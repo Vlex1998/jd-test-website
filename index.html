@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JD Roofing Solutions — Trusted Roof Repair & Installation in Houston</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Open Sans', Arial, sans-serif; box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-size: 14px; line-height: 1.7; font-weight: 500; color: #444; background: #fff; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; }
+    .nav-link { color: white; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; transition: color 0.2s; }
+    .nav-link:hover { color: #3B9EF0; }
+    #main-nav.scrolled .nav-link { color: #071118; }
+    #main-nav.scrolled .nav-link:hover { color: #3B9EF0; }
+    .btn-blue { background: #3B9EF0; color: white; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; padding: 11px 22px; border-radius: 3px; border: none; cursor: pointer; display: inline-block; transition: background 0.2s, transform 0.1s; }
+    .btn-blue:hover { background: #2589D8; }
+    .btn-blue:active { transform: scale(0.98); }
+    .section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #3B9EF0; display: block; }
+    .section-heading { font-size: 46px; font-weight: 800; color: #3B9EF0; line-height: 1.05; letter-spacing: -0.02em; }
+    .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(59,158,240,0.12); }
+    @keyframes scrollUp { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+    .review-col { display: flex; flex-direction: column; gap: 20px; animation: scrollUp linear infinite; }
+    .review-col:hover { animation-play-state: paused; }
+    @media (prefers-reduced-motion: reduce) { .review-col { animation: none; } }
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-item { opacity: 0; animation: fadeSlideUp 0.52s ease-out forwards; }
+    @media (prefers-reduced-motion: reduce) { .hero-item { animation: none; opacity: 1; } }
+  .eapps-widget-toolbar, .eapps-link, .eapps-widget-toolbar-powered-by { display:none !important; }
+  /* --- MOBILE NAV --- */
+  .nav-dropdown-wrap{position:relative;}
+  .nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:rgba(7,17,24,0.98);border:1px solid rgba(59,158,240,0.22);border-radius:10px;padding:8px 0;min-width:210px;box-shadow:0 12px 40px rgba(0,0,0,0.5);z-index:100;} .nav-dropdown::before{content:'';position:absolute;top:-10px;left:-20px;right:-20px;height:10px;}
+  .nav-dropdown-wrap:hover .nav-dropdown{display:block;}
+  .nav-dropdown a{display:block;padding:11px 20px;color:#9AAABB;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;border-bottom:1px solid rgba(255,255,255,0.05);transition:color 0.2s,background 0.2s;}
+  .nav-dropdown a:last-child{border-bottom:none;}
+  .nav-dropdown a:hover{color:#3B9EF0;background:rgba(59,158,240,0.07);}
+  .mob-services{border-bottom:1px solid rgba(255,255,255,0.06);}
+  .mob-services-btn{display:flex;justify-content:space-between;align-items:center;width:100%;color:#ccc;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;padding:17px 24px;background:transparent;border:none;cursor:pointer;transition:color 0.2s;}
+  .mob-services-btn:hover,.mob-services-btn.active{color:#3B9EF0;}
+  .mob-services-btn .arr{transition:transform 0.22s;}
+  .mob-services-btn.active .arr{transform:rotate(180deg);}
+  .mob-services-sub{display:none;background:rgba(0,0,0,0.18);}
+  .mob-services-sub.open{display:block;}
+  .mob-services-sub a{display:block!important;padding:13px 24px 13px 36px!important;color:#889!important;font-size:12px!important;letter-spacing:0.06em!important;border-bottom:1px solid rgba(255,255,255,0.04)!important;}
+  .mob-services-sub a:last-child{border-bottom:none!important;}
+  .mob-services-sub a:hover{color:#3B9EF0!important;}
+  .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:transparent;border:none;}
+  .nav-hamburger span{width:22px;height:2px;background:white;display:block;border-radius:1px;transition:transform 0.22s,opacity 0.22s;}
+  #main-nav.scrolled .nav-hamburger span{background:#071118;}
+  .mobile-menu{display:none;position:fixed;top:88px;left:0;right:0;background:rgba(7,17,24,0.98);z-index:49;flex-direction:column;border-top:1px solid rgba(59,158,240,0.2);box-shadow:0 12px 40px rgba(0,0,0,0.5);}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{color:#ccc;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;padding:17px 24px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color 0.2s;}
+  .mobile-menu a:hover{color:#3B9EF0;}
+  .mobile-menu .m-tel{color:#3B9EF0;border-bottom:none;}
+  /* --- MOBILE BREAKPOINT --- */
+  @media(max-width:768px){
+    .nav-links-desktop{display:none!important;}
+    .nav-cta-desktop{display:none!important;}
+    .nav-hamburger{display:flex!important;}
+    .section-heading{font-size:28px!important;letter-spacing:-0.01em!important;}
+    .m-hero-h1{font-size:36px!important;line-height:1.1!important;}
+    .m-col{flex-direction:column!important;}
+    .m-1col{grid-template-columns:1fr!important;gap:24px!important;}
+    .m-2col{grid-template-columns:1fr 1fr!important;gap:14px!important;}
+    .m-footer{grid-template-columns:1fr 1fr!important;gap:28px!important;}
+    .m-hide{display:none!important;}
+    .m-banner-h2{font-size:26px!important;line-height:1.2!important;}
+    .m-h2-lg{font-size:30px!important;}
+    .m-pad{padding-left:18px!important;padding-right:18px!important;}
+    .m-pad-v{padding-top:52px!important;padding-bottom:52px!important;}
+  }
+  </style>
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav id="main-nav" style="background:transparent; position:fixed; top:0; left:0; right:0; z-index:50; transition:background 0.35s, box-shadow 0.35s;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 28px; height:88px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+    <a href="#" style="display:flex; align-items:center;">
+      <img src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" style="height:80px; width:auto;">
+    </a>
+    <div class="nav-links-desktop" style="display:flex; align-items:center; gap:28px;">
+      <a href="#" class="nav-link">Home</a>
+      <div class="nav-dropdown-wrap">
+        <a href="#services" class="nav-link" style="display:flex;align-items:center;gap:5px;">Services<svg class="arr" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="nav-dropdown">
+          <a href="roof-replacement.html">Roof Replacement</a>
+          <a href="roof-repair.html">Roof Repair</a>
+          <a href="storm-damage.html">Storm &amp; Hail Damage</a>
+          <a href="commercial-roofing.html">Commercial Roofing</a>
+          <a href="insurance-claims.html">Insurance Claims</a>
+          <a href="roof-inspection.html">Roof Inspection</a>
+        </div>
+      </div>
+      <a href="reviews.html" class="nav-link">Reviews</a>
+      <a href="financing.html" class="nav-link">Financing</a>
+      <a href="estimate.html" class="nav-link">Contact Us</a>
+    </div>
+    <div class="nav-cta-desktop" style="display:flex; align-items:center; gap:18px;">
+      <a href="tel:8322953277" style="color:white; font-size:13px; font-weight:700; white-space:nowrap;">&#9990; 832-295-3277</a>
+      <a href="estimate.html" class="btn-blue">Free Inspection</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#">Home</a>
+  <div class="mob-services">
+    <button class="mob-services-btn" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('open')">Services<svg class="arr" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="mob-services-sub">
+      <a href="roof-replacement.html">Roof Replacement</a>
+      <a href="roof-repair.html">Roof Repair</a>
+      <a href="storm-damage.html">Storm &amp; Hail Damage</a>
+      <a href="commercial-roofing.html">Commercial Roofing</a>
+      <a href="insurance-claims.html">Insurance Claims</a>
+      <a href="roof-inspection.html">Roof Inspection</a>
+    </div>
+  </div>
+  <a href="reviews.html">Reviews</a>
+  <a href="financing.html">Financing</a>
+  <a href="estimate.html">Contact Us</a>
+  <a href="tel:8322953277" class="m-tel">&#9990; 832-295-3277</a>
+</div>
+
+<!-- ====== HERO ====== -->
+<section style="position:relative; min-height:100vh; background:#071118; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+
+  <!-- Background video -->
+  <video autoplay muted loop playsinline style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;">
+    <source src="Brand_assets/FORWEBSITE THIS 1 .mov" type="video/mp4">
+  </video>
+  <!-- Dark gradient overlay -->
+  <div style="position:absolute; inset:0; background:linear-gradient(160deg, rgba(5,14,24,0.72) 0%, rgba(7,17,24,0.62) 60%, rgba(10,24,37,0.58) 100%);"></div>
+  <!-- Brand blue ambient glow -->
+  <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 50% 40%, rgba(59,158,240,0.1) 0%, transparent 62%);"></div>
+
+  <!-- Animated content -->
+  <div style="position:relative; z-index:1; text-align:center; padding:100px 28px 80px; max-width:860px; margin:0 auto; width:100%;">
+
+    <!-- Badge pill -->
+    <div class="hero-item" style="animation-delay:0.10s; margin-bottom:22px;">
+      <span style="display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.07); padding:7px 18px; border-radius:100px; font-size:12px; font-weight:700; color:#93C5FD; letter-spacing:0.06em; text-transform:uppercase;">
+        <svg width="13" height="13" fill="#3B9EF0" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        GAF Certified &nbsp;&middot;&nbsp; Houston, TX
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <div class="hero-item" style="animation-delay:0.25s; margin-bottom:22px;">
+      <h1 class="m-hero-h1" style="font-size:66px; font-weight:800; color:white; line-height:1.07; letter-spacing:-0.028em;">
+        Houston's Trusted<br>
+        <span style="background:linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.5) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Roofing Experts</span>
+      </h1>
+    </div>
+
+    <!-- Paragraph -->
+    <div class="hero-item" style="animation-delay:0.40s; margin-bottom:38px;">
+      <p style="font-size:17px; color:rgba(255,255,255,0.62); line-height:1.78; max-width:560px; margin:0 auto;">
+        From storm damage repairs to full roof replacements, JD Roofing Solutions delivers expert craftsmanship and GAF-certified quality across the Houston metro area.
+      </p>
+    </div>
+
+    <!-- Buttons -->
+    <div class="hero-item" style="animation-delay:0.55s; margin-bottom:56px; display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap;">
+      <a href="estimate.html" class="btn-blue" style="font-size:14px; padding:15px 34px; display:inline-flex; align-items:center; gap:9px;">
+        Get Free Estimate
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="tel:8322953277" style="font-size:14px; padding:14px 32px; font-weight:700; color:white; border:2px solid rgba(255,255,255,0.28); border-radius:3px; display:inline-flex; align-items:center; gap:8px; letter-spacing:0.04em; transition:border-color 0.2s, background 0.2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.7)';this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.28)';this.style.background='transparent'">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 3.18 2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.41-1.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        832-295-3277
+      </a>
+    </div>
+
+    <!-- Stats -->
+    <div class="hero-item" style="animation-delay:0.70s; display:flex; align-items:center; justify-content:center; gap:44px; flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <div style="font-size:28px; font-weight:800; color:white; line-height:1; letter-spacing:-0.02em;">2,500+</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.45); margin-top:5px; letter-spacing:0.04em;">Roofs Completed</div>
+      </div>
+      <div class="m-hide" style="width:1px; height:38px; background:rgba(255,255,255,0.14);"></div>
+      <div style="text-align:center;">
+        <div style="font-size:28px; font-weight:800; color:white; line-height:1; letter-spacing:-0.02em;">10+</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.45); margin-top:5px; letter-spacing:0.04em;">Years Experience</div>
+      </div>
+      <div class="m-hide" style="width:1px; height:38px; background:rgba(255,255,255,0.14);"></div>
+      <div style="text-align:center;">
+        <div style="font-size:28px; font-weight:800; color:white; line-height:1; letter-spacing:-0.02em;">&#9733; 5.0</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.45); margin-top:5px; letter-spacing:0.04em;">Star Rated</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== CONTACT FORM ====== -->
+<section id="contact" style="background:white; padding:80px 28px;">
+  <div class="m-1col" style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
+
+    <!-- Left: trust + stats -->
+    <div>
+      <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#3B9EF0; display:block; margin-bottom:14px;">Trusted &amp; Certified</span>
+      <h2 style="font-size:40px; font-weight:800; color:#071118; line-height:1.1; letter-spacing:-0.02em; margin-bottom:28px;">Get a Free Estimate<br>from Houston's Best</h2>
+
+      <!-- Cert badges row -->
+      <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap; margin-bottom:32px;">
+        <img src="brand_assets/Certified.png" alt="GAF Certified" style="height:72px; width:auto; object-fit:contain;">
+        <img src="brand_assets/certainteed.png" alt="CertainTeed" style="height:72px; width:auto; object-fit:contain;">
+        <img src="brand_assets/1200px-Owens_Corning_logo.svg.png" alt="Owens Corning" style="height:52px; width:auto; object-fit:contain; border-radius:4px;">
+      </div>
+
+      <!-- Stats row -->
+      <div style="display:flex; align-items:stretch; gap:0; border:1.5px solid #edf2f7; border-radius:8px; overflow:hidden; margin-bottom:32px;">
+        <div style="flex:1; padding:20px 18px; text-align:center; border-right:1.5px solid #edf2f7;">
+          <div style="font-size:30px; font-weight:800; color:#071118; line-height:1; letter-spacing:-0.02em;">2,500+</div>
+          <div style="font-size:11px; color:#888; margin-top:5px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Roofs Done</div>
+        </div>
+        <div style="flex:1; padding:20px 18px; text-align:center; border-right:1.5px solid #edf2f7;">
+          <div style="font-size:30px; font-weight:800; color:#071118; line-height:1; letter-spacing:-0.02em;">10+</div>
+          <div style="font-size:11px; color:#888; margin-top:5px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Years Exp.</div>
+        </div>
+        <div style="flex:1; padding:20px 18px; text-align:center;">
+          <div style="font-size:24px; font-weight:800; color:#071118; line-height:1;">&#9733; 4.9</div>
+          <div style="font-size:11px; color:#888; margin-top:5px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Google Rating</div>
+        </div>
+      </div>
+
+      <!-- Google reviews CTA -->
+      <a href="https://www.google.com/search?q=jd+roofing+solutions&rlz=1C5BAPC_enUS1188US1192&sca_esv=267922cfa28b0bd4&biw=1976&bih=1226&sxsrf=ANbL-n5_NRS2Ry6Pp0ai8vSKpLtur5NC4g%3A1777392736599&ei=YNzwaZWfJIKEqtsP5f30sQI&gs_ssp=eJzj4tVP1zc0zIg3NE8vTis0YLRSNaiwMDMxSLa0SLa0NE9MtDBMszKoSLVINDI0MDEyNjRNNkpMNvcSyUpRKMrPT8vMS1cozs8pLcnMzysGADDbFuw&oq=jd+roofing&gs_lp=Egxnd3Mtd2l6LXNlcnAiCmpkIHJvb2ZpbmcqAggBMgQQIxgnMhMQLhivARjHARiABBiKBRiOBRgnMgQQIxgnMgQQIxgnMgsQABiABBiKBRiRAjIKEAAYgAQYigUYQzIGEAAYBxgeMgUQABiABDIFEAAYgAQyBRAAGIAESOwRULcDWJgGcAF4AZABAJgBZKABgwKqAQMyLjG4AQHIAQD4AQGYAgSgApACwgIKEAAYRxjWBBiwA8ICBxAAGIAEGA3CAg0QLhgNGK8BGMcBGIAEwgIHECMYsAIYJ8ICEBAuGIAEGA0YxwEYrwEYjgWYAwCIBgGQBgiSBwMzLjGgB6EosgcDMi4xuAeOAsIHAzAuNMgHCYAIAQ&sclient=gws-wiz-serp#lrd=0x8640c98c997aa81f:0xe8a21042315c2ac7,1,,,," target="_blank" style="display:inline-flex; align-items:center; gap:10px; border:1.5px solid #edf2f7; border-radius:8px; padding:14px 20px; text-decoration:none; transition:border-color 0.2s;" onmouseover="this.style.borderColor='#3B9EF0'" onmouseout="this.style.borderColor='#edf2f7'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div>
+          <div style="font-size:13px; font-weight:700; color:#071118;">See Our Google Reviews</div>
+          <div style="font-size:11px; color:#888;">Verified by real customers</div>
+        </div>
+        <svg width="14" height="14" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" style="margin-left:4px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Right: form card -->
+    <div style="background:white; border-radius:10px; border:1.5px solid #edf2f7; box-shadow:0 8px 40px rgba(59,158,240,0.09), 0 2px 8px rgba(0,0,0,0.05); overflow:hidden;">
+      <div style="background:#3B9EF0; padding:22px 28px;">
+        <p style="color:white; font-size:19px; font-weight:800; margin-bottom:3px;">Get Your Free Estimate</p>
+        <p style="color:rgba(255,255,255,0.78); font-size:12px;">No obligation &middot; We respond within hours</p>
+      </div>
+      <div style="padding:24px 28px 28px;">
+        <form id="hero-form" onsubmit="heroSubmit(event)">
+          <!-- Name row -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
+            <input type="text" name="first_name" placeholder="First Name *" required style="width:100%; padding:11px 13px; border:1.5px solid #e2e8f0; border-radius:5px; font-size:13px; font-family:inherit; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#e2e8f0'" />
+            <input type="text" name="last_name" placeholder="Last Name *" required style="width:100%; padding:11px 13px; border:1.5px solid #e2e8f0; border-radius:5px; font-size:13px; font-family:inherit; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#e2e8f0'" />
+          </div>
+          <!-- Phone + Email row -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
+            <input type="tel" name="phone" placeholder="Phone *" required style="width:100%; padding:11px 13px; border:1.5px solid #e2e8f0; border-radius:5px; font-size:13px; font-family:inherit; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#e2e8f0'" />
+            <input type="email" name="email" placeholder="Email *" required style="width:100%; padding:11px 13px; border:1.5px solid #e2e8f0; border-radius:5px; font-size:13px; font-family:inherit; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#e2e8f0'" />
+          </div>
+          <!-- Address full width -->
+          <input type="text" name="address" placeholder="Street Address *" style="width:100%; padding:11px 13px; border:1.5px solid #e2e8f0; border-radius:5px; font-size:13px; font-family:inherit; outline:none; margin-bottom:16px; display:block; transition:border-color 0.2s;" onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#e2e8f0'" />
+          <button type="submit" id="hero-submit-btn" class="btn-blue" style="width:100%; padding:14px; font-size:13px; border-radius:5px; display:flex; align-items:center; justify-content:center; gap:8px;">
+            GET FREE ESTIMATE
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+        <script>
+        function heroSubmit(e) {
+          e.preventDefault();
+          var btn = document.getElementById('hero-submit-btn');
+          var f = e.target;
+          btn.textContent = 'Sending...';
+          btn.disabled = true;
+          fetch('https://formsubmit.co/ajax/jdroofingsolutions06@gmail.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+              _subject: 'New Free Estimate Request — JD Roofing Solutions',
+              'First Name': f.first_name.value,
+              'Last Name':  f.last_name.value,
+              Phone:        f.phone.value,
+              Email:        f.email.value,
+              Address:      f.address.value
+            })
+          })
+          .then(function(r){ return r.json(); })
+          .then(function(){
+            btn.innerHTML = '&#10003; Sent! We\'ll contact you soon.';
+            btn.style.background = '#16a34a';
+            f.reset();
+          })
+          .catch(function(){
+            btn.innerHTML = 'GET FREE ESTIMATE';
+            btn.disabled = false;
+            alert('Something went wrong. Please call us at 832-295-3277.');
+          });
+        }
+        </script>
+        <p style="text-align:center; color:#bbb; font-size:11px; margin-top:14px; line-height:1.6;">By submitting you agree to be contacted about your roofing project.<br>Licensed &amp; Insured &middot; Houston, TX</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== QUALITY BANNER (below contact) ====== -->
+<section style="position:relative; min-height:340px; display:flex; align-items:center; overflow:hidden;">
+  <div style="position:absolute; inset:0; background-image:url('brand_assets/roof 20.webp'); background-size:cover; background-position:center top;"></div>
+  <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(7,17,24,0.88) 0%, rgba(7,17,24,0.65) 55%, rgba(7,17,24,0.3) 100%);"></div>
+  <div style="position:relative; z-index:1; max-width:1100px; margin:0 auto; padding:60px 28px; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; width:100%;">
+    <div>
+      <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#3B9EF0; display:block; margin-bottom:10px;">Expert Craftsmanship</span>
+      <h2 class="m-banner-h2" style="font-size:38px; font-weight:800; color:white; line-height:1.1; letter-spacing:-0.02em; margin-bottom:12px;">Quality Roof Services<br>in Houston, TX</h2>
+      <p style="color:rgba(255,255,255,0.65); font-size:15px; line-height:1.7; max-width:420px;">Residential &amp; commercial roofing by a GAF-certified crew. Storm damage, full replacements, and everything in between.</p>
+    </div>
+    <a href="tel:8322953277" class="btn-blue" style="font-size:14px; padding:16px 36px; display:inline-flex; align-items:center; gap:9px; white-space:nowrap; flex-shrink:0;">
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 3.18 2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.41-1.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call 832-295-3277
+    </a>
+  </div>
+</section>
+
+<!-- ====== TRUST BAR ====== -->
+<section style="background:white; border-bottom:1px solid #edf2f7; padding:28px 28px;">
+  <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; gap:40px; flex-wrap:wrap;">
+    <div>
+      <span class="section-label" style="margin-bottom:4px;">Trusted &amp; Certified</span>
+      <p style="font-size:34px; font-weight:800; color:#071118; line-height:1; margin-bottom:2px;">2,500+</p>
+      <p style="color:#888; font-size:12px;">Roofs Completed</p>
+    </div>
+    <div style="width:1px; height:56px; background:#e2e8f0; flex-shrink:0;"></div>
+    <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+      <div style="background:#EEF7FF; border-radius:4px; padding:9px 18px; font-size:12px; font-weight:700; color:#555;">GAF Certified</div>
+      <div style="background:#EEF7FF; border-radius:4px; padding:9px 18px; font-size:12px; font-weight:700; color:#555;">Licensed &amp; Insured</div>
+      <div style="background:#EEF7FF; border-radius:4px; padding:9px 18px; font-size:12px; font-weight:700; color:#555;">10+ Years Experience</div>
+      <div style="background:#EEF7FF; border-radius:4px; padding:9px 18px; font-size:12px; font-weight:700; color:#555;">Insurance Claim Experts</div>
+      <div style="background:#EEF7FF; border-radius:4px; padding:9px 18px; font-size:12px; font-weight:700; color:#3B9EF0;">&#9733;&#9733;&#9733;&#9733;&#9733; 5-Star Rated</div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ====== SERVICES ====== -->
+<section id="services" style="background:white; padding:88px 28px;">
+  <div class="m-col" style="max-width:1200px; margin:0 auto; display:flex; gap:64px; align-items:flex-start;">
+    <div style="width:260px; flex-shrink:0;">
+      <span class="section-label" style="margin-bottom:14px;">What We Offer</span>
+      <h2 class="section-heading" style="margin-bottom:18px;">We Do<br>It All!</h2>
+      <p style="color:#666; font-size:14px; line-height:1.75; margin-bottom:28px;">From residential repairs to full commercial projects — JD Roofing handles every job with expert care and lasting results.</p>
+      <a href="estimate.html" class="btn-blue">Get a Quote</a>
+    </div>
+    <div class="m-2col" style="flex:1; display:grid; grid-template-columns:repeat(3,1fr); gap:18px;">
+
+      <a href="roof-replacement.html" style="text-decoration:none; display:block;">
+        <div class="card-hover" style="border:1.5px solid #E8EEF8; border-radius:8px; padding:26px 20px; cursor:pointer; height:100%;">
+          <div style="width:50px; height:50px; background:#EEF7FF; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:14px;">
+            <svg width="24" height="24" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 style="font-size:15px; font-weight:700; color:#071118; margin-bottom:8px;">Roof Replacement</h3>
+          <p style="color:#666; font-size:13px; line-height:1.65;">Full tear-off and replacement with premium materials and a lasting warranty.</p>
+        </div>
+      </a>
+
+      <a href="roof-repair.html" style="text-decoration:none; display:block;">
+        <div class="card-hover" style="border:1.5px solid #E8EEF8; border-radius:8px; padding:26px 20px; cursor:pointer; height:100%;">
+          <div style="width:50px; height:50px; background:#EEF7FF; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:14px;">
+            <svg width="24" height="24" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 style="font-size:15px; font-weight:700; color:#071118; margin-bottom:8px;">Roof Repair</h3>
+          <p style="color:#666; font-size:13px; line-height:1.65;">Fast, reliable fixes for leaks, missing shingles, flashing, and structural damage.</p>
+        </div>
+      </a>
+
+      <a href="storm-damage.html" style="text-decoration:none; display:block;">
+        <div class="card-hover" style="border:1.5px solid #E8EEF8; border-radius:8px; padding:26px 20px; cursor:pointer; height:100%;">
+          <div style="width:50px; height:50px; background:#EEF7FF; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:14px;">
+            <svg width="24" height="24" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 style="font-size:15px; font-weight:700; color:#071118; margin-bottom:8px;">Hail &amp; Storm Damage</h3>
+          <p style="color:#666; font-size:13px; line-height:1.65;">Emergency storm response and insurance claim assistance for hail and wind damage.</p>
+        </div>
+      </a>
+
+      <a href="commercial-roofing.html" style="text-decoration:none; display:block;">
+        <div class="card-hover" style="border:1.5px solid #E8EEF8; border-radius:8px; padding:26px 20px; cursor:pointer; height:100%;">
+          <div style="width:50px; height:50px; background:#EEF7FF; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:14px;">
+            <svg width="24" height="24" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+          </div>
+          <h3 style="font-size:15px; font-weight:700; color:#071118; margin-bottom:8px;">Commercial Roofing</h3>
+          <p style="color:#666; font-size:13px; line-height:1.65;">Flat roof systems, TPO, EPDM, and metal roofing for commercial properties.</p>
+        </div>
+      </a>
+
+      <a href="insurance-claims.html" style="text-decoration:none; display:block;">
+        <div class="card-hover" style="border:1.5px solid #E8EEF8; border-radius:8px; padding:26px 20px; cursor:pointer; height:100%;">
+          <div style="width:50px; height:50px; background:#EEF7FF; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:14px;">
+            <svg width="24" height="24" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6M9 8h6M9 16h4"/><path d="M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
+          </div>
+          <h3 style="font-size:15px; font-weight:700; color:#071118; margin-bottom:8px;">Insurance Claims</h3>
+          <p style="color:#666; font-size:13px; line-height:1.65;">We guide you through the entire insurance claims process — from inspection to payout.</p>
+        </div>
+      </a>
+
+      <a href="roof-inspection.html" style="text-decoration:none; display:block;">
+        <div class="card-hover" style="border:1.5px solid #E8EEF8; border-radius:8px; padding:26px 20px; cursor:pointer; height:100%;">
+          <div style="width:50px; height:50px; background:#EEF7FF; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:14px;">
+            <svg width="24" height="24" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 style="font-size:15px; font-weight:700; color:#071118; margin-bottom:8px;">Roof Inspection</h3>
+          <p style="color:#666; font-size:13px; line-height:1.65;">Thorough inspections with detailed reports — free of charge for Houston homeowners.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== WHY CHOOSE US ====== -->
+<section style="background:#F8FAFF; padding:0 0;">
+  <div style="max-width:1340px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; min-height:640px;">
+
+    <!-- LEFT: image -->
+    <div style="position:relative; overflow:hidden; min-height:560px;">
+      <img src="Brand_assets/worker v9.webp" alt="JD Roofing worker on job" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(7,17,24,0.08) 0%,rgba(7,17,24,0.0) 100%);"></div>
+    </div>
+
+    <!-- RIGHT: content -->
+    <div style="padding:72px 56px 72px 52px; display:flex; flex-direction:column; justify-content:center;">
+      <span class="section-label" style="display:block; margin-bottom:12px;">Our Advantage</span>
+      <h2 class="section-heading" style="margin-bottom:14px;">Why Choose Us?</h2>
+      <p style="color:#666; font-size:14px; max-width:460px; line-height:1.8; margin-bottom:44px;">JD Roofing Solutions combines expert craftsmanship, transparent pricing, and unmatched customer service across the Houston area.</p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px 32px;">
+
+        <div style="display:flex; align-items:flex-start; gap:14px;">
+          <div style="width:42px;height:42px;background:#3B9EF0;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div><h3 style="font-size:14px;font-weight:700;color:#071118;margin-bottom:4px;">Licensed &amp; Insured</h3><p style="color:#777;font-size:12px;line-height:1.7;">Fully licensed, bonded, and insured for your peace of mind.</p></div>
+        </div>
+
+        <div style="display:flex; align-items:flex-start; gap:14px;">
+          <div style="width:42px;height:42px;background:#3B9EF0;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M12 14v8M8 22h8"/></svg>
+          </div>
+          <div><h3 style="font-size:14px;font-weight:700;color:#071118;margin-bottom:4px;">10+ Years Experience</h3><p style="color:#777;font-size:12px;line-height:1.7;">Over a decade of roofing excellence in Houston.</p></div>
+        </div>
+
+        <div style="display:flex; align-items:flex-start; gap:14px;">
+          <div style="width:42px;height:42px;background:#3B9EF0;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <div><h3 style="font-size:14px;font-weight:700;color:#071118;margin-bottom:4px;">Free Estimates</h3><p style="color:#777;font-size:12px;line-height:1.7;">No-obligation inspections — transparent, no hidden fees.</p></div>
+        </div>
+
+        <div style="display:flex; align-items:flex-start; gap:14px;">
+          <div style="width:42px;height:42px;background:#3B9EF0;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div><h3 style="font-size:14px;font-weight:700;color:#071118;margin-bottom:4px;">GAF Certified</h3><p style="color:#777;font-size:12px;line-height:1.7;">Premium materials with manufacturer-backed warranties.</p></div>
+        </div>
+
+        <div style="display:flex; align-items:flex-start; gap:14px;">
+          <div style="width:42px;height:42px;background:#3B9EF0;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div><h3 style="font-size:14px;font-weight:700;color:#071118;margin-bottom:4px;">24/7 Emergency Service</h3><p style="color:#777;font-size:12px;line-height:1.7;">Available around the clock for emergency repairs.</p></div>
+        </div>
+
+        <div style="display:flex; align-items:flex-start; gap:14px;">
+          <div style="width:42px;height:42px;background:#3B9EF0;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div><h3 style="font-size:14px;font-weight:700;color:#071118;margin-bottom:4px;">Lifetime Warranty</h3><p style="color:#777;font-size:12px;line-height:1.7;">We stand behind every job with industry-leading warranties.</p></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== FINANCING + WARRANTIES (combined photo section) ====== -->
+<section style="position:relative; overflow:hidden;">
+  <!-- Single high-quality background photo: roof + sky with clouds -->
+  <img src="brand_assets/roof 18.webp" alt="" aria-hidden="true"
+       style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 18%;">
+
+  <!-- Dark overlay for text readability — lightens toward top so sky shows through -->
+  <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(7,17,24,0.08) 0%, rgba(7,17,24,0.52) 30%, rgba(7,17,24,0.78) 58%, rgba(7,17,24,0.93) 100%);"></div>
+
+  <!-- TOP FADE: subtle white → transparent -->
+  <div style="position:absolute; top:0; left:0; right:0; height:110px; background:linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0) 100%); z-index:2; pointer-events:none;"></div>
+
+
+  <!-- All content -->
+  <div style="position:relative; z-index:3; padding:90px 28px 80px; text-align:center;">
+
+    <!-- FINANCING block -->
+    <div style="max-width:620px; margin:0 auto; padding-bottom:56px;">
+      <h2 class="m-h2-lg" style="font-size:44px; font-weight:800; color:white; margin-bottom:14px; letter-spacing:-0.025em; text-shadow:0 2px 18px rgba(0,0,0,0.55);">Stress-Free Roofing Payments</h2>
+      <p style="color:rgba(255,255,255,0.82); font-size:15px; line-height:1.65; margin-bottom:28px; text-shadow:0 1px 8px rgba(0,0,0,0.4);">Flexible financing &amp; insurance assistance — most storm damage claims require zero out of pocket.</p>
+      <a href="financing.html" style="display:inline-block; background:#3B9EF0; border-radius:6px; padding:12px 30px; color:white; font-size:13px; font-weight:700; letter-spacing:0.05em; text-decoration:none; transition:background 0.2s;" onmouseover="this.style.background='#2a8de0'" onmouseout="this.style.background='#3B9EF0'">See if you qualify</a>
+    </div>
+
+    <!-- WARRANTIES block -->
+    <div style="max-width:620px; margin:0 auto;">
+      <h2 class="m-h2-lg" style="font-size:44px; font-weight:800; color:white; margin-bottom:14px; letter-spacing:-0.025em; line-height:1.06; text-shadow:0 2px 20px rgba(0,0,0,0.6);">Warranties That<br>Last a Lifetime</h2>
+      <p style="color:rgba(255,255,255,0.82); font-size:15px; line-height:1.65; text-shadow:0 1px 8px rgba(0,0,0,0.4);">30–50 years of coverage on labor and materials — because we stand by our work.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== HOW IT WORKS ====== -->
+<style>
+  .hiw-section { background: white; padding: 88px 0; overflow: hidden; }
+  .hiw-inner { max-width: 1260px; margin: 0 auto; padding: 0 60px; display: grid; grid-template-columns: 1fr 380px; align-items: end; gap: 40px; }
+  .hiw-heading { font-size: clamp(38px, 5vw, 58px); font-weight: 900; color: #071118; letter-spacing: -0.03em; line-height: 1.0; margin: 10px 0 8px; }
+  .hiw-tagline { color: #999; font-size: 14px; font-weight: 500; margin-bottom: 52px; }
+  /* steps */
+  .hiw-steps { display: flex; gap: 0; position: relative; }
+  .hiw-steps::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: calc(10% + 0px);
+    right: calc(10% + 0px);
+    height: 2px;
+    background: linear-gradient(90deg, #D1E8F9 0%, #B8D8F0 50%, #D1E8F9 100%);
+    z-index: 0;
+  }
+  .hiw-step { flex: 1; text-align: center; padding: 0 6px; cursor: default; }
+  .hiw-icon-ring {
+    width: 44px; height: 44px;
+    background: #EDF6FF;
+    border: 2.5px solid #3B9EF0;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 14px;
+    position: relative; z-index: 1;
+    transition: transform 0.38s cubic-bezier(0.22,1,0.36,1), background 0.28s ease, box-shadow 0.38s cubic-bezier(0.22,1,0.36,1);
+  }
+  .hiw-step:hover .hiw-icon-ring {
+    transform: scale(1.28) translateY(-7px);
+    background: #3B9EF0;
+    box-shadow: 0 12px 32px rgba(59,158,240,0.40);
+  }
+  .hiw-icon-ring svg { display: block; transition: stroke 0.28s ease; }
+  .hiw-step:hover .hiw-icon-ring svg { stroke: white; }
+  .hiw-step-label { font-size: 9.5px; font-weight: 800; color: #3B9EF0; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 5px; }
+  .hiw-step-title { font-size: 12.5px; font-weight: 700; color: #071118; margin-bottom: 5px; line-height: 1.3; transition: color 0.25s; }
+  .hiw-step:hover .hiw-step-title { color: #3B9EF0; }
+  .hiw-step-desc { font-size: 11px; color: #aaa; line-height: 1.65; }
+  /* photo */
+  .hiw-photo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: -40px;
+    flex-shrink: 0;
+    align-self: flex-end;
+  }
+  .hiw-photo img {
+    height: 520px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 8px 32px rgba(0,0,0,0.18));
+  }
+  @media (max-width: 960px) {
+    .hiw-inner { grid-template-columns: 1fr; padding: 0 28px; }
+    .hiw-photo { margin-right: -28px; justify-content: center; }
+    .hiw-photo img { height: 320px; }
+    .hiw-steps::before { display: none; }
+    .hiw-steps { flex-wrap: wrap; gap: 28px; }
+    .hiw-step { flex: 0 0 calc(50% - 14px); }
+  }
+</style>
+<section class="hiw-section">
+  <div class="hiw-inner">
+    <div>
+      <span class="section-label">Simple Process</span>
+      <h2 class="hiw-heading">How It Works.</h2>
+      <p class="hiw-tagline">Simple. Smooth. Stress-free from start to finish.</p>
+
+      <div class="hiw-steps">
+
+        <div class="hiw-step">
+          <div class="hiw-icon-ring">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B9EF0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 11 19.79 19.79 0 01.88 2.38 2 2 0 012.86.4h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.11a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 15.92z"/></svg>
+          </div>
+          <div class="hiw-step-label">Step 01</div>
+          <div class="hiw-step-title">Call Us</div>
+          <div class="hiw-step-desc">Schedule your free roof inspection with one quick call.</div>
+        </div>
+
+        <div class="hiw-step">
+          <div class="hiw-icon-ring">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B9EF0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div class="hiw-step-label">Step 02</div>
+          <div class="hiw-step-title">We Inspect</div>
+          <div class="hiw-step-desc">Certified inspector checks every detail and documents all damage.</div>
+        </div>
+
+        <div class="hiw-step">
+          <div class="hiw-icon-ring">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B9EF0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="hiw-step-label">Step 03</div>
+          <div class="hiw-step-title">Get Your Estimate</div>
+          <div class="hiw-step-desc">Clear, fair, and transparent pricing — no surprises.</div>
+        </div>
+
+        <div class="hiw-step">
+          <div class="hiw-icon-ring">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B9EF0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="hiw-step-label">Step 04</div>
+          <div class="hiw-step-title">Roof Installation</div>
+          <div class="hiw-step-desc">Certified crew completes the project efficiently and cleanly.</div>
+        </div>
+
+        <div class="hiw-step">
+          <div class="hiw-icon-ring">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B9EF0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="hiw-step-label">Step 05</div>
+          <div class="hiw-step-title">Happy Roof, Happy Home</div>
+          <div class="hiw-step-desc">We back every project until you're completely satisfied.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hiw-photo">
+      <img src="Brand_assets/drop shadow_.png" alt="JD Roofing Solutions salesman">
+    </div>
+  </div>
+</section>
+
+<!-- ====== ROOF ANATOMY VISUALIZER ====== -->
+<section style="background:#F4F7FA; padding:60px 28px;" id="anatomy-section">
+  <style>
+    /* ---- entrance animations ---- */
+    @keyframes anatFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes anatImgIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:scale(1)}}
+    /* ---- dot pulse ring ---- */
+    /* ---- card stagger ---- */
+    .anat-card{opacity:0;transform:translateY(22px);transition:opacity 0.5s ease,transform 0.5s cubic-bezier(0.22,1,0.36,1),border-color 0.2s,background 0.2s,box-shadow 0.2s;}
+    .anat-card.in{opacity:1;transform:translateY(0);}
+    .anat-card:hover{transform:translateY(-5px)!important;border-color:#D6006B!important;background:#FFF5F9!important;box-shadow:0 12px 36px rgba(214,0,107,0.12)!important;}
+    .anat-card:hover .anat-num{background:#3B9EF0;transform:scale(1.12);}
+    .anat-card.highlighted{border-color:#D6006B!important;background:#FFF5F9!important;box-shadow:0 8px 28px rgba(214,0,107,0.14)!important;}
+    .anat-num{transition:background 0.2s,transform 0.2s;}
+    /* ---- image container ---- */
+    #anat-img-wrap{opacity:0;transform:scale(0.97);transition:opacity 0.7s ease,transform 0.7s cubic-bezier(0.22,1,0.36,1);}
+    #anat-img-wrap.in{opacity:1;transform:scale(1);}
+    #anat-img-wrap:hover img{transform:scale(1.015);}
+    #anat-img-wrap img{transition:transform 0.6s cubic-bezier(0.22,1,0.36,1);}
+    /* ---- heading ---- */
+    #anat-heading{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
+    #anat-heading.in{opacity:1;transform:translateY(0);}
+    @media(max-width:768px){.anat-grid{grid-template-columns:1fr 1fr!important;}}
+    @media(max-width:480px){.anat-grid{grid-template-columns:1fr!important;}}
+  </style>
+
+  <div style="max-width:1100px;margin:0 auto;">
+
+    <!-- HEADING -->
+    <div id="anat-heading" style="text-align:center;margin-bottom:36px;">
+      <span style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3B9EF0;display:block;margin-bottom:10px;">System Breakdown</span>
+      <h2 style="font-size:clamp(28px,4vw,40px);font-weight:900;color:#071118;letter-spacing:-0.025em;margin-bottom:10px;">Anatomy of Your Roofing System</h2>
+      <p style="color:#607080;font-size:15px;max-width:500px;margin:0 auto;line-height:1.7;">See every layer that protects your home — from the rafters to the final shingle course.</p>
+    </div>
+
+    <!-- PHOTO with pulsing dot overlays — 12 visible numbers from Owens Corning diagram -->
+    <div id="anat-img-wrap" style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(7,17,24,0.18);margin-bottom:40px;">
+      <img src="Anatomy_of_A_Roof_r082523.jpeg" alt="Anatomy of a roofing system showing all layers" style="width:100%;display:block;height:auto;">
+    </div>
+
+    <!-- LEGEND — all 14 items, 4 columns -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;" class="anat-grid">
+
+      <div class="anat-card" data-num="1" style="background:white;border-radius:12px;padding:14px 16px;border:1.5px solid #E8EEF8;display:flex;align-items:flex-start;gap:10px;">
+        <span class="anat-num" style="width:26px;height:26px;background:#D6006B;border-radius:50%;color:white;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</span>
+        <div><p style="font-weight:700;color:#071118;font-size:12px;margin-bottom:2px;">Roof Ridge</p><p style="color:#607080;font-size:11px;line-height:1.45;">Horizontal peak where two roof planes meet</p></div>
+      </div>
+
+      <div class="anat-card" data-num="2" style="background:white;border-radius:12px;padding:14px 16px;border:1.5px solid #E8EEF8;display:flex;align-items:flex-start;gap:10px;">
+        <span class="anat-num" style="width:26px;height:26px;background:#D6006B;border-radius:50%;color:white;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</span>
+        <div><p style="font-weight:700;color:#071118;font-size:12px;margin-bottom:2px;">Ridge Vent</p><p style="color:#607080;font-size:11px;line-height:1.45;">Exhaust vent along the peak for attic airflow</p></div>
+      </div>
+
+      <div class="anat-card" data-num="4" style="background:white;border-radius:12px;padding:14px 16px;border:1.5px solid #E8EEF8;display:flex;align-items:flex-start;gap:10px;">
+        <span class="anat-num" style="width:26px;height:26px;background:#D6006B;border-radius:50%;color:white;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</span>
+        <div><p style="font-weight:700;color:#071118;font-size:12px;margin-bottom:2px;">Hip</p><p style="color:#607080;font-size:11px;line-height:1.45;">Sloping ridge where two roof planes intersect</p></div>
+      </div>
+
+      <div class="anat-card" data-num="5" style="background:white;border-radius:12px;padding:14px 16px;border:1.5px solid #E8EEF8;display:flex;align-items:flex-start;gap:10px;">
+        <span class="anat-num" style="width:26px;height:26px;background:#D6006B;border-radius:50%;color:white;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">5</span>
+        <div><p style="font-weight:700;color:#071118;font-size:12px;margin-bottom:2px;">Roof Deck</p><p style="color:#607080;font-size:11px;line-height:1.45;">Structural plywood/OSB sheathing base</p></div>
+      </div>
+
+      <div class="anat-card" data-num="6" style="background:white;border-radius:12px;padding:14px 16px;border:1.5px solid #E8EEF8;display:flex;align-items:flex-start;gap:10px;">
+        <span class="anat-num" style="width:26px;height:26px;background:#D6006B;border-radius:50%;color:white;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">6</span>
+        <div><p style="font-weight:700;color:#071118;font-size:12px;margin-bottom:2px;">Roofing Underlayment</p><p style="color:#607080;font-size:11px;line-height:1.45;">Synthetic or felt moisture barrier under shingles</p></div>
+      </div>
+
+      <div class="anat-card" data-num="7" style="background:white;border-radius:12px;padding:14px 16px;border:1.5px solid #E8EEF8;display:flex;align-items:flex-start;gap:10px;">
+        <span class="anat-num" style="width:26px;height:26px;background:#D6006B;border-radius:50%;color:white;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">7</span>
+        <div><p style="font-weight:700;color:#071118;font-size:12px;margin-bottom:2px;">Roof Valley</p><p style="color:#607080;font-size:11px;line-height:1.45;">V-shaped channel where two slopes meet</p></div>
+      </div>
+
+      <div class="anat-card" data-num="8" style="background:white;border-radius:12px;padding:14px 16px;border:1.5px solid #E8EEF8;display:flex;align-items:flex-start;gap:10px;">
+        <span class="anat-num" style="width:26px;height:26px;background:#D6006B;border-radius:50%;color:white;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">8</span>
+        <div><p style="font-weight:700;color:#071118;font-size:12px;margin-bottom:2px;">Architectural Shingles</p><p style="color:#607080;font-size:11px;line-height:1.45;">Laminated shingles — primary weather layer</p></div>
+      </div>
+
+      <div class="anat-card" data-num="9" style="background:white;border-radius:12px;padding:14px 16px;border:1.5px solid #E8EEF8;display:flex;align-items:flex-start;gap:10px;">
+        <span class="anat-num" style="width:26px;height:26px;background:#D6006B;border-radius:50%;color:white;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">9</span>
+        <div><p style="font-weight:700;color:#071118;font-size:12px;margin-bottom:2px;">Roof Gable</p><p style="color:#607080;font-size:11px;line-height:1.45;">Triangular wall section at the end of a roof</p></div>
+      </div>
+
+      <div class="anat-card" data-num="10" style="background:white;border-radius:12px;padding:14px 16px;border:1.5px solid #E8EEF8;display:flex;align-items:flex-start;gap:10px;">
+        <span class="anat-num" style="width:26px;height:26px;background:#D6006B;border-radius:50%;color:white;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">10</span>
+        <div><p style="font-weight:700;color:#071118;font-size:12px;margin-bottom:2px;">Metal Drip Edge</p><p style="color:#607080;font-size:11px;line-height:1.45;">Directs water runoff away from fascia</p></div>
+      </div>
+
+      <div class="anat-card" data-num="12" style="background:white;border-radius:12px;padding:14px 16px;border:1.5px solid #E8EEF8;display:flex;align-items:flex-start;gap:10px;">
+        <span class="anat-num" style="width:26px;height:26px;background:#D6006B;border-radius:50%;color:white;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">12</span>
+        <div><p style="font-weight:700;color:#071118;font-size:12px;margin-bottom:2px;">Ice &amp; Water Barrier</p><p style="color:#607080;font-size:11px;line-height:1.45;">Self-adhering waterproofing at eaves &amp; valleys</p></div>
+      </div>
+
+      <div class="anat-card" data-num="13" style="background:white;border-radius:12px;padding:14px 16px;border:1.5px solid #E8EEF8;display:flex;align-items:flex-start;gap:10px;">
+        <span class="anat-num" style="width:26px;height:26px;background:#D6006B;border-radius:50%;color:white;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">13</span>
+        <div><p style="font-weight:700;color:#071118;font-size:12px;margin-bottom:2px;">Eave</p><p style="color:#607080;font-size:11px;line-height:1.45;">Lower roof edge that overhangs the wall</p></div>
+      </div>
+
+      <div class="anat-card" data-num="14" style="background:white;border-radius:12px;padding:14px 16px;border:1.5px solid #E8EEF8;display:flex;align-items:flex-start;gap:10px;">
+        <span class="anat-num" style="width:26px;height:26px;background:#D6006B;border-radius:50%;color:white;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">14</span>
+        <div><p style="font-weight:700;color:#071118;font-size:12px;margin-bottom:2px;">Undereave Vent</p><p style="color:#607080;font-size:11px;line-height:1.45;">Intake vent drawing cool air into the attic</p></div>
+      </div>
+
+    </div>
+    <style>
+      @media(max-width:900px){.anat-grid{grid-template-columns:repeat(3,1fr)!important;}}
+      @media(max-width:580px){.anat-grid{grid-template-columns:1fr 1fr!important;}}
+      @media(max-width:380px){.anat-grid{grid-template-columns:1fr!important;}}
+    </style>
+
+  </div>
+
+  <script>
+  (function(){
+    /* ---- scroll-in observer ---- */
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var t = e.target;
+        if(t.id==='anat-heading'||t.id==='anat-img-wrap'){ t.classList.add('in'); io.unobserve(t); }
+        if(t.classList.contains('anat-grid')){
+          var cards = t.querySelectorAll('.anat-card');
+          cards.forEach(function(c,i){ setTimeout(function(){ c.classList.add('in'); }, i*80); });
+          io.unobserve(t);
+        }
+      });
+    },{threshold:0.1});
+    ['anat-heading','anat-img-wrap'].forEach(function(id){ var el=document.getElementById(id); if(el) io.observe(el); });
+    var grid = document.querySelector('.anat-grid'); if(grid) io.observe(grid);
+
+  })();
+  </script>
+</section>
+
+<!-- ====== MAP ====== -->
+<section style="position:relative; overflow:hidden; min-height:520px; display:flex; align-items:center;">
+
+  <!-- Map iframe fills full background -->
+  <iframe
+    src="https://maps.google.com/maps?q=29.760778,-95.369490&t=&z=10&ie=UTF8&iwloc=&output=embed"
+    style="position:absolute; inset:0; width:100%; height:100%; border:0; pointer-events:none;"
+    loading="lazy">
+  </iframe>
+
+  <!-- Dark blue gradient overlay -->
+  <div style="position:absolute; inset:0; background:linear-gradient(100deg, rgba(7,17,24,0.72) 0%, rgba(7,17,24,0.55) 50%, rgba(7,17,24,0.25) 100%); pointer-events:none;"></div>
+
+  <!-- Content layer -->
+  <div style="position:relative; z-index:2; width:100%; max-width:1200px; margin:0 auto; padding:80px 28px; display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;">
+
+    <!-- Left: Heading + areas -->
+    <div style="flex:1; min-width:260px;">
+      <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#3B9EF0; display:block; margin-bottom:12px;">Where We Work</span>
+      <h2 class="m-h2-lg" style="font-size:52px; font-weight:900; color:white; line-height:1.05; letter-spacing:-0.02em; margin-bottom:24px;">Where To<br>Find Us.</h2>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px 24px; max-width:340px;">
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>Houston</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>Katy</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>Sugar Land</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>Pearland</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>The Woodlands</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>Humble</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>Baytown</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>League City</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>Cypress</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>Pasadena</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>Spring</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>Tomball</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>Missouri City</div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);"><div style="width:7px; height:7px; background:#3B9EF0; border-radius:50%; flex-shrink:0;"></div>Friendswood</div>
+      </div>
+    </div>
+
+    <!-- Right: Zip Checker Card -->
+    <div style="background:white; border-radius:16px; padding:32px; width:320px; flex-shrink:0; box-shadow:0 20px 60px rgba(0,0,0,0.25);">
+      <p style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#3B9EF0; margin-bottom:10px;">Service Area Check</p>
+      <p style="font-weight:800; color:#071118; font-size:18px; line-height:1.25; margin-bottom:6px;">Check If We Serve Your Area</p>
+      <p style="color:#888; font-size:12px; line-height:1.6; margin-bottom:20px;">Enter your zip code to find out if we service your neighborhood.</p>
+
+      <input type="text" id="zipInput" maxlength="5" placeholder="e.g. 77084"
+        style="width:100%; border:1.5px solid #dde5f0; border-radius:8px; padding:13px 16px; font-size:15px; outline:none; font-family:inherit; color:#071118; margin-bottom:10px; display:block; transition:border-color 0.2s;"
+        onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#dde5f0'"
+        oninput="this.value=this.value.replace(/[^0-9]/g,''); document.getElementById('zipResult').style.display='none';"
+        onkeydown="if(event.key==='Enter')checkZip()" />
+
+      <button onclick="checkZip()" class="btn-blue" style="width:100%; padding:14px; border-radius:8px; font-size:13px; letter-spacing:0.08em;">CHECK</button>
+
+      <div id="zipResult" style="margin-top:14px; font-size:12px; font-weight:700; display:none; padding:11px 14px; border-radius:8px; line-height:1.5;"></div>
+
+      <p style="color:#bbb; font-size:11px; text-align:center; margin-top:16px;">Serving Houston &amp; surrounding communities</p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  var servedZips = new Set([
+    77001,77002,77003,77004,77005,77006,77007,77008,77009,77010,
+    77011,77012,77013,77014,77015,77016,77017,77018,77019,77020,
+    77021,77022,77023,77024,77025,77026,77027,77028,77029,77030,
+    77031,77032,77033,77034,77035,77036,77037,77038,77039,77040,
+    77041,77042,77043,77044,77045,77046,77047,77048,77049,77050,
+    77051,77052,77053,77054,77055,77056,77057,77058,77059,77060,
+    77061,77062,77063,77064,77065,77066,77067,77068,77069,77070,
+    77071,77072,77073,77074,77075,77076,77077,77078,77079,77080,
+    77081,77082,77083,77084,77085,77086,77087,77088,77089,77090,
+    77091,77092,77093,77094,77095,77096,77097,77098,77099,
+    77201,77202,77203,77204,77205,77206,77207,77208,77209,77210,
+    77338,77339,77345,77346,77347,77365,77373,77375,77377,77379,
+    77380,77381,77382,77384,77385,77386,77387,77388,77389,77393,
+    77396,77406,77407,77429,77433,77449,77450,77459,77469,77478,
+    77479,77489,77493,77494,77496,77498,77502,77503,77504,77505,
+    77506,77507,77508,77520,77521,77522,77523,77530,77536,77546,
+    77571,77572,77573,77574,77578,77581,77584,77588,77590,77591,
+    77598
+  ].map(Number));
+
+  function checkZip() {
+    var input = document.getElementById('zipInput');
+    var result = document.getElementById('zipResult');
+    var zip = parseInt(input.value, 10);
+    result.style.display = 'block';
+    if (!input.value || input.value.length < 5) {
+      result.style.background = '#FFF8E1';
+      result.style.color = '#92400E';
+      result.innerHTML = '&#9888; Please enter a full 5-digit zip code.';
+    } else if (servedZips.has(zip)) {
+      result.style.background = '#ECFDF5';
+      result.style.color = '#065F46';
+      result.innerHTML = '&#10003; Great news — we service your area! <a href="estimate.html" style="color:#3B9EF0; text-decoration:underline; margin-left:4px;">Get a free estimate →</a>';
+    } else {
+      result.style.background = '#FEF2F2';
+      result.style.color = '#991B1B';
+      result.innerHTML = '&#10007; Outside our current area — call us, we may still help! <a href="tel:8322953277" style="color:#3B9EF0; text-decoration:underline; margin-left:4px;">832-295-3277</a>';
+    }
+  }
+</script>
+
+<!-- ====== RECENT PROJECTS (CompanyCam) ====== -->
+<section style="background:white; padding:88px 28px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <span class="section-label" style="margin-bottom:12px; display:block;">Our Work</span>
+    <h2 class="section-heading" style="margin-bottom:40px;">Recent Projects.</h2>
+    <div
+      data-showcase-id="01eff276-38c1-4675-8441-0a318df5ccde"
+      id="companycam-showcase-root"
+    ></div>
+    <script>
+      (function () {
+        var ccShowcaseRoot = document.getElementById("companycam-showcase-root");
+        if (!ccShowcaseRoot.attachShadow || !window.fetch) { return; }
+        var ccShowcaseRootParent = document.getElementsByTagName("body")[0];
+        var ccShowcaseScript = document.createElement("script");
+        ccShowcaseScript.src = 'https://showcase.companycam.com/bundle.js';
+        ccShowcaseScript.type = "text/javascript";
+        ccShowcaseRootParent.appendChild(ccShowcaseScript);
+      })();
+    </script>
+  </div>
+</section>
+
+<!-- ====== TESTIMONIALS ====== -->
+<section id="reviews" style="background:#F8FAFC; padding:88px 28px; overflow:hidden;">
+  <div style="max-width:1200px; margin:0 auto;">
+
+    <!-- Header -->
+    <div style="text-align:center; margin-bottom:56px;">
+      <span class="section-label" style="margin-bottom:12px; display:block;">Client Reviews</span>
+      <h2 class="section-heading" style="margin-bottom:14px;">What Our Clients Say.</h2>
+      <!-- Google rating summary -->
+      <div style="display:inline-flex; align-items:center; gap:10px; background:white; border:1.5px solid #edf2f7; border-radius:100px; padding:10px 22px; margin-top:8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span style="color:#F59E0B; font-size:15px; letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span style="font-weight:700; color:#071118; font-size:14px;">4.9</span>
+        <span style="color:#999; font-size:13px;">· Google Reviews</span>
+      </div>
+    </div>
+
+    <!-- 3-column infinite scroll -->
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px; height:580px; overflow:hidden; -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%); mask-image:linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);">
+
+      <!-- Column 1 — 22s -->
+      <div style="overflow:hidden;">
+        <div class="review-col" style="animation-duration:22s;">
+          <!-- reviews (duplicated below for seamless loop) -->
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Jordan and his crew were very professional, on time, and worked efficiently. I would definitely recommend his services to anyone in need of roofing work. Great price and fast service."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a/ACg8ocILDR9q6tosW1uv_b1rmvkhFMbtNCnPiUHvaXs6kdoZATyceA=w72-h72-p-rp-mo-br100" alt="Gio Gonzalez" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Gio Gonzalez</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Jordan did such a fantastic job replacing my roof. His team was very prompt and responsive. They are a hard working, dedicated team. If you need roof repair or replacement, I highly recommend!"</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjWSsGKUS3GgCkHWgQ9pNlWJs6NF7L6x3I7VJqmMHJz94go_RovkEg=w72-h72-p-rp-mo-ba3-br100" alt="Ashley Laredo" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Ashley Laredo</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"I recommend JD Roofing Solutions for your next roof repair. I called the same day, got an incredible price. Superior work and excellent customer service."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjXzrsFyLm6pVUUdQCjEOsQMst1JhSa5EJBQ8s0tYd5b1YINlxA=w72-h72-p-rp-mo-br100" alt="Ashwood Turner" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Ashwood Turner</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"JD Roofing Solutions is the company to use if you want fast, efficient and very professional work. I called on a Wednesday and they were at my home on Thursday. I highly recommend them!"</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjUquM6jq_sJxmYnub8-EoNFc_Es37k3aG5GNigzgLeKSNuIhdNe=w72-h72-p-rp-mo-br100" alt="Tania Stone" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Tania Stone</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <!-- duplicate for seamless loop -->
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Jordan and his crew were very professional, on time, and worked efficiently. I would definitely recommend his services to anyone in need of roofing work. Great price and fast service."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a/ACg8ocILDR9q6tosW1uv_b1rmvkhFMbtNCnPiUHvaXs6kdoZATyceA=w72-h72-p-rp-mo-br100" alt="Gio Gonzalez" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Gio Gonzalez</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Jordan did such a fantastic job replacing my roof. His team was very prompt and responsive. They are a hard working, dedicated team. If you need roof repair or replacement, I highly recommend!"</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjWSsGKUS3GgCkHWgQ9pNlWJs6NF7L6x3I7VJqmMHJz94go_RovkEg=w72-h72-p-rp-mo-ba3-br100" alt="Ashley Laredo" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Ashley Laredo</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"I recommend JD Roofing Solutions for your next roof repair. I called the same day, got an incredible price. Superior work and excellent customer service."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjXzrsFyLm6pVUUdQCjEOsQMst1JhSa5EJBQ8s0tYd5b1YINlxA=w72-h72-p-rp-mo-br100" alt="Ashwood Turner" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Ashwood Turner</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"JD Roofing Solutions is the company to use if you want fast, efficient and very professional work. I called on a Wednesday and they were at my home on Thursday. I highly recommend them!"</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjUquM6jq_sJxmYnub8-EoNFc_Es37k3aG5GNigzgLeKSNuIhdNe=w72-h72-p-rp-mo-br100" alt="Tania Stone" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Tania Stone</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2 — 30s (slower) -->
+      <div style="overflow:hidden;">
+        <div class="review-col" style="animation-duration:30s;">
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Very reasonable pricing and they did an amazing job roofing my house. They left the house the same way it was when they arrived. I highly recommend them to anyone looking for quality roofing work."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjUGgOq1po0xiNQvoBDKnVMzBIG2OD9czn6F2Hrq8i9bH7a12NgYZg=w72-h72-p-rp-mo-ba3-br100" alt="JDL" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">JDL</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"JD Roofing was very fast and efficient. Jordan was very professional and very respectful. He explains everything in detail. Excellent experience overall."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjU77vY-_bVLn8iRuH-2QmhIGdSvy2nlaYWt21I7HcoY1OkLBCI4=w72-h72-p-rp-mo-br100" alt="Mario Green" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Mario Green</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Jordan was very responsive and professional. His team arrived on time and did a great job replacing the roof using quality materials. They cleaned up well. I highly recommend."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjU_OknMg9u6u6WHkTB-9kQmukaNGKQycDXjDjFmOOWJu-Rz914kBA=w72-h72-p-rp-mo-br100" alt="Greg Yee" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Greg Yee</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Highly recommended — very professional, no issues at all. This team doesn't cut any corners. Very detailed and to the point. Would absolutely hire again."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjV1ISACYhh1T18ZZ9UxXYIqBBz-2zdM9zRrX0v8pzcSUFBZsKJ6=w72-h72-p-rp-mo-br100" alt="Chris Zavala" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Chris Zavala</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <!-- duplicate -->
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Very reasonable pricing and they did an amazing job roofing my house. They left the house the same way it was when they arrived. I highly recommend them to anyone looking for quality roofing work."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjUGgOq1po0xiNQvoBDKnVMzBIG2OD9czn6F2Hrq8i9bH7a12NgYZg=w72-h72-p-rp-mo-ba3-br100" alt="JDL" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">JDL</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"JD Roofing was very fast and efficient. Jordan was very professional and very respectful. He explains everything in detail. Excellent experience overall."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjU77vY-_bVLn8iRuH-2QmhIGdSvy2nlaYWt21I7HcoY1OkLBCI4=w72-h72-p-rp-mo-br100" alt="Mario Green" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Mario Green</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Jordan was very responsive and professional. His team arrived on time and did a great job replacing the roof using quality materials. They cleaned up well. I highly recommend."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjU_OknMg9u6u6WHkTB-9kQmukaNGKQycDXjDjFmOOWJu-Rz914kBA=w72-h72-p-rp-mo-br100" alt="Greg Yee" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Greg Yee</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Highly recommended — very professional, no issues at all. This team doesn't cut any corners. Very detailed and to the point. Would absolutely hire again."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjV1ISACYhh1T18ZZ9UxXYIqBBz-2zdM9zRrX0v8pzcSUFBZsKJ6=w72-h72-p-rp-mo-br100" alt="Chris Zavala" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Chris Zavala</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 3 — 18s (faster) -->
+      <div style="overflow:hidden;">
+        <div class="review-col" style="animation-duration:18s;">
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Jordan did an amazing job on our roof. He knows his craft and we are very pleased with how our roof turned out. They were fast, efficient, and very professional."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjWmrUEJF-l2BlzBW6akcmzx5O2vfziA1MseJZRs0Xgac6Z3EfVA=w72-h72-p-rp-mo-br100" alt="jaymer farzan" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">jaymer farzan</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Friendly and hard working group of roofers. I recommend them for your next roof. They cleaned up all the trash and fixed all roofing problems. My family is very happy with the result."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjVVqvDoi7es_3paFw-1tJ9DvwPmND5hx5RDlp_NgeW_UcLbVyQU=w72-h72-p-rp-mo-br100" alt="Arthur Lange" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Arthur Lange</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Jordan is very personable and professional. He scheduled the roof change in a short time frame. The job was done quickly and the crew cleaned up very well. Prices are very reasonable."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjWwpLwmdpM8Ow1QYGIGU0M8OfrCG77012SRL-3EkFpjqNWEG4RG_Q=w72-h72-p-rp-mo-ba3-br100" alt="Vittel Molina" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Vittel Molina</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"My experience with Jordan was great. He was on time and did exactly what he said he would. The price was good and everything was clean after they finished. I would highly recommend JD Roofing."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjUYbEaVd2Y1zD5AbewCDaeNxg6C9GSRUAzRlDpfkGyexNHcqqdV=w72-h72-p-rp-mo-br100" alt="Sandy Edmonds" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Sandy Edmonds</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <!-- duplicate -->
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Jordan did an amazing job on our roof. He knows his craft and we are very pleased with how our roof turned out. They were fast, efficient, and very professional."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjWmrUEJF-l2BlzBW6akcmzx5O2vfziA1MseJZRs0Xgac6Z3EfVA=w72-h72-p-rp-mo-br100" alt="jaymer farzan" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">jaymer farzan</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Friendly and hard working group of roofers. I recommend them for your next roof. They cleaned up all the trash and fixed all roofing problems. My family is very happy with the result."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjVVqvDoi7es_3paFw-1tJ9DvwPmND5hx5RDlp_NgeW_UcLbVyQU=w72-h72-p-rp-mo-br100" alt="Arthur Lange" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Arthur Lange</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"Jordan is very personable and professional. He scheduled the roof change in a short time frame. The job was done quickly and the crew cleaned up very well. Prices are very reasonable."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjWwpLwmdpM8Ow1QYGIGU0M8OfrCG77012SRL-3EkFpjqNWEG4RG_Q=w72-h72-p-rp-mo-ba3-br100" alt="Vittel Molina" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Vittel Molina</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:white; border:1.5px solid #E8EEF8; border-radius:16px; padding:24px; box-shadow:0 4px 24px rgba(59,158,240,0.07);">
+            <div style="color:#F59E0B; font-size:15px; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#444; font-size:13px; line-height:1.78; margin-bottom:18px;">"My experience with Jordan was great. He was on time and did exactly what he said he would. The price was good and everything was clean after they finished. I would highly recommend JD Roofing."</p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjUYbEaVd2Y1zD5AbewCDaeNxg6C9GSRUAzRlDpfkGyexNHcqqdV=w72-h72-p-rp-mo-br100" alt="Sandy Edmonds" style="width:40px; height:40px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+              <div><div style="font-weight:700; color:#071118; font-size:13px; line-height:1.3;">Sandy Edmonds</div><div style="color:#999; font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOLLOW US ====== -->
+<section style="background:#F8FAFF; padding:88px 28px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <span class="section-label" style="margin-bottom:12px;">Stay Connected</span>
+    <h2 class="section-heading" style="margin-bottom:40px;">Follow Us.</h2>
+    <!-- Elfsight Social Feed | Untitled Social Feed -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-f685e824-10a8-4ed2-bc1f-705edaf0eacb" data-elfsight-app-lazy></div>
+  </div>
+</section>
+
+<!-- ====== BOTTOM CTA ====== -->
+<section style="background:#F8FAFF; padding:0 16px 60px;">
+  <div style="position:relative; overflow:hidden; border-radius:16px; max-width:1280px; margin:0 auto; padding:52px 52px; box-shadow:0 20px 60px rgba(0,0,0,0.22);">
+    <!-- Background roof photo -->
+    <img src="brand_assets/top view.webp" alt="" aria-hidden="true"
+         style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;">
+    <!-- Dark overlay -->
+    <div style="position:absolute; inset:0; background:rgba(5,12,20,0.80);"></div>
+    <!-- Subtle blue glow -->
+    <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 30% 50%, rgba(59,158,240,0.14) 0%, transparent 60%);"></div>
+
+    <div style="position:relative; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+      <div>
+        <h2 style="font-size:32px; font-weight:800; color:white; margin-bottom:8px; letter-spacing:-0.02em;">Age Is Just a Number — Protect Your Roof!</h2>
+        <p style="color:rgba(255,255,255,0.6); font-size:14px;">Don't wait for the next storm. Schedule your free inspection today.</p>
+      </div>
+      <a href="estimate.html" class="btn-blue" style="font-size:14px; padding:17px 40px; white-space:nowrap;">Get My Free Inspection &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer style="background:#071118; border-top:1px solid #0F1F35; padding:60px 28px 28px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div class="m-footer" style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; margin-bottom:48px;">
+
+      <div>
+        <div style="margin-bottom:18px;">
+          <img src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" style="height:80px; width:auto;">
+        </div>
+        <p style="color:#607080; font-size:13px; line-height:1.75; max-width:260px; margin-bottom:22px;">Houston's trusted roofing experts — delivering quality craftsmanship and unparalleled service across the greater Houston metro area.</p>
+        <div style="display:flex; gap:12px;">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/JDRoofingSolutions/" target="_blank" rel="noopener" aria-label="Facebook" style="width:34px; height:34px; background:#0F1F35; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background 0.2s;" onmouseover="this.style.background='#1877F2'" onmouseout="this.style.background='#0F1F35'">
+            <svg width="14" height="14" fill="#93AABF" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/jdroofingsolutions/" target="_blank" rel="noopener" aria-label="Instagram" style="width:34px; height:34px; background:#0F1F35; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background 0.2s;" onmouseover="this.style.background='#E1306C'" onmouseout="this.style.background='#0F1F35'">
+            <svg width="14" height="14" fill="none" stroke="#93AABF" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <!-- Google Business -->
+          <a href="https://share.google/oai32PGM5oZx6rDlt" target="_blank" rel="noopener" aria-label="Google Business" style="width:34px; height:34px; background:#0F1F35; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background 0.2s;" onmouseover="this.style.background='#4285F4'" onmouseout="this.style.background='#0F1F35'">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#93AABF"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          </a>
+          <!-- Google Reviews -->
+          <a href="https://www.google.com/search?q=jd+roofing+solutions&rlz=1C5BAPC_enUS1188US1192&sca_esv=267922cfa28b0bd4&biw=1976&bih=1226&sxsrf=ANbL-n5_NRS2Ry6Pp0ai8vSKpLtur5NC4g%3A1777392736599&ei=YNzwaZWfJIKEqtsP5f30sQI&gs_ssp=eJzj4tVP1zc0zIg3NE8vTis0YLRSNaiwMDMxSLa0SLa0NE9MtDBMszKoSLVINDI0MDEyNjRNNkpMNvcSyUpRKMrPT8vMS1cozs8pLcnMzysGADDbFuw&oq=jd+roofing&gs_lp=Egxnd3Mtd2l6LXNlcnAiCmpkIHJvb2ZpbmcqAggBMgQQIxgnMhMQLhivARjHARiABBiKBRiOBRgnMgQQIxgnMgQQIxgnMgsQABiABBiKBRiRAjIKEAAYgAQYigUYQzIGEAAYBxgeMgUQABiABDIFEAAYgAQyBRAAGIAESOwRULcDWJgGcAF4AZABAJgBZKABgwKqAQMyLjG4AQHIAQD4AQGYAgSgApACwgIKEAAYRxjWBBiwA8ICBxAAGIAEGA3CAg0QLhgNGK8BGMcBGIAEwgIHECMYsAIYJ8ICEBAuGIAEGA0YxwEYrwEYjgWYAwCIBgGQBgiSBwMzLjGgB6EosgcDMi4xuAeOAsIHAzAuNMgHCYAIAQ&sclient=gws-wiz-serp#lrd=0x8640c98c997aa81f:0xe8a21042315c2ac7,1,,,," target="_blank" rel="noopener" aria-label="Google Reviews" style="width:34px; height:34px; background:#0F1F35; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background 0.2s;" onmouseover="this.style.background='#FBBC04'" onmouseout="this.style.background='#0F1F35'">
+            <svg width="14" height="14" fill="#93AABF" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </a>
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@jdroofingsolutions" target="_blank" rel="noopener" aria-label="TikTok" style="width:34px; height:34px; background:#0F1F35; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background 0.2s;" onmouseover="this.style.background='#010101'" onmouseout="this.style.background='#0F1F35'">
+            <svg width="14" height="14" fill="#93AABF" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 style="color:white; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:18px;">Services</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li><a href="roof-replacement.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Replacement</a></li>
+          <li><a href="roof-repair.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Repair</a></li>
+          <li><a href="storm-damage.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Storm &amp; Hail Damage</a></li>
+          <li><a href="commercial-roofing.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Commercial Roofing</a></li>
+          <li><a href="insurance-claims.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Insurance Claims</a></li>
+          <li><a href="roof-inspection.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Inspection</a></li>
+          <li><a href="https://jdroofingsolutions.com/roof-maintenance" target="_blank" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Maintenance</a></li>
+          <li><a href="https://jdroofingsolutions.com/attic-ventilation" target="_blank" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Attic Ventilation</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color:white; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:18px;">Service Areas</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li><a href="city.html?city=houston" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Houston</a></li>
+          <li><a href="city.html?city=katy" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Katy</a></li>
+          <li><a href="city.html?city=sugar-land" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Sugar Land</a></li>
+          <li><a href="city.html?city=the-woodlands" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">The Woodlands</a></li>
+          <li><a href="city.html?city=pearland" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Pearland</a></li>
+          <li><a href="city.html?city=cypress" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Cypress</a></li>
+          <li><a href="city.html?city=humble" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Humble</a></li>
+          <li><a href="city.html?city=baytown" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Baytown</a></li>
+          <li><a href="city.html?city=league-city" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">League City</a></li>
+          <li><a href="city.html?city=pasadena" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Pasadena</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color:white; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:18px;">Contact</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li><a href="tel:8322953277" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">832-295-3277</a></li>
+          <li><a href="mailto:jdroofingsolutions06@gmail.com" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">jdroofingsolutions06@gmail.com</a></li>
+          <li style="color:#607080; font-size:13px;">10108 Veterans Memorial Dr</li>
+          <li style="color:#607080; font-size:13px;">Houston, TX 77014</li>
+          <li style="color:#607080; font-size:13px;">Mon–Fri: 9am–5pm</li>
+          <li style="color:#607080; font-size:13px;">24/7 Emergency Line</li>
+        </ul>
+      </div>
+
+    </div>
+    <div style="border-top:1px solid #0F1F35; padding-top:22px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;">
+      <p style="color:#3A4A5A; font-size:11px;">&copy; 2025 JD Roofing Solutions. All rights reserved. &nbsp;|&nbsp; Licensed &amp; Insured</p>
+      <div style="display:flex; gap:20px;">
+        <a href="#" style="color:#3A4A5A; font-size:11px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#3A4A5A'">Privacy Policy</a>
+        <a href="#" style="color:#3A4A5A; font-size:11px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#3A4A5A'">Terms of Service</a>
+        <a href="#" style="color:#3A4A5A; font-size:11px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#3A4A5A'">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var nav = document.getElementById('main-nav');
+    function updateNav() {
+      if (window.scrollY > 60) {
+        nav.classList.add('scrolled');
+        nav.style.background = 'white';
+        nav.style.boxShadow = '0 2px 16px rgba(7,17,24,0.1)';
+      } else {
+        nav.classList.remove('scrolled');
+        nav.style.background = 'transparent';
+        nav.style.boxShadow = 'none';
+      }
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+  })();
+</script>
+</body>
+</html>

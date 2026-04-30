@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roofing Financing | JD Roofing Solutions — Affordable Payment Plans Houston</title>
+  <meta name="description" content="Flexible roofing financing with plans starting at 0% APR. JD Roofing Solutions offers easy monthly payments with fast approval for Houston homeowners.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *{font-family:'Open Sans',Arial,sans-serif;box-sizing:border-box;margin:0;padding:0;}
+    body{font-size:14px;line-height:1.7;font-weight:500;color:#444;background:#fff;-webkit-font-smoothing:antialiased;}
+    a{text-decoration:none;}
+    .nav-link{color:white;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;transition:color 0.2s;}
+    .nav-link:hover,.nav-link.active{color:#3B9EF0;}
+    .btn-blue{background:#3B9EF0;color:white;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.06em;padding:11px 22px;border-radius:3px;border:none;cursor:pointer;display:inline-block;transition:background 0.2s,transform 0.15s;}
+    .btn-blue:hover{background:#2589D8;}
+    .btn-blue:active{transform:scale(0.98);}
+    .nav-dropdown-wrap{position:relative;}
+    .nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:rgba(7,17,24,0.98);border:1px solid rgba(59,158,240,0.22);border-radius:10px;padding:8px 0;min-width:210px;box-shadow:0 12px 40px rgba(0,0,0,0.5);z-index:100;}
+    .nav-dropdown-wrap:hover .nav-dropdown{display:block;}
+    .nav-dropdown a{display:block;padding:11px 20px;color:#9AAABB;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;border-bottom:1px solid rgba(255,255,255,0.05);transition:color 0.2s,background 0.2s;}
+    .nav-dropdown a:last-child{border-bottom:none;}
+    .nav-dropdown a:hover{color:#3B9EF0;background:rgba(59,158,240,0.07);}
+    .mob-services-btn{display:flex;justify-content:space-between;align-items:center;width:100%;color:white;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;padding:17px 24px;background:transparent;border:none;cursor:pointer;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mob-services-btn:hover,.mob-services-btn.active{color:#3B9EF0;}
+    .mob-services-btn .arr{transition:transform 0.22s;}
+    .mob-services-btn.active .arr{transform:rotate(180deg);}
+    .mob-services-sub{display:none;background:rgba(0,0,0,0.18);}
+    .mob-services-sub.open{display:block;}
+    .mob-services-sub a{display:block!important;padding:13px 24px 13px 36px!important;color:#889!important;font-size:12px!important;letter-spacing:0.06em!important;border-bottom:1px solid rgba(255,255,255,0.04)!important;}
+    .mob-services-sub a:hover{color:#3B9EF0!important;}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:transparent;border:none;}
+    .nav-hamburger span{width:22px;height:2px;background:white;display:block;border-radius:1px;}
+    .mobile-menu{display:none;position:fixed;top:88px;left:0;right:0;background:rgba(7,17,24,0.98);z-index:49;flex-direction:column;border-top:1px solid rgba(59,158,240,0.2);box-shadow:0 12px 40px rgba(0,0,0,0.5);}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{color:white;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;padding:17px 24px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color 0.2s;}
+    .mobile-menu a:hover{color:#3B9EF0;}
+    .mobile-menu .m-tel{color:#3B9EF0;border-bottom:none;}
+    /* plan cards */
+    .plan-card{background:white;border-radius:22px;padding:36px 32px;border:2px solid #EDF2F7;transition:transform 0.32s cubic-bezier(0.22,1,0.36,1),box-shadow 0.32s,border-color 0.2s;cursor:default;position:relative;overflow:hidden;}
+    .plan-card:hover{transform:translateY(-8px);box-shadow:0 24px 64px rgba(59,158,240,0.14);border-color:#3B9EF0;}
+    .plan-card.featured{background:#071118;border-color:#3B9EF0;box-shadow:0 12px 48px rgba(59,158,240,0.22);}
+    .plan-card.featured:hover{transform:translateY(-8px);box-shadow:0 28px 72px rgba(59,158,240,0.32);}
+    /* step card */
+    .step-card{background:rgba(255,255,255,0.04);border:1px solid rgba(59,158,240,0.15);border-radius:20px;padding:36px 28px;transition:transform 0.32s cubic-bezier(0.22,1,0.36,1),border-color 0.2s,box-shadow 0.32s;}
+    .step-card:hover{transform:translateY(-6px);border-color:rgba(59,158,240,0.5);box-shadow:0 20px 56px rgba(59,158,240,0.18);}
+    /* FAQ */
+    .faq-item{border-bottom:1px solid #EDF2F7;}
+    .faq-q{width:100%;background:transparent;border:none;text-align:left;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:15px;font-weight:700;color:#071118;gap:20px;}
+    .faq-q:hover{color:#3B9EF0;}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.38s cubic-bezier(0.22,1,0.36,1);}
+    .faq-a.open{max-height:300px;}
+    .faq-icon{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#EDF6FF;display:flex;align-items:center;justify-content:center;transition:background 0.2s,transform 0.22s;}
+    .faq-q:hover .faq-icon{background:#3B9EF0;}
+    .faq-q:hover .faq-icon svg{stroke:white;}
+    .faq-icon.open{background:#3B9EF0;transform:rotate(45deg);}
+    .faq-icon.open svg{stroke:white;}
+    /* fade-up */
+    .fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.6s ease,transform 0.6s ease;}
+    .fade-up.in{opacity:1;transform:translateY(0);}
+    @media(max-width:768px){
+      .nav-links-desktop,.nav-cta-desktop{display:none!important;}
+      .nav-hamburger{display:flex!important;}
+      .m-footer{grid-template-columns:1fr 1fr!important;gap:28px!important;}
+      .m-hide{display:none!important;}
+      .plans-grid{grid-template-columns:1fr!important;}
+      .steps-grid{grid-template-columns:1fr!important;}
+      .benefits-grid{grid-template-columns:1fr 1fr!important;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav" style="background:transparent;position:fixed;top:0;left:0;right:0;z-index:50;transition:background 0.35s,box-shadow 0.35s;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 28px;height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+    <a href="index.html"><img src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" style="height:80px;width:auto;"></a>
+    <div class="nav-links-desktop" style="display:flex;align-items:center;gap:28px;">
+      <a href="index.html" class="nav-link">Home</a>
+      <div class="nav-dropdown-wrap">
+        <a href="index.html#services" class="nav-link" style="display:flex;align-items:center;gap:5px;">Services<svg class="arr" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="nav-dropdown">
+          <a href="roof-replacement.html">Roof Replacement</a>
+          <a href="roof-repair.html">Roof Repair</a>
+          <a href="storm-damage.html">Storm &amp; Hail Damage</a>
+          <a href="commercial-roofing.html">Commercial Roofing</a>
+          <a href="insurance-claims.html">Insurance Claims</a>
+          <a href="roof-inspection.html">Roof Inspection</a>
+        </div>
+      </div>
+      <a href="reviews.html" class="nav-link">Reviews</a>
+      <a href="financing.html" class="nav-link active">Financing</a>
+      <a href="estimate.html" class="nav-link">Contact Us</a>
+    </div>
+    <div class="nav-cta-desktop" style="display:flex;align-items:center;gap:18px;">
+      <a href="tel:8322953277" style="color:white;font-size:13px;font-weight:700;white-space:nowrap;">&#9990; 832-295-3277</a>
+      <a href="estimate.html" class="btn-blue">Free Inspection</a>
+    </div>
+    <button class="nav-hamburger" onclick="document.getElementById('mmenu').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mmenu">
+  <a href="index.html">Home</a>
+  <button class="mob-services-btn" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('open')">Services<svg class="arr" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+  <div class="mob-services-sub">
+    <a href="roof-replacement.html">Roof Replacement</a>
+    <a href="roof-repair.html">Roof Repair</a>
+    <a href="storm-damage.html">Storm &amp; Hail Damage</a>
+    <a href="commercial-roofing.html">Commercial Roofing</a>
+    <a href="insurance-claims.html">Insurance Claims</a>
+    <a href="roof-inspection.html">Roof Inspection</a>
+  </div>
+  <a href="reviews.html">Reviews</a>
+  <a href="financing.html" style="color:#3B9EF0!important;">Financing</a>
+  <a href="estimate.html">Contact Us</a>
+  <a href="tel:8322953277" class="m-tel">&#9990; 832-295-3277</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section style="padding-top:88px;background:#071118;min-height:72vh;display:flex;align-items:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(59,158,240,0.18) 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(251,188,4,0.09) 0%,transparent 45%),radial-gradient(ellipse at 60% 80%,rgba(59,158,240,0.08) 0%,transparent 40%);"></div>
+  <div style="position:absolute;inset:0;opacity:0.025;background-image:linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px);background-size:48px 48px;"></div>
+  <div style="position:absolute;right:4%;top:5%;font-size:420px;line-height:1;color:rgba(59,158,240,0.04);font-weight:900;pointer-events:none;user-select:none;font-family:Georgia,serif;">$</div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:80px 28px;position:relative;z-index:1;width:100%;display:grid;grid-template-columns:1fr auto;align-items:center;gap:60px;" class="m-hero-grid">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(251,188,4,0.1);border:1px solid rgba(251,188,4,0.28);border-radius:20px;padding:7px 16px;margin-bottom:28px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FBBC04" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <span style="color:#FBBC04;font-size:12px;font-weight:700;">Fast Approval · No Hidden Fees · All Credit Types Welcome</span>
+      </div>
+      <h1 style="font-size:clamp(36px,6vw,66px);font-weight:900;color:white;letter-spacing:-0.035em;line-height:1.0;margin-bottom:20px;">
+        Don't Wait to<br>Fix Your Roof.<br><span style="color:#3B9EF0;">We Make It Easy.</span>
+      </h1>
+      <p style="color:#8AAABB;font-size:16px;line-height:1.85;max-width:520px;margin-bottom:36px;">Flexible payment plans starting at 0% APR. Protect your home today and pay over time — no stress, no surprises, no out-of-pocket pressure.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+        <a href="estimate.html" class="btn-blue" style="padding:16px 32px;font-size:14px;display:inline-flex;align-items:center;gap:9px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          Check If I Qualify
+        </a>
+        <a href="tel:8322953277" style="display:inline-flex;align-items:center;gap:8px;color:white;font-weight:700;font-size:14px;padding:16px 28px;border:1.5px solid rgba(255,255,255,0.2);border-radius:3px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#3B9EF0'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)'">
+          &#9990; 832-295-3277
+        </a>
+      </div>
+      <div style="display:flex;align-items:center;gap:24px;margin-top:36px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:7px;color:#607080;font-size:12px;font-weight:600;">
+          <svg width="14" height="14" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Approval in 60 Seconds
+        </div>
+        <div style="display:flex;align-items:center;gap:7px;color:#607080;font-size:12px;font-weight:600;">
+          <svg width="14" height="14" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          No Impact to Credit Score
+        </div>
+        <div style="display:flex;align-items:center;gap:7px;color:#607080;font-size:12px;font-weight:600;">
+          <svg width="14" height="14" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          Plans from $89/mo
+        </div>
+      </div>
+    </div>
+
+    <!-- hero right card -->
+    <div class="m-hide" style="background:rgba(255,255,255,0.04);border:1.5px solid rgba(59,158,240,0.2);border-radius:24px;padding:36px 32px;backdrop-filter:blur(12px);min-width:280px;">
+      <div style="text-align:center;margin-bottom:28px;">
+        <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#3B9EF0;margin-bottom:10px;">Starting From</div>
+        <div style="font-size:72px;font-weight:900;color:white;letter-spacing:-0.04em;line-height:1;">0%</div>
+        <div style="color:#FBBC04;font-size:14px;font-weight:700;margin-top:4px;">APR Promotional Rate</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="display:flex;align-items:center;gap:12px;background:rgba(59,158,240,0.07);border-radius:10px;padding:12px 16px;">
+          <svg width="18" height="18" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span style="color:white;font-size:13px;font-weight:600;">Terms up to 15 years</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;background:rgba(59,158,240,0.07);border-radius:10px;padding:12px 16px;">
+          <svg width="18" height="18" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span style="color:white;font-size:13px;font-weight:600;">All credit scores considered</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;background:rgba(59,158,240,0.07);border-radius:10px;padding:12px 16px;">
+          <svg width="18" height="18" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span style="color:white;font-size:13px;font-weight:600;">Same-day approval possible</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;background:rgba(59,158,240,0.07);border-radius:10px;padding:12px 16px;">
+          <svg width="18" height="18" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span style="color:white;font-size:13px;font-weight:600;">No prepayment penalties</span>
+        </div>
+      </div>
+      <a href="estimate.html" class="btn-blue" style="display:block;text-align:center;padding:15px;margin-top:24px;font-size:13px;">Apply Now — It's Free</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS STRIP ===== -->
+<section style="background:#0F1F35;padding:0 28px;border-top:1px solid rgba(59,158,240,0.15);border-bottom:1px solid rgba(59,158,240,0.15);">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);">
+    <div style="padding:28px 20px;text-align:center;border-right:1px solid rgba(255,255,255,0.06);">
+      <div style="font-size:38px;font-weight:900;color:#3B9EF0;letter-spacing:-0.03em;line-height:1;">0%</div>
+      <div style="color:#607080;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-top:6px;">APR Available</div>
+    </div>
+    <div style="padding:28px 20px;text-align:center;border-right:1px solid rgba(255,255,255,0.06);">
+      <div style="font-size:38px;font-weight:900;color:#3B9EF0;letter-spacing:-0.03em;line-height:1;">60s</div>
+      <div style="color:#607080;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-top:6px;">Approval Time</div>
+    </div>
+    <div style="padding:28px 20px;text-align:center;border-right:1px solid rgba(255,255,255,0.06);">
+      <div style="font-size:38px;font-weight:900;color:#3B9EF0;letter-spacing:-0.03em;line-height:1;">15yr</div>
+      <div style="color:#607080;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-top:6px;">Max Term Length</div>
+    </div>
+    <div style="padding:28px 20px;text-align:center;">
+      <div style="font-size:38px;font-weight:900;color:#3B9EF0;letter-spacing:-0.03em;line-height:1;">$0</div>
+      <div style="color:#607080;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-top:6px;">Down Payment Option</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section style="background:#071118;padding:96px 28px;overflow:hidden;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:64px;" class="fade-up">
+      <span style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3B9EF0;display:block;margin-bottom:10px;">Simple Process</span>
+      <h2 style="font-size:clamp(32px,5vw,48px);font-weight:900;color:white;letter-spacing:-0.03em;line-height:1.05;">How Financing Works</h2>
+      <p style="color:#607080;font-size:15px;margin-top:16px;max-width:500px;margin-left:auto;margin-right:auto;">Get your roof done today. Three steps, no stress.</p>
+    </div>
+
+    <div class="steps-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div class="step-card fade-up">
+        <div style="width:56px;height:56px;background:rgba(59,158,240,0.12);border:2px solid rgba(59,158,240,0.3);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+          <svg width="24" height="24" fill="none" stroke="#3B9EF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+        <div style="display:inline-block;background:rgba(59,158,240,0.1);color:#3B9EF0;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:16px;">Step 01</div>
+        <h3 style="color:white;font-size:20px;font-weight:800;margin-bottom:12px;letter-spacing:-0.02em;">Check Your Options</h3>
+        <p style="color:#607080;font-size:14px;line-height:1.8;">Call us or submit a contact form. We'll walk you through financing options that fit your budget — zero obligation, zero pressure.</p>
+      </div>
+
+      <div class="step-card fade-up" style="transition-delay:0.1s;">
+        <div style="width:56px;height:56px;background:rgba(59,158,240,0.12);border:2px solid rgba(59,158,240,0.3);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+          <svg width="24" height="24" fill="none" stroke="#3B9EF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <div style="display:inline-block;background:rgba(59,158,240,0.1);color:#3B9EF0;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:16px;">Step 02</div>
+        <h3 style="color:white;font-size:20px;font-weight:800;margin-bottom:12px;letter-spacing:-0.02em;">Get Approved Fast</h3>
+        <p style="color:#607080;font-size:14px;line-height:1.8;">Quick application with approval decisions in as little as 60 seconds. All credit types considered — we work to get everyone approved.</p>
+      </div>
+
+      <div class="step-card fade-up" style="transition-delay:0.2s;">
+        <div style="width:56px;height:56px;background:rgba(59,158,240,0.12);border:2px solid rgba(59,158,240,0.3);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+          <svg width="24" height="24" fill="none" stroke="#3B9EF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div style="display:inline-block;background:rgba(59,158,240,0.1);color:#3B9EF0;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:16px;">Step 03</div>
+        <h3 style="color:white;font-size:20px;font-weight:800;margin-bottom:12px;letter-spacing:-0.02em;">Protect Your Home</h3>
+        <p style="color:#607080;font-size:14px;line-height:1.8;">We start your roof immediately after approval. Pay comfortable monthly installments while your family stays covered and protected.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PLANS ===== -->
+<section style="background:white;padding:96px 28px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:64px;" class="fade-up">
+      <span style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3B9EF0;display:block;margin-bottom:10px;">Payment Options</span>
+      <h2 style="font-size:clamp(32px,5vw,48px);font-weight:900;color:#071118;letter-spacing:-0.03em;line-height:1.05;">Plans Built for<br>Every Budget</h2>
+    </div>
+
+    <div class="plans-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+      <!-- Plan 1 -->
+      <div class="plan-card fade-up">
+        <div style="margin-bottom:8px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#607080;">STARTER</span>
+        </div>
+        <div style="font-size:48px;font-weight:900;color:#071118;letter-spacing:-0.04em;line-height:1.1;margin-bottom:4px;">0%<span style="font-size:20px;font-weight:700;color:#607080;"> APR</span></div>
+        <div style="color:#3B9EF0;font-size:13px;font-weight:700;margin-bottom:28px;">12-Month Promotional Period</div>
+        <div style="border-top:1px solid #EDF2F7;padding-top:24px;display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="color:#444;font-size:14px;">Zero interest for 12 months</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="color:#444;font-size:14px;">No prepayment penalty</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="color:#444;font-size:14px;">Good/excellent credit preferred</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="color:#444;font-size:14px;">Lowest possible monthly payment</span>
+          </div>
+        </div>
+        <a href="estimate.html" style="display:block;text-align:center;padding:14px;border:2px solid #3B9EF0;border-radius:8px;color:#3B9EF0;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.06em;transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='#3B9EF0';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#3B9EF0'">Get This Plan</a>
+      </div>
+
+      <!-- Plan 2 — Featured -->
+      <div class="plan-card featured fade-up" style="transition-delay:0.1s;">
+        <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:#3B9EF0;color:white;font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:5px 18px;border-radius:0 0 10px 10px;">Most Popular</div>
+        <div style="margin-bottom:8px;margin-top:16px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#607080;">STANDARD</span>
+        </div>
+        <div style="font-size:48px;font-weight:900;color:white;letter-spacing:-0.04em;line-height:1.1;margin-bottom:4px;">Low<span style="font-size:20px;font-weight:700;color:#607080;"> Rate</span></div>
+        <div style="color:#3B9EF0;font-size:13px;font-weight:700;margin-bottom:28px;">Fixed Rate · Up to 7 Years</div>
+        <div style="border-top:1px solid rgba(255,255,255,0.07);padding-top:24px;display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="color:#c8dff0;font-size:14px;">Fixed monthly payments</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="color:#c8dff0;font-size:14px;">Fair credit welcome (580+)</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="color:#c8dff0;font-size:14px;">No down payment required</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="color:#c8dff0;font-size:14px;">Plans from ~$89/month</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" fill="none" stroke="#FBBC04" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="color:#FBBC04;font-size:14px;font-weight:700;">No prepayment penalties</span>
+          </div>
+        </div>
+        <a href="estimate.html" class="btn-blue" style="display:block;text-align:center;padding:15px;font-size:13px;">Get This Plan</a>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="plan-card fade-up" style="transition-delay:0.2s;">
+        <div style="margin-bottom:8px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#607080;">EXTENDED</span>
+        </div>
+        <div style="font-size:48px;font-weight:900;color:#071118;letter-spacing:-0.04em;line-height:1.1;margin-bottom:4px;">15yr<span style="font-size:20px;font-weight:700;color:#607080;"> term</span></div>
+        <div style="color:#3B9EF0;font-size:13px;font-weight:700;margin-bottom:28px;">Lowest Monthly Payment Option</div>
+        <div style="border-top:1px solid #EDF2F7;padding-top:24px;display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="color:#444;font-size:14px;">Maximum term — lowest payment</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="color:#444;font-size:14px;">All credit types considered</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="color:#444;font-size:14px;">Ideal for large projects</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="color:#444;font-size:14px;">Pay off early with no penalty</span>
+          </div>
+        </div>
+        <a href="estimate.html" style="display:block;text-align:center;padding:14px;border:2px solid #3B9EF0;border-radius:8px;color:#3B9EF0;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.06em;transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='#3B9EF0';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#3B9EF0'">Get This Plan</a>
+      </div>
+
+    </div>
+    <p style="text-align:center;color:#aaa;font-size:12px;margin-top:28px;">*Rates and terms subject to credit approval. Contact us for a personalized quote.</p>
+  </div>
+</section>
+
+<!-- ===== PHOTO TRUST BANNER ===== -->
+<section style="position:relative;overflow:hidden;min-height:420px;display:flex;align-items:center;">
+  <img src="Brand_assets/roof1.webp" alt="Completed roof project" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+  <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(7,17,24,0.93) 0%,rgba(7,17,24,0.7) 60%,rgba(7,17,24,0.2) 100%);"></div>
+  <div style="position:absolute;inset:0;background:rgba(59,158,240,0.07);mix-blend-mode:multiply;"></div>
+  <div style="max-width:1200px;margin:0 auto;padding:80px 28px;position:relative;z-index:1;width:100%;">
+    <div style="max-width:600px;">
+      <span style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FBBC04;display:block;margin-bottom:14px;">Insurance Claims Too</span>
+      <h2 style="font-size:clamp(28px,5vw,44px);font-weight:900;color:white;letter-spacing:-0.03em;line-height:1.1;margin-bottom:20px;">Storm Damage?<br>You May Owe Nothing.</h2>
+      <p style="color:rgba(255,255,255,0.75);font-size:15px;line-height:1.8;margin-bottom:32px;">Most hail and wind damage claims are fully covered by homeowners insurance. JD Roofing works directly with your insurance adjuster — many of our customers pay $0 out of pocket.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="estimate.html" class="btn-blue" style="padding:15px 30px;font-size:14px;">Start My Claim</a>
+        <a href="tel:8322953277" style="display:inline-flex;align-items:center;gap:8px;color:white;font-weight:700;font-size:14px;padding:15px 24px;border:1.5px solid rgba(255,255,255,0.3);border-radius:3px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#3B9EF0'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'">&#9990; Call Us Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BENEFITS GRID ===== -->
+<section style="background:#071118;padding:96px 28px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:64px;" class="fade-up">
+      <span style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3B9EF0;display:block;margin-bottom:10px;">Why Finance With Us</span>
+      <h2 style="font-size:clamp(32px,5vw,48px);font-weight:900;color:white;letter-spacing:-0.03em;line-height:1.05;">Every Advantage,<br>In Your Corner.</h2>
+    </div>
+    <div class="benefits-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
+      <div class="step-card fade-up" style="text-align:center;padding:40px 28px;">
+        <div style="width:60px;height:60px;background:rgba(59,158,240,0.1);border:2px solid rgba(59,158,240,0.25);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="26" height="26" fill="none" stroke="#3B9EF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 style="color:white;font-size:17px;font-weight:800;margin-bottom:10px;">Soft Credit Check Only</h3>
+        <p style="color:#607080;font-size:14px;line-height:1.75;">Pre-qualify without affecting your credit score. We use a soft pull to show you your options first.</p>
+      </div>
+
+      <div class="step-card fade-up" style="text-align:center;padding:40px 28px;transition-delay:0.08s;">
+        <div style="width:60px;height:60px;background:rgba(59,158,240,0.1);border:2px solid rgba(59,158,240,0.25);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="26" height="26" fill="none" stroke="#3B9EF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 style="color:white;font-size:17px;font-weight:800;margin-bottom:10px;">Fast Decisions</h3>
+        <p style="color:#607080;font-size:14px;line-height:1.75;">Get a financing decision in as little as 60 seconds. Don't wait weeks to protect your home.</p>
+      </div>
+
+      <div class="step-card fade-up" style="text-align:center;padding:40px 28px;transition-delay:0.16s;">
+        <div style="width:60px;height:60px;background:rgba(59,158,240,0.1);border:2px solid rgba(59,158,240,0.25);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="26" height="26" fill="none" stroke="#3B9EF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <h3 style="color:white;font-size:17px;font-weight:800;margin-bottom:10px;">Predictable Payments</h3>
+        <p style="color:#607080;font-size:14px;line-height:1.75;">Fixed rates mean your monthly payment never changes. Budget with confidence from day one.</p>
+      </div>
+
+      <div class="step-card fade-up" style="text-align:center;padding:40px 28px;transition-delay:0.06s;">
+        <div style="width:60px;height:60px;background:rgba(59,158,240,0.1);border:2px solid rgba(59,158,240,0.25);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="26" height="26" fill="none" stroke="#3B9EF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3 style="color:white;font-size:17px;font-weight:800;margin-bottom:10px;">All Credit Types</h3>
+        <p style="color:#607080;font-size:14px;line-height:1.75;">Less-than-perfect credit? We still have options. We work with multiple lenders to find you a solution.</p>
+      </div>
+
+      <div class="step-card fade-up" style="text-align:center;padding:40px 28px;transition-delay:0.14s;">
+        <div style="width:60px;height:60px;background:rgba(59,158,240,0.1);border:2px solid rgba(59,158,240,0.25);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="26" height="26" fill="none" stroke="#3B9EF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3 style="color:white;font-size:17px;font-weight:800;margin-bottom:10px;">Protect What Matters</h3>
+        <p style="color:#607080;font-size:14px;line-height:1.75;">Your family's safety shouldn't wait for savings. Financing lets you act now and keep your home dry.</p>
+      </div>
+
+      <div class="step-card fade-up" style="text-align:center;padding:40px 28px;transition-delay:0.22s;">
+        <div style="width:60px;height:60px;background:rgba(59,158,240,0.1);border:2px solid rgba(59,158,240,0.25);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="26" height="26" fill="none" stroke="#3B9EF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 style="color:white;font-size:17px;font-weight:800;margin-bottom:10px;">Houston-Based Team</h3>
+        <p style="color:#607080;font-size:14px;line-height:1.75;">We're your neighbors. Local company, local accountability — we'll be here long after your roof is done.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section style="background:white;padding:96px 28px;">
+  <div style="max-width:820px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:56px;" class="fade-up">
+      <span style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3B9EF0;display:block;margin-bottom:10px;">Got Questions?</span>
+      <h2 style="font-size:clamp(30px,5vw,44px);font-weight:900;color:#071118;letter-spacing:-0.03em;line-height:1.05;">Financing FAQ</h2>
+    </div>
+
+    <div class="fade-up">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Does applying affect my credit score?
+          <div class="faq-icon"><svg width="12" height="12" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p style="color:#607080;font-size:14px;line-height:1.85;padding-bottom:22px;">Pre-qualifying uses a soft credit inquiry which does not affect your credit score at all. Only if you proceed and accept a formal offer does a hard inquiry occur.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What credit score do I need to qualify?
+          <div class="faq-icon"><svg width="12" height="12" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p style="color:#607080;font-size:14px;line-height:1.85;padding-bottom:22px;">We work with multiple lending partners so there's no single minimum. Borrowers with scores as low as 580 may qualify for some plans. We'll find the best available option for your situation — even if your credit is less than perfect.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How long does approval take?
+          <div class="faq-icon"><svg width="12" height="12" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p style="color:#607080;font-size:14px;line-height:1.85;padding-bottom:22px;">Most decisions come back in 60 seconds or less. In some cases it may take a few minutes. Once approved, we can schedule your roof installation immediately.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is there a down payment required?
+          <div class="faq-icon"><svg width="12" height="12" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p style="color:#607080;font-size:14px;line-height:1.85;padding-bottom:22px;">Most of our financing plans require no down payment. We'll be transparent about any specific plan requirements upfront — no surprises.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I pay off my loan early?
+          <div class="faq-icon"><svg width="12" height="12" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p style="color:#607080;font-size:14px;line-height:1.85;padding-bottom:22px;">Yes. None of our financing plans carry prepayment penalties. Pay off early whenever you're ready and save on interest — there's no charge for doing so.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What if my insurance covers the damage?
+          <div class="faq-icon"><svg width="12" height="12" fill="none" stroke="#3B9EF0" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p style="color:#607080;font-size:14px;line-height:1.85;padding-bottom:22px;">Many storm and hail damage repairs are fully covered by your homeowner's insurance policy. JD Roofing works directly with your adjuster to maximize your claim. In many cases, you only pay your deductible — or nothing at all. We'll review your policy with you for free.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section style="background:#071118;padding:88px 28px;position:relative;overflow:hidden;border-top:1px solid rgba(59,158,240,0.1);">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(59,158,240,0.12) 0%,transparent 65%);"></div>
+  <div style="max-width:700px;margin:0 auto;text-align:center;position:relative;z-index:1;">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(251,188,4,0.1);border:1px solid rgba(251,188,4,0.28);border-radius:20px;padding:7px 18px;margin-bottom:28px;">
+      <span style="color:#FBBC04;font-size:12px;font-weight:700;">Ready to get started?</span>
+    </div>
+    <h2 style="font-size:clamp(32px,5vw,52px);font-weight:900;color:white;letter-spacing:-0.035em;line-height:1.05;margin-bottom:18px;">Your New Roof Is<br>One Call Away.</h2>
+    <p style="color:#607080;font-size:16px;line-height:1.8;margin-bottom:40px;">Don't let cost hold you back from a safe, beautiful home. Call us or fill out the form and we'll contact you within the hour.</p>
+    <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+      <a href="estimate.html" class="btn-blue" style="padding:17px 36px;font-size:14px;border-radius:4px;">Check If I Qualify</a>
+      <a href="tel:8322953277" style="display:inline-flex;align-items:center;gap:8px;color:white;font-weight:700;font-size:14px;padding:17px 32px;border:1.5px solid rgba(255,255,255,0.2);border-radius:4px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#3B9EF0'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)'">&#9990; 832-295-3277</a>
+    </div>
+    <p style="color:#3A4A5A;font-size:12px;margin-top:24px;">Free inspection · No obligation · Same-day response</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:#040D14;padding:64px 28px 36px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;" class="m-footer">
+      <div>
+        <img src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" style="height:68px;width:auto;margin-bottom:20px;">
+        <p style="color:#3A4A5A;font-size:13px;line-height:1.8;max-width:280px;margin-bottom:24px;">Houston's trusted roofing contractor. Licensed, insured, and committed to quality craftsmanship with honest pricing.</p>
+        <div style="display:flex;gap:10px;">
+          <a href="https://www.facebook.com/profile.php?id=61574865721832" target="_blank" style="width:36px;height:36px;background:#0F1F35;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#3B9EF0'" onmouseout="this.style.background='#0F1F35'">
+            <svg width="16" height="16" fill="#607080" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/jdroofingsolutions/" target="_blank" style="width:36px;height:36px;background:#0F1F35;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#3B9EF0'" onmouseout="this.style.background='#0F1F35'">
+            <svg width="16" height="16" fill="none" stroke="#607080" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@jdroofing" target="_blank" style="width:36px;height:36px;background:#0F1F35;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#3B9EF0'" onmouseout="this.style.background='#0F1F35'">
+            <svg width="16" height="16" fill="#607080" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.73a4.85 4.85 0 01-1.01-.04z"/></svg>
+          </a>
+          <a href="https://share.google/oai32PGM5oZx6rDlt" target="_blank" style="width:36px;height:36px;background:#0F1F35;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#3B9EF0'" onmouseout="this.style.background='#0F1F35'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:white;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:18px;">Services</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="index.html#services" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Replacement</a></li>
+          <li><a href="index.html#services" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Repair</a></li>
+          <li><a href="index.html#services" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Storm &amp; Hail Damage</a></li>
+          <li><a href="index.html#services" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Insurance Claims</a></li>
+          <li><a href="financing.html" style="color:#3B9EF0;font-size:13px;font-weight:600;">Financing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:white;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:18px;">Service Areas</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="city.html?city=houston" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Houston</a></li>
+          <li><a href="city.html?city=katy" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Katy</a></li>
+          <li><a href="city.html?city=sugar-land" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Sugar Land</a></li>
+          <li><a href="city.html?city=cypress" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Cypress</a></li>
+          <li><a href="city.html?city=spring" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Spring</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:white;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:18px;">Contact</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="tel:8322953277" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">832-295-3277</a></li>
+          <li><a href="mailto:jdroofingsolutions06@gmail.com" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">jdroofingsolutions06@gmail.com</a></li>
+          <li style="color:#607080;font-size:13px;">Houston, TX 77014</li>
+          <li style="color:#607080;font-size:13px;">Mon–Fri: 9am–5pm · 24/7 Emergency</li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid #0F1F35;padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
+      <p style="color:#3A4A5A;font-size:11px;">&copy; 2025 JD Roofing Solutions. All rights reserved. &nbsp;|&nbsp; Licensed &amp; Insured</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  @media(max-width:900px){
+    .m-hero-grid{grid-template-columns:1fr!important;}
+  }
+</style>
+
+<script>
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting) e.target.classList.add('in');});
+  },{threshold:0.08});
+  document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
+
+  function toggleFaq(btn){
+    var answer = btn.nextElementSibling;
+    var icon = btn.querySelector('.faq-icon');
+    var isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(function(a){a.classList.remove('open');});
+    document.querySelectorAll('.faq-icon').forEach(function(i){i.classList.remove('open');});
+    if(!isOpen){
+      answer.classList.add('open');
+      icon.classList.add('open');
+    }
+  }
+</script>
+<script>
+  (function(){
+    var nav = document.getElementById('main-nav');
+    function updateNav(){
+      if(window.scrollY > 60){
+        nav.classList.add('scrolled');
+        nav.style.background = 'white';
+        nav.style.boxShadow = '0 2px 16px rgba(7,17,24,0.1)';
+      } else {
+        nav.classList.remove('scrolled');
+        nav.style.background = 'transparent';
+        nav.style.boxShadow = 'none';
+      }
+    }
+    window.addEventListener('scroll', updateNav, {passive:true});
+    updateNav();
+  })();
+</script>
+</body>
+</html>

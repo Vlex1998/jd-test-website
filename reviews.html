@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Reviews | JD Roofing Solutions — Houston's #1 Roofer</title>
+  <meta name="description" content="Read 100+ verified five-star Google reviews from Houston homeowners who trust JD Roofing Solutions for roof replacement, storm damage, and repairs.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *{font-family:'Open Sans',Arial,sans-serif;box-sizing:border-box;margin:0;padding:0;}
+    body{font-size:14px;line-height:1.7;font-weight:500;color:#444;background:#fff;-webkit-font-smoothing:antialiased;}
+    a{text-decoration:none;}
+    .nav-link{color:white;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;transition:color 0.2s;}
+    .nav-link:hover,.nav-link.active{color:#3B9EF0;}
+    .btn-blue{background:#3B9EF0;color:white;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.06em;padding:11px 22px;border-radius:3px;border:none;cursor:pointer;display:inline-block;transition:background 0.2s,transform 0.15s;}
+    .btn-blue:hover{background:#2589D8;}
+    .btn-blue:active{transform:scale(0.98);}
+    /* nav */
+    .nav-dropdown-wrap{position:relative;}
+    .nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:rgba(7,17,24,0.98);border:1px solid rgba(59,158,240,0.22);border-radius:10px;padding:8px 0;min-width:210px;box-shadow:0 12px 40px rgba(0,0,0,0.5);z-index:100;}
+    .nav-dropdown-wrap:hover .nav-dropdown{display:block;}
+    .nav-dropdown a{display:block;padding:11px 20px;color:#9AAABB;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;border-bottom:1px solid rgba(255,255,255,0.05);transition:color 0.2s,background 0.2s;}
+    .nav-dropdown a:last-child{border-bottom:none;}
+    .nav-dropdown a:hover{color:#3B9EF0;background:rgba(59,158,240,0.07);}
+    .mob-services-btn{display:flex;justify-content:space-between;align-items:center;width:100%;color:white;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;padding:17px 24px;background:transparent;border:none;cursor:pointer;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mob-services-btn:hover,.mob-services-btn.active{color:#3B9EF0;}
+    .mob-services-btn .arr{transition:transform 0.22s;}
+    .mob-services-btn.active .arr{transform:rotate(180deg);}
+    .mob-services-sub{display:none;background:rgba(0,0,0,0.18);}
+    .mob-services-sub.open{display:block;}
+    .mob-services-sub a{display:block!important;padding:13px 24px 13px 36px!important;color:#889!important;font-size:12px!important;letter-spacing:0.06em!important;border-bottom:1px solid rgba(255,255,255,0.04)!important;}
+    .mob-services-sub a:hover{color:#3B9EF0!important;}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:transparent;border:none;}
+    .nav-hamburger span{width:22px;height:2px;background:white;display:block;border-radius:1px;}
+    .mobile-menu{display:none;position:fixed;top:88px;left:0;right:0;background:rgba(7,17,24,0.98);z-index:49;flex-direction:column;border-top:1px solid rgba(59,158,240,0.2);box-shadow:0 12px 40px rgba(0,0,0,0.5);}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{color:white;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;padding:17px 24px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color 0.2s;}
+    .mobile-menu a:hover{color:#3B9EF0;}
+    .mobile-menu .m-tel{color:#3B9EF0;border-bottom:none;}
+    /* cards */
+    .rv-card{background:white;border-radius:20px;padding:28px;border:1.5px solid #EDF2F7;box-shadow:0 2px 16px rgba(0,0,0,0.05);transition:transform 0.32s cubic-bezier(0.22,1,0.36,1),box-shadow 0.32s;cursor:default;break-inside:avoid;margin-bottom:20px;display:inline-block;width:100%;}
+    .rv-card:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(59,158,240,0.13);}
+    .rv-card-dark{background:#071118;border:1.5px solid rgba(59,158,240,0.2);}
+    .rv-card-dark p{color:#a8bfcf;}
+    .rv-card-dark .rv-name{color:white;}
+    .rv-card-dark .rv-meta{color:#607080;}
+    .rv-card-dark .rv-divider{border-color:rgba(255,255,255,0.07);}
+    /* masonry */
+    .masonry{columns:3;column-gap:20px;}
+    @media(max-width:960px){.masonry{columns:2;}}
+    @media(max-width:560px){.masonry{columns:1;}}
+    /* photo strip */
+    .strip{display:flex;gap:14px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;}
+    .strip::-webkit-scrollbar{display:none;}
+    .strip-img{width:280px;height:210px;flex-shrink:0;border-radius:16px;object-fit:cover;transition:transform 0.3s,box-shadow 0.3s;}
+    .strip-img:hover{transform:scale(1.04);box-shadow:0 20px 50px rgba(0,0,0,0.3);}
+    /* rating bar */
+    .bar-track{height:8px;background:#EDF2F7;border-radius:4px;overflow:hidden;flex:1;}
+    .bar-fill{height:100%;background:#FBBC04;border-radius:4px;transition:width 1.2s cubic-bezier(0.22,1,0.36,1);}
+    /* scroll fade */
+    .fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .fade-up.in{opacity:1;transform:translateY(0);}
+    /* tag pills */
+    .tag{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;}
+    /* quote decoration */
+    .quote-mark{font-family:Georgia,serif;font-size:80px;line-height:0.75;color:rgba(59,158,240,0.18);display:block;margin-bottom:10px;}
+    @media(max-width:768px){
+      .nav-links-desktop,.nav-cta-desktop{display:none!important;}
+      .nav-hamburger{display:flex!important;}
+      .m-footer{grid-template-columns:1fr 1fr!important;gap:28px!important;}
+      .m-hide{display:none!important;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav" style="background:transparent;position:fixed;top:0;left:0;right:0;z-index:50;transition:background 0.35s,box-shadow 0.35s;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 28px;height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+    <a href="index.html"><img src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" style="height:80px;width:auto;"></a>
+    <div class="nav-links-desktop" style="display:flex;align-items:center;gap:28px;">
+      <a href="index.html" class="nav-link">Home</a>
+      <div class="nav-dropdown-wrap">
+        <a href="index.html#services" class="nav-link" style="display:flex;align-items:center;gap:5px;">Services<svg class="arr" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="nav-dropdown">
+          <a href="roof-replacement.html">Roof Replacement</a>
+          <a href="roof-repair.html">Roof Repair</a>
+          <a href="storm-damage.html">Storm &amp; Hail Damage</a>
+          <a href="commercial-roofing.html">Commercial Roofing</a>
+          <a href="insurance-claims.html">Insurance Claims</a>
+          <a href="roof-inspection.html">Roof Inspection</a>
+        </div>
+      </div>
+      <a href="reviews.html" class="nav-link active">Reviews</a>
+      <a href="financing.html" class="nav-link">Financing</a>
+      <a href="estimate.html" class="nav-link">Contact Us</a>
+    </div>
+    <div class="nav-cta-desktop" style="display:flex;align-items:center;gap:18px;">
+      <a href="tel:8322953277" style="color:white;font-size:13px;font-weight:700;white-space:nowrap;">&#9990; 832-295-3277</a>
+      <a href="estimate.html" class="btn-blue">Free Inspection</a>
+    </div>
+    <button class="nav-hamburger" onclick="document.getElementById('mmenu').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mmenu">
+  <a href="index.html">Home</a>
+  <button class="mob-services-btn" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('open')">Services<svg class="arr" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+  <div class="mob-services-sub">
+    <a href="roof-replacement.html">Roof Replacement</a>
+    <a href="roof-repair.html">Roof Repair</a>
+    <a href="storm-damage.html">Storm &amp; Hail Damage</a>
+    <a href="commercial-roofing.html">Commercial Roofing</a>
+    <a href="insurance-claims.html">Insurance Claims</a>
+    <a href="roof-inspection.html">Roof Inspection</a>
+  </div>
+  <a href="reviews.html" style="color:#3B9EF0!important;">Reviews</a>
+  <a href="financing.html">Financing</a>
+  <a href="estimate.html">Contact Us</a>
+  <a href="tel:8322953277" class="m-tel">&#9990; 832-295-3277</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section style="padding-top:88px;background:#071118;min-height:65vh;display:flex;align-items:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 15% 60%,rgba(59,158,240,0.16) 0%,transparent 50%),radial-gradient(ellipse at 85% 25%,rgba(251,188,4,0.08) 0%,transparent 45%);"></div>
+  <div style="position:absolute;inset:0;opacity:0.025;background-image:linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px);background-size:48px 48px;"></div>
+  <!-- giant faded quotation mark -->
+  <div style="position:absolute;right:5%;top:10%;font-size:400px;line-height:1;color:rgba(59,158,240,0.05);font-family:Georgia,serif;pointer-events:none;user-select:none;font-weight:900;">&ldquo;</div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:80px 28px;position:relative;z-index:1;width:100%;display:grid;grid-template-columns:1fr auto;align-items:center;gap:60px;" class="m-hero-grid">
+    <div>
+      <!-- verified badge -->
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(251,188,4,0.1);border:1px solid rgba(251,188,4,0.28);border-radius:20px;padding:7px 16px;margin-bottom:24px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span style="color:#FBBC04;font-size:12px;font-weight:700;">Verified Google Reviews · 100% Real Customers</span>
+      </div>
+      <h1 style="font-size:clamp(38px,6vw,68px);font-weight:900;color:white;letter-spacing:-0.035em;line-height:1.0;margin-bottom:20px;">
+        Houston Trusts<br><span style="color:#3B9EF0;">JD Roofing.</span>
+      </h1>
+      <p style="color:#8AAABB;font-size:16px;line-height:1.85;max-width:500px;margin-bottom:36px;">Every review below is from a real Houston-area homeowner — no scripts, no paid testimonials. Just honest feedback from families we've helped protect their homes.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="https://www.google.com/search?q=jd+roofing+solutions&sclient=gws-wiz-serp#lrd=0x8640c98c997aa81f:0xe8a21042315c2ac7,1,,,," target="_blank" class="btn-blue" style="padding:14px 28px;font-size:14px;display:inline-flex;align-items:center;gap:9px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="white"/></svg>
+          Leave Us a Review
+        </a>
+        <a href="estimate.html" style="display:inline-flex;align-items:center;gap:8px;color:white;font-weight:700;font-size:14px;padding:14px 28px;border:1.5px solid rgba(255,255,255,0.2);border-radius:3px;transition:border-color 0.2s,background 0.2s;" onmouseover="this.style.borderColor='#3B9EF0'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)'">
+          Get Free Inspection
+        </a>
+      </div>
+    </div>
+    <!-- rating card -->
+    <div class="m-hide" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:36px 32px;backdrop-filter:blur(10px);min-width:260px;text-align:center;">
+      <div style="font-size:72px;font-weight:900;color:white;letter-spacing:-0.04em;line-height:1;">4.9</div>
+      <div style="color:#FBBC04;font-size:24px;letter-spacing:3px;margin:8px 0;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div style="color:#607080;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:24px;">Out of 5 Stars</div>
+      <!-- rating bars -->
+      <div style="display:flex;flex-direction:column;gap:8px;text-align:left;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="color:#aaa;font-size:11px;font-weight:700;width:10px;">5</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="#FBBC04"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <div class="bar-track"><div class="bar-fill" data-w="96%" style="width:0%;"></div></div>
+          <span style="color:#607080;font-size:11px;width:28px;text-align:right;">96%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="color:#aaa;font-size:11px;font-weight:700;width:10px;">4</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="#FBBC04"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <div class="bar-track"><div class="bar-fill" data-w="3%" style="width:0%;"></div></div>
+          <span style="color:#607080;font-size:11px;width:28px;text-align:right;">3%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="color:#aaa;font-size:11px;font-weight:700;width:10px;">3</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="#FBBC04"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <div class="bar-track"><div class="bar-fill" data-w="1%" style="width:0%;background:#ccc;"></div></div>
+          <span style="color:#607080;font-size:11px;width:28px;text-align:right;">1%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="color:#aaa;font-size:11px;font-weight:700;width:10px;">2</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="#ccc"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <div class="bar-track"><div class="bar-fill" data-w="0%" style="width:0%;background:#ccc;"></div></div>
+          <span style="color:#607080;font-size:11px;width:28px;text-align:right;">0%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="color:#aaa;font-size:11px;font-weight:700;width:10px;">1</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="#ccc"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <div class="bar-track"><div class="bar-fill" data-w="0%" style="width:0%;background:#ccc;"></div></div>
+          <span style="color:#607080;font-size:11px;width:28px;text-align:right;">0%</span>
+        </div>
+      </div>
+      <div style="margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.07);color:#607080;font-size:11px;font-weight:600;">Based on 100+ Google Reviews</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS STRIP ===== -->
+<section style="background:#0F1F35;padding:0 28px;border-top:1px solid rgba(59,158,240,0.15);border-bottom:1px solid rgba(59,158,240,0.15);">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);">
+    <div style="padding:32px 20px;text-align:center;border-right:1px solid rgba(255,255,255,0.06);">
+      <div style="font-size:42px;font-weight:900;color:#3B9EF0;letter-spacing:-0.03em;line-height:1;">4.9</div>
+      <div style="color:#FBBC04;font-size:14px;margin:4px 0;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div style="color:#607080;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">Google Rating</div>
+    </div>
+    <div style="padding:32px 20px;text-align:center;border-right:1px solid rgba(255,255,255,0.06);">
+      <div style="font-size:42px;font-weight:900;color:#3B9EF0;letter-spacing:-0.03em;line-height:1;"><span id="c-reviews">0</span>+</div>
+      <div style="height:22px;"></div>
+      <div style="color:#607080;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">5-Star Reviews</div>
+    </div>
+    <div style="padding:32px 20px;text-align:center;border-right:1px solid rgba(255,255,255,0.06);">
+      <div style="font-size:42px;font-weight:900;color:#3B9EF0;letter-spacing:-0.03em;line-height:1;"><span id="c-roofs">0</span>+</div>
+      <div style="height:22px;"></div>
+      <div style="color:#607080;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">Roofs Completed</div>
+    </div>
+    <div style="padding:32px 20px;text-align:center;">
+      <div style="font-size:42px;font-weight:900;color:#3B9EF0;letter-spacing:-0.03em;line-height:1;"><span id="c-years">0</span>+</div>
+      <div style="height:22px;"></div>
+      <div style="color:#607080;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">Years Experience</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3 FEATURED SPOTLIGHT REVIEWS ===== -->
+<section style="background:white;padding:88px 28px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:56px;" class="fade-up">
+      <span style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3B9EF0;display:block;margin-bottom:10px;">Customer Spotlight</span>
+      <h2 style="font-size:44px;font-weight:900;color:#071118;letter-spacing:-0.03em;line-height:1.05;">The Reviews That<br>Say It All.</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:20px;" class="fade-up">
+
+      <!-- Big dark card -->
+      <div style="background:#071118;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;position:relative;row-span:2;">
+        <div style="height:200px;overflow:hidden;position:relative;flex-shrink:0;">
+          <img src="Brand_assets/roof1.webp" alt="Completed roof" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(7,17,24,0.95) 100%);"></div>
+          <div style="position:absolute;bottom:16px;left:20px;">
+            <span style="color:#FBBC04;font-size:20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <div style="position:absolute;top:14px;right:14px;">
+            <span class="tag" style="background:rgba(59,158,240,0.2);color:#3B9EF0;border:1px solid rgba(59,158,240,0.3);">Roof Replacement</span>
+          </div>
+        </div>
+        <div style="padding:28px 28px 32px;flex:1;display:flex;flex-direction:column;">
+          <span class="quote-mark">&ldquo;</span>
+          <p style="color:#c8dff0;font-size:15px;line-height:1.9;flex:1;margin-bottom:24px;">"Jordan and his crew were very professional, on time, and worked efficiently. I would definitely recommend his services to anyone in need of roofing work. Great price and fast service. They handled everything with my insurance — stress free from start to finish."</p>
+          <div style="display:flex;align-items:center;gap:14px;border-top:1px solid rgba(255,255,255,0.07);padding-top:20px;">
+            <img src="https://lh3.googleusercontent.com/a/ACg8ocILDR9q6tosW1uv_b1rmvkhFMbtNCnPiUHvaXs6kdoZATyceA=w72-h72-p-rp-mo-br100" style="width:48px;height:48px;border-radius:50%;border:2px solid #3B9EF0;flex-shrink:0;">
+            <div>
+              <div style="color:white;font-weight:800;font-size:14px;">Gio Gonzalez</div>
+              <div style="color:#607080;font-size:12px;">Houston, TX</div>
+              <div style="display:flex;align-items:center;gap:6px;margin-top:4px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                <span style="color:#607080;font-size:11px;font-weight:600;">Posted on Google</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column stacked -->
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <!-- Blue gradient card -->
+        <div style="background:linear-gradient(135deg,#1a3a5c 0%,#0d2540 100%);border-radius:24px;padding:28px;position:relative;overflow:hidden;flex:1;">
+          <div style="position:absolute;top:-24px;right:-24px;width:100px;height:100px;background:rgba(59,158,240,0.15);border-radius:50%;"></div>
+          <div style="position:absolute;bottom:-20px;left:-20px;width:80px;height:80px;background:rgba(59,158,240,0.08);border-radius:50%;"></div>
+          <div style="position:relative;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;">
+              <span style="color:#FBBC04;font-size:18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span class="tag" style="background:rgba(59,158,240,0.18);color:#5BB8FF;border:1px solid rgba(59,158,240,0.3);">Storm Damage</span>
+            </div>
+            <span class="quote-mark" style="color:rgba(59,158,240,0.3);">&ldquo;</span>
+            <p style="color:#c8dff0;font-size:13px;line-height:1.85;margin-bottom:18px;">"Jordan did such a fantastic job replacing my roof. His team was very prompt and responsive. They are a hard working, dedicated team. If you need roof repair or replacement, I highly recommend!"</p>
+            <div style="display:flex;align-items:center;gap:10px;border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjWSsGKUS3GgCkHWgQ9pNlWJs6NF7L6x3I7VJqmMHJz94go_RovkEg=w72-h72-p-rp-mo-ba3-br100" style="width:40px;height:40px;border-radius:50%;border:2px solid rgba(59,158,240,0.5);flex-shrink:0;">
+              <div><div style="color:white;font-weight:700;font-size:12px;">Ashley Laredo</div><div style="color:#607080;font-size:11px;">Katy, TX · Google Review</div></div>
+            </div>
+          </div>
+        </div>
+        <!-- White card with photo bottom -->
+        <div style="background:#F8FAFC;border-radius:24px;padding:28px;border:1.5px solid #EDF2F7;position:relative;overflow:hidden;flex:1;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;">
+            <span style="color:#F59E0B;font-size:16px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="tag" style="background:#EBF5FE;color:#3B9EF0;">Insurance Claim</span>
+          </div>
+          <span class="quote-mark" style="color:rgba(59,158,240,0.15);">&ldquo;</span>
+          <p style="color:#555;font-size:13px;line-height:1.85;margin-bottom:18px;">"JD Roofing Solutions is the company to use if you want fast, efficient and very professional work. I called on a Wednesday and they were at my home on Thursday!"</p>
+          <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #EDF2F7;padding-top:16px;">
+            <img src="https://lh3.googleusercontent.com/a-/ALV-UjUquM6jq_sJxmYnub8-EoNFc_Es37k3aG5GNigzgLeKSNuIhdNe=w72-h72-p-rp-mo-br100" style="width:40px;height:40px;border-radius:50%;border:2px solid #3B9EF0;flex-shrink:0;">
+            <div><div style="font-weight:700;color:#071118;font-size:12px;">Tania Stone</div><div style="color:#999;font-size:11px;">Houston, TX · Google Review</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third column -->
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="background:white;border-radius:24px;overflow:hidden;border:1.5px solid #EDF2F7;flex:1;display:flex;flex-direction:column;">
+          <div style="height:130px;overflow:hidden;position:relative;flex-shrink:0;">
+            <img src="Brand_assets/roof2.webp" alt="Completed roof" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(255,255,255,0.95) 100%);"></div>
+            <div style="position:absolute;top:10px;right:10px;"><span class="tag" style="background:rgba(7,17,24,0.7);color:white;">Free Inspection</span></div>
+          </div>
+          <div style="padding:18px 22px 22px;flex:1;display:flex;flex-direction:column;">
+            <div style="color:#F59E0B;font-size:15px;margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#555;font-size:13px;line-height:1.8;flex:1;margin-bottom:16px;">"I recommend JD Roofing Solutions for your next roof repair. I called the same day, got an incredible price. Superior work and excellent customer service."</p>
+            <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #EDF2F7;padding-top:14px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjXzrsFyLm6pVUUdQCjEOsQMst1JhSa5EJBQ8s0tYd5b1YINlxA=w72-h72-p-rp-mo-br100" style="width:38px;height:38px;border-radius:50%;flex-shrink:0;">
+              <div><div style="font-weight:700;color:#071118;font-size:12px;">Ashwood Turner</div><div style="color:#aaa;font-size:11px;">Google Review</div></div>
+            </div>
+          </div>
+        </div>
+        <div style="background:#071118;border-radius:24px;padding:24px;position:relative;overflow:hidden;flex:0 0 auto;">
+          <div style="position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(59,158,240,0.15),transparent 60%);"></div>
+          <div style="position:relative;">
+            <div style="color:#FBBC04;font-size:16px;margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p style="color:#8AAABB;font-size:13px;line-height:1.8;margin-bottom:16px;">"Very reasonable pricing and they did an amazing job. They left the house exactly the way it was when they arrived. Highly recommend."</p>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <img src="https://lh3.googleusercontent.com/a-/ALV-UjUGgOq1po0xiNQvoBDKnVMzBIG2OD9czn6F2Hrq8i9bH7a12NgYZg=w72-h72-p-rp-mo-ba3-br100" style="width:38px;height:38px;border-radius:50%;border:2px solid rgba(59,158,240,0.4);flex-shrink:0;">
+              <div><div style="color:white;font-weight:700;font-size:12px;">JDL</div><div style="color:#607080;font-size:11px;">Sugar Land, TX</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECT PHOTO STRIP ===== -->
+<section style="background:#071118;padding:72px 0;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 28px 28px;" class="fade-up">
+    <span style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3B9EF0;display:block;margin-bottom:10px;">Completed Projects</span>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;">
+      <h2 style="font-size:36px;font-weight:900;color:white;letter-spacing:-0.03em;line-height:1.1;">Results That Speak<br>for Themselves.</h2>
+      <p style="color:#607080;font-size:13px;max-width:300px;">Scroll through a selection of completed roofing projects across the Houston metro area.</p>
+    </div>
+  </div>
+  <div style="padding:0 28px;" class="fade-up">
+    <div class="strip">
+      <img src="Brand_assets/roof1.webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/roof2.webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/roof3.webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/roof4.webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/roof 7.webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/roof 9.webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/roof 10.webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/roof 13 .webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/roof 17 .webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/roof 18.webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/roof 19 .webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/roof 20.webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/roof 21 .webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/roof 22.webp" class="strip-img" alt="Project">
+      <img src="Brand_assets/worker.webp" class="strip-img" alt="Crew">
+      <img src="Brand_assets/worker v2 .webp" class="strip-img" alt="Crew">
+      <img src="Brand_assets/DSC09106.JPG" class="strip-img" alt="Crew on the job">
+    </div>
+  </div>
+</section>
+
+<!-- ===== ALL REVIEWS MASONRY ===== -->
+<section style="background:#F8FAFC;padding:88px 28px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:52px;" class="fade-up">
+      <span style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3B9EF0;display:block;margin-bottom:10px;">All Reviews</span>
+      <h2 style="font-size:44px;font-weight:900;color:#071118;letter-spacing:-0.03em;">Every Review.<br>Every Five Stars.</h2>
+      <div style="display:inline-flex;align-items:center;gap:10px;background:white;border:1.5px solid #EDF2F7;border-radius:100px;padding:12px 28px;margin-top:20px;box-shadow:0 4px 20px rgba(0,0,0,0.06);">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span style="color:#F59E0B;font-size:18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span style="font-weight:900;color:#071118;font-size:16px;">4.9</span>
+        <span style="color:#bbb;font-size:13px;">· 100+ Verified Google Reviews</span>
+      </div>
+    </div>
+
+    <div class="masonry fade-up">
+
+      <div class="rv-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <span style="color:#F59E0B;font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="tag" style="background:#EBF5FE;color:#3B9EF0;font-size:10px;">Roof Replacement</span>
+        </div>
+        <p style="color:#444;font-size:13px;line-height:1.85;margin-bottom:18px;">"Jordan and his crew were very professional, on time, and worked efficiently. I would definitely recommend his services to anyone in need of roofing work. Great price and fast service."</p>
+        <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #F0F4F8;padding-top:14px;">
+          <img src="https://lh3.googleusercontent.com/a/ACg8ocILDR9q6tosW1uv_b1rmvkhFMbtNCnPiUHvaXs6kdoZATyceA=w72-h72-p-rp-mo-br100" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div style="flex:1;"><div class="rv-name" style="font-weight:700;color:#071118;font-size:12px;">Gio Gonzalez</div><div class="rv-meta" style="color:#aaa;font-size:11px;">Houston, TX · Google Review</div></div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <span style="color:#F59E0B;font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="tag" style="background:#EBF5FE;color:#3B9EF0;font-size:10px;">Storm Damage</span>
+        </div>
+        <p style="color:#444;font-size:13px;line-height:1.85;margin-bottom:18px;">"Jordan did such a fantastic job replacing my roof. His team was very prompt and responsive. They are a hard working, dedicated team. If you need roof repair or replacement, I highly recommend!"</p>
+        <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #F0F4F8;padding-top:14px;">
+          <img src="https://lh3.googleusercontent.com/a-/ALV-UjWSsGKUS3GgCkHWgQ9pNlWJs6NF7L6x3I7VJqmMHJz94go_RovkEg=w72-h72-p-rp-mo-ba3-br100" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div style="flex:1;"><div style="font-weight:700;color:#071118;font-size:12px;">Ashley Laredo</div><div style="color:#aaa;font-size:11px;">Katy, TX · Google Review</div></div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <span style="color:#F59E0B;font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="tag" style="background:#EBF5FE;color:#3B9EF0;font-size:10px;">Roof Repair</span>
+        </div>
+        <p style="color:#444;font-size:13px;line-height:1.85;margin-bottom:18px;">"I recommend JD Roofing Solutions for your next roof repair. I called the same day, got an incredible price. Superior work and excellent customer service. Couldn't be happier with the result."</p>
+        <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #F0F4F8;padding-top:14px;">
+          <img src="https://lh3.googleusercontent.com/a-/ALV-UjXzrsFyLm6pVUUdQCjEOsQMst1JhSa5EJBQ8s0tYd5b1YINlxA=w72-h72-p-rp-mo-br100" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div style="flex:1;"><div style="font-weight:700;color:#071118;font-size:12px;">Ashwood Turner</div><div style="color:#aaa;font-size:11px;">The Woodlands, TX · Google Review</div></div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <span style="color:#F59E0B;font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="tag" style="background:#EBF5FE;color:#3B9EF0;font-size:10px;">Insurance Claim</span>
+        </div>
+        <p style="color:#444;font-size:13px;line-height:1.85;margin-bottom:18px;">"JD Roofing Solutions is the company to use if you want fast, efficient and very professional work. I called on a Wednesday and they were at my home on Thursday. I highly recommend them!"</p>
+        <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #F0F4F8;padding-top:14px;">
+          <img src="https://lh3.googleusercontent.com/a-/ALV-UjUquM6jq_sJxmYnub8-EoNFc_Es37k3aG5GNigzgLeKSNuIhdNe=w72-h72-p-rp-mo-br100" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div style="flex:1;"><div style="font-weight:700;color:#071118;font-size:12px;">Tania Stone</div><div style="color:#aaa;font-size:11px;">Houston, TX · Google Review</div></div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <span style="color:#F59E0B;font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="tag" style="background:#EBF5FE;color:#3B9EF0;font-size:10px;">Roof Replacement</span>
+        </div>
+        <p style="color:#444;font-size:13px;line-height:1.85;margin-bottom:18px;">"Very reasonable pricing and they did an amazing job roofing my house. They left the house the same way it was when they arrived. I highly recommend them to anyone looking for quality roofing work."</p>
+        <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #F0F4F8;padding-top:14px;">
+          <img src="https://lh3.googleusercontent.com/a-/ALV-UjUGgOq1po0xiNQvoBDKnVMzBIG2OD9czn6F2Hrq8i9bH7a12NgYZg=w72-h72-p-rp-mo-ba3-br100" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div style="flex:1;"><div style="font-weight:700;color:#071118;font-size:12px;">JDL</div><div style="color:#aaa;font-size:11px;">Sugar Land, TX · Google Review</div></div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <span style="color:#F59E0B;font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="tag" style="background:#EBF5FE;color:#3B9EF0;font-size:10px;">Free Inspection</span>
+        </div>
+        <p style="color:#444;font-size:13px;line-height:1.85;margin-bottom:18px;">"JD Roofing was very fast and efficient. Jordan was very professional and very respectful. He explains everything in detail. Excellent experience overall — will use again."</p>
+        <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #F0F4F8;padding-top:14px;">
+          <img src="https://lh3.googleusercontent.com/a-/ALV-UjU77vY-_bVLn8iRuH-2QmhIGdSvy2nlaYWt21I7HcoY1OkLBCI4=w72-h72-p-rp-mo-br100" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div style="flex:1;"><div style="font-weight:700;color:#071118;font-size:12px;">Mario Green</div><div style="color:#aaa;font-size:11px;">Pearland, TX · Google Review</div></div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <span style="color:#F59E0B;font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="tag" style="background:#EBF5FE;color:#3B9EF0;font-size:10px;">Roof Replacement</span>
+        </div>
+        <p style="color:#444;font-size:13px;line-height:1.85;margin-bottom:18px;">"Jordan was very responsive and professional. His team arrived on time and did a great job replacing the roof using quality materials. They cleaned up well and left no mess behind. Highly recommend."</p>
+        <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #F0F4F8;padding-top:14px;">
+          <img src="https://lh3.googleusercontent.com/a-/ALV-UjU_OknMg9u6u6WHkTB-9kQmukaNGKQycDXjDjFmOOWJu-Rz914kBA=w72-h72-p-rp-mo-br100" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div style="flex:1;"><div style="font-weight:700;color:#071118;font-size:12px;">Greg Yee</div><div style="color:#aaa;font-size:11px;">Cypress, TX · Google Review</div></div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <span style="color:#F59E0B;font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="tag" style="background:#EBF5FE;color:#3B9EF0;font-size:10px;">Storm Damage</span>
+        </div>
+        <p style="color:#444;font-size:13px;line-height:1.85;margin-bottom:18px;">"Highly recommended — very professional, no issues at all. This team doesn't cut any corners. Very detailed and to the point. Would absolutely hire again without hesitation."</p>
+        <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #F0F4F8;padding-top:14px;">
+          <img src="https://lh3.googleusercontent.com/a-/ALV-UjV1ISACYhh1T18ZZ9UxXYIqBBz-2zdM9zRrX0v8pzcSUFBZsKJ6=w72-h72-p-rp-mo-br100" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div style="flex:1;"><div style="font-weight:700;color:#071118;font-size:12px;">Chris Zavala</div><div style="color:#aaa;font-size:11px;">Houston, TX · Google Review</div></div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <span style="color:#F59E0B;font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="tag" style="background:#EBF5FE;color:#3B9EF0;font-size:10px;">Roof Replacement</span>
+        </div>
+        <p style="color:#444;font-size:13px;line-height:1.85;margin-bottom:18px;">"Jordan did an amazing job on our roof. He knows his craft and we are very pleased with how our roof turned out. They were fast, efficient, and very professional throughout the whole process."</p>
+        <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #F0F4F8;padding-top:14px;">
+          <img src="https://lh3.googleusercontent.com/a-/ALV-UjWmrUEJF-l2BlzBW6akcmzx5O2vfziA1MseJZRs0Xgac6Z3EfVA=w72-h72-p-rp-mo-br100" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div style="flex:1;"><div style="font-weight:700;color:#071118;font-size:12px;">Jaymer Farzan</div><div style="color:#aaa;font-size:11px;">Humble, TX · Google Review</div></div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <span style="color:#F59E0B;font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="tag" style="background:#EBF5FE;color:#3B9EF0;font-size:10px;">Roof Repair</span>
+        </div>
+        <p style="color:#444;font-size:13px;line-height:1.85;margin-bottom:18px;">"Friendly and hard working group of roofers. I recommend them for your next roof. They cleaned up all the trash and fixed all roofing problems. My family is very happy with the result."</p>
+        <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #F0F4F8;padding-top:14px;">
+          <img src="https://lh3.googleusercontent.com/a-/ALV-UjVVqvDoi7es_3paFw-1tJ9DvwPmND5hx5RDlp_NgeW_UcLbVyQU=w72-h72-p-rp-mo-br100" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div style="flex:1;"><div style="font-weight:700;color:#071118;font-size:12px;">Arthur Lange</div><div style="color:#aaa;font-size:11px;">League City, TX · Google Review</div></div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <span style="color:#F59E0B;font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="tag" style="background:#EBF5FE;color:#3B9EF0;font-size:10px;">Insurance Claim</span>
+        </div>
+        <p style="color:#444;font-size:13px;line-height:1.85;margin-bottom:18px;">"Outstanding service from start to finish. Jordan walked us through everything, handled all the paperwork with our insurance company, and the crew knocked out our entire roof in one day. Couldn't be happier."</p>
+        <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #F0F4F8;padding-top:14px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:#3B9EF0;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:14px;flex-shrink:0;">RM</div>
+          <div style="flex:1;"><div style="font-weight:700;color:#071118;font-size:12px;">Rachel M.</div><div style="color:#aaa;font-size:11px;">Katy, TX · Google Review</div></div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <span style="color:#F59E0B;font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="tag" style="background:#EBF5FE;color:#3B9EF0;font-size:10px;">Storm Damage</span>
+        </div>
+        <p style="color:#444;font-size:13px;line-height:1.85;margin-bottom:18px;">"Came out after a major hail storm and had my roof assessed the same day I called. Insurance claim was approved in full. JD Roofing handled everything — absolute professionals who know the process."</p>
+        <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #F0F4F8;padding-top:14px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:#071118;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:14px;flex-shrink:0;">DT</div>
+          <div style="flex:1;"><div style="font-weight:700;color:#071118;font-size:12px;">David T.</div><div style="color:#aaa;font-size:11px;">Baytown, TX · Google Review</div></div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+      </div>
+
+      <div class="rv-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+          <span style="color:#F59E0B;font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="tag" style="background:#EBF5FE;color:#3B9EF0;font-size:10px;">Roof Replacement</span>
+        </div>
+        <p style="color:#444;font-size:13px;line-height:1.85;margin-bottom:18px;">"Best decision I made for my home. Fair pricing, exceptional quality, and a team that truly cares. My neighbors asked who did my roof — I gave them JD's number on the spot."</p>
+        <div style="display:flex;align-items:center;gap:10px;border-top:1px solid #F0F4F8;padding-top:14px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:#1a3a5c;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:14px;flex-shrink:0;">SL</div>
+          <div style="flex:1;"><div style="font-weight:700;color:#071118;font-size:12px;">Sandra L.</div><div style="color:#aaa;font-size:11px;">Pasadena, TX · Google Review</div></div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:56px;" class="fade-up">
+      <a href="https://www.google.com/search?q=jd+roofing+solutions&sclient=gws-wiz-serp#lrd=0x8640c98c997aa81f:0xe8a21042315c2ac7,1,,,," target="_blank" style="display:inline-flex;align-items:center;gap:10px;border:2px solid #3B9EF0;border-radius:6px;padding:16px 36px;color:#3B9EF0;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.07em;transition:background 0.22s,color 0.22s;" onmouseover="this.style.background='#3B9EF0';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#3B9EF0'">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        See All Reviews on Google
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section style="background:#071118;padding:88px 28px;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(59,158,240,0.14) 0%,transparent 55%),radial-gradient(ellipse at 75% 50%,rgba(59,158,240,0.07) 0%,transparent 50%);"></div>
+  <div style="max-width:860px;margin:0 auto;text-align:center;position:relative;" class="fade-up">
+    <div style="color:#FBBC04;font-size:28px;margin-bottom:20px;letter-spacing:4px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <h2 style="font-size:clamp(32px,5vw,54px);font-weight:900;color:white;letter-spacing:-0.03em;line-height:1.05;margin-bottom:16px;">Ready to Be Our<br><span style="color:#3B9EF0;">Next Happy Customer?</span></h2>
+    <p style="color:#8AAABB;font-size:15px;line-height:1.85;max-width:480px;margin:0 auto 36px;">Get a free, no-obligation roof inspection and see firsthand why hundreds of Houston homeowners give us five stars.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="estimate.html" class="btn-blue" style="padding:16px 36px;font-size:15px;">Schedule Free Inspection</a>
+      <a href="tel:8322953277" style="display:inline-flex;align-items:center;gap:8px;color:white;font-weight:700;font-size:15px;padding:16px 32px;border:1.5px solid rgba(255,255,255,0.22);border-radius:3px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#3B9EF0'" onmouseout="this.style.borderColor='rgba(255,255,255,0.22)'">
+        &#9990; 832-295-3277
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#071118;border-top:1px solid #0F1F35;padding:60px 28px 28px;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="m-footer" style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;">
+      <div>
+        <div style="margin-bottom:18px;"><img src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" style="height:80px;width:auto;"></div>
+        <p style="color:#607080;font-size:13px;line-height:1.75;max-width:260px;margin-bottom:22px;">Houston's trusted roofing experts — delivering quality craftsmanship across the greater Houston metro area.</p>
+        <div style="display:flex;gap:12px;">
+          <a href="https://www.facebook.com/JDRoofingSolutions/" target="_blank" style="width:34px;height:34px;background:#0F1F35;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#1877F2'" onmouseout="this.style.background='#0F1F35'"><svg width="14" height="14" fill="#93AABF" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/jdroofingsolutions/" target="_blank" style="width:34px;height:34px;background:#0F1F35;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#E1306C'" onmouseout="this.style.background='#0F1F35'"><svg width="14" height="14" fill="none" stroke="#93AABF" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://share.google/oai32PGM5oZx6rDlt" target="_blank" style="width:34px;height:34px;background:#0F1F35;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#4285F4'" onmouseout="this.style.background='#0F1F35'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#93AABF"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:white;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:18px;">Services</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="roof-replacement.html" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Replacement</a></li>
+          <li><a href="roof-repair.html" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Repair</a></li>
+          <li><a href="storm-damage.html" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Storm &amp; Hail Damage</a></li>
+          <li><a href="commercial-roofing.html" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Commercial Roofing</a></li>
+          <li><a href="insurance-claims.html" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Insurance Claims</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:white;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:18px;">Service Areas</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="city.html?city=houston" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Houston</a></li>
+          <li><a href="city.html?city=katy" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Katy</a></li>
+          <li><a href="city.html?city=sugar-land" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Sugar Land</a></li>
+          <li><a href="city.html?city=the-woodlands" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">The Woodlands</a></li>
+          <li><a href="city.html?city=pearland" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Pearland</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:white;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:18px;">Contact</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="tel:8322953277" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">832-295-3277</a></li>
+          <li><a href="mailto:jdroofingsolutions06@gmail.com" style="color:#607080;font-size:13px;transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">jdroofingsolutions06@gmail.com</a></li>
+          <li style="color:#607080;font-size:13px;">Houston, TX 77014</li>
+          <li style="color:#607080;font-size:13px;">Mon–Fri: 9am–5pm · 24/7 Emergency</li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid #0F1F35;padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
+      <p style="color:#3A4A5A;font-size:11px;">&copy; 2025 JD Roofing Solutions. All rights reserved. &nbsp;|&nbsp; Licensed &amp; Insured</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  @media(max-width:900px){
+    .m-hero-grid{grid-template-columns:1fr!important;}
+  }
+</style>
+
+<script>
+  // Scroll fade-in
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting) e.target.classList.add('in');});
+  },{threshold:0.1});
+  document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
+
+  // Count-up
+  function countUp(id,target,dur){
+    var el=document.getElementById(id),start=0,step=target/(dur/16);
+    var t=setInterval(function(){start+=step;if(start>=target){start=target;clearInterval(t);}el.textContent=Math.floor(start);},16);
+  }
+  var counted=false;
+  new IntersectionObserver(function(e){
+    if(e[0].isIntersecting&&!counted){counted=true;countUp('c-reviews',100,1100);countUp('c-roofs',500,1400);countUp('c-years',10,900);}
+  },{threshold:0.4}).observe(document.getElementById('c-reviews').closest('section'));
+
+  // Rating bar animation
+  new IntersectionObserver(function(e){
+    if(e[0].isIntersecting){
+      document.querySelectorAll('.bar-fill').forEach(function(b){
+        b.style.width=b.getAttribute('data-w');
+      });
+    }
+  },{threshold:0.5}).observe(document.querySelector('.bar-track').closest('section'));
+</script>
+<script>
+  (function(){
+    var nav = document.getElementById('main-nav');
+    function updateNav(){
+      if(window.scrollY > 60){
+        nav.classList.add('scrolled');
+        nav.style.background = 'white';
+        nav.style.boxShadow = '0 2px 16px rgba(7,17,24,0.1)';
+      } else {
+        nav.classList.remove('scrolled');
+        nav.style.background = 'transparent';
+        nav.style.boxShadow = 'none';
+      }
+    }
+    window.addEventListener('scroll', updateNav, {passive:true});
+    updateNav();
+  })();
+</script>
+</body>
+</html>

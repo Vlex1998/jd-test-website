@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Roofing Services | JD Roofing Solutions</title>
+  <meta name="description" id="page-desc" content="JD Roofing Solutions — trusted roofing contractor serving the Houston metro area.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Open Sans', Arial, sans-serif; box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-size: 14px; line-height: 1.7; font-weight: 500; color: #444; background: #fff; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; }
+    .nav-link { color: white; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; transition: color 0.2s; }
+    .nav-link:hover { color: #3B9EF0; }
+    #main-nav.scrolled .nav-link { color: #071118; }
+    #main-nav.scrolled .nav-link:hover { color: #3B9EF0; }
+    #main-nav.scrolled .nav-hamburger span { background: #071118; }
+    .btn-blue { background: #3B9EF0; color: white; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; padding: 11px 22px; border-radius: 3px; border: none; cursor: pointer; display: inline-block; transition: background 0.2s, transform 0.1s; }
+    .btn-blue:hover { background: #2589D8; }
+    .btn-blue:active { transform: scale(0.98); }
+    .section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #3B9EF0; display: block; }
+    /* nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown { display:none; position:absolute; top:calc(100% + 8px); left:50%; transform:translateX(-50%); background:rgba(7,17,24,0.98); border:1px solid rgba(59,158,240,0.22); border-radius:10px; padding:8px 0; min-width:210px; box-shadow:0 12px 40px rgba(0,0,0,0.5); z-index:100; }
+    .nav-dropdown::before { content:''; position:absolute; top:-10px; left:-20px; right:-20px; height:10px; }
+    .nav-dropdown-wrap:hover .nav-dropdown { display:block; }
+    .nav-dropdown a { display:block; padding:11px 20px; color:#9AAABB; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; border-bottom:1px solid rgba(255,255,255,0.05); transition:color 0.2s, background 0.2s; }
+    .nav-dropdown a:last-child { border-bottom:none; }
+    .nav-dropdown a:hover { color:#3B9EF0; background:rgba(59,158,240,0.07); }
+    /* mobile nav */
+    .mob-services { border-bottom:1px solid rgba(255,255,255,0.06); }
+    .mob-services-btn { display:flex; justify-content:space-between; align-items:center; width:100%; color:white; font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:0.07em; padding:17px 24px; background:transparent; border:none; cursor:pointer; transition:color 0.2s; }
+    .mob-services-btn:hover, .mob-services-btn.active { color:#3B9EF0; }
+    .mob-services-btn .arr { transition:transform 0.22s; }
+    .mob-services-btn.active .arr { transform:rotate(180deg); }
+    .mob-services-sub { display:none; background:rgba(0,0,0,0.18); }
+    .mob-services-sub.open { display:block; }
+    .mob-services-sub a { display:block!important; padding:13px 24px 13px 36px!important; color:#889!important; font-size:12px!important; letter-spacing:0.06em!important; border-bottom:1px solid rgba(255,255,255,0.04)!important; }
+    .mob-services-sub a:last-child { border-bottom:none!important; }
+    .mob-services-sub a:hover { color:#3B9EF0!important; }
+    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; background:transparent; border:none; }
+    .nav-hamburger span { width:22px; height:2px; background:white; display:block; border-radius:1px; transition:transform 0.22s, opacity 0.22s; }
+    .mobile-menu { display:none; position:fixed; top:88px; left:0; right:0; background:rgba(7,17,24,0.98); z-index:49; flex-direction:column; border-top:1px solid rgba(59,158,240,0.2); box-shadow:0 12px 40px rgba(0,0,0,0.5); }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a { color:white; font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:0.07em; padding:17px 24px; border-bottom:1px solid rgba(255,255,255,0.06); transition:color 0.2s; }
+    .mobile-menu a:hover { color:#3B9EF0; }
+    .mobile-menu .m-tel { color:#3B9EF0; border-bottom:none; }
+    /* responsive */
+    @media(max-width:768px) {
+      .nav-links-desktop { display:none!important; }
+      .nav-cta-desktop { display:none!important; }
+      .nav-hamburger { display:flex!important; }
+      .m-1col { grid-template-columns:1fr!important; gap:24px!important; }
+      .m-footer { grid-template-columns:1fr 1fr!important; gap:28px!important; }
+      .m-hide { display:none!important; }
+      .hero-h1 { font-size:34px!important; }
+    }
+    /* service cards */
+    .svc-card { background:#F8FAFC; border-radius:14px; padding:28px 24px; border:1px solid #EDF2F7; transition:transform 0.25s cubic-bezier(0.22,1,0.36,1), box-shadow 0.25s; cursor:default; }
+    .svc-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(59,158,240,0.12); }
+    .svc-icon { width:48px; height:48px; background:#EBF5FE; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+    /* trust bar */
+    .trust-item { display:flex; align-items:center; gap:10px; }
+  </style>
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav id="main-nav" style="background:transparent;position:fixed;top:0;left:0;right:0;z-index:50;transition:background 0.35s,box-shadow 0.35s;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 28px; height:88px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+    <a href="index.html" style="display:flex; align-items:center;">
+      <img src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" style="height:80px; width:auto;">
+    </a>
+    <div class="nav-links-desktop" style="display:flex; align-items:center; gap:28px;">
+      <a href="index.html" class="nav-link">Home</a>
+      <div class="nav-dropdown-wrap">
+        <a href="#services" class="nav-link" style="display:flex;align-items:center;gap:5px;">Services<svg class="arr" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="nav-dropdown">
+          <a href="roof-replacement.html">Roof Replacement</a>
+          <a href="roof-repair.html">Roof Repair</a>
+          <a href="storm-damage.html">Storm &amp; Hail Damage</a>
+          <a href="commercial-roofing.html">Commercial Roofing</a>
+          <a href="insurance-claims.html">Insurance Claims</a>
+          <a href="roof-inspection.html">Roof Inspection</a>
+        </div>
+      </div>
+      <a href="reviews.html" class="nav-link">Reviews</a>
+      <a href="financing.html" class="nav-link">Financing</a>
+      <a href="estimate.html" class="nav-link">Contact Us</a>
+    </div>
+    <div class="nav-cta-desktop" style="display:flex; align-items:center; gap:18px;">
+      <a href="tel:8322953277" style="color:white; font-size:13px; font-weight:700; white-space:nowrap;">&#9990; 832-295-3277</a>
+      <a href="estimate.html" class="btn-blue">Free Inspection</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <div class="mob-services">
+    <button class="mob-services-btn" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('open')">Services<svg class="arr" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="mob-services-sub">
+      <a href="roof-replacement.html">Roof Replacement</a>
+      <a href="roof-repair.html">Roof Repair</a>
+      <a href="storm-damage.html">Storm &amp; Hail Damage</a>
+      <a href="commercial-roofing.html">Commercial Roofing</a>
+      <a href="insurance-claims.html">Insurance Claims</a>
+      <a href="roof-inspection.html">Roof Inspection</a>
+    </div>
+  </div>
+  <a href="reviews.html">Reviews</a>
+  <a href="financing.html">Financing</a>
+  <a href="estimate.html">Contact Us</a>
+  <a href="tel:8322953277" class="m-tel">&#9990; 832-295-3277</a>
+</div>
+
+<!-- ====== HERO ====== -->
+<section style="padding-top:88px; background:#071118; min-height:58vh; display:flex; align-items:center; position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 30% 50%, rgba(59,158,240,0.13) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(59,158,240,0.07) 0%, transparent 50%);"></div>
+  <!-- subtle grid texture -->
+  <div style="position:absolute; inset:0; opacity:0.04; background-image:linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px); background-size:48px 48px;"></div>
+  <div style="max-width:1200px; margin:0 auto; padding:80px 28px; position:relative; z-index:1; width:100%;">
+    <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(59,158,240,0.12); border:1px solid rgba(59,158,240,0.3); border-radius:20px; padding:6px 14px; margin-bottom:24px;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#3B9EF0" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span style="color:#3B9EF0; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em;" id="hero-badge">Serving Your City, TX</span>
+    </div>
+    <h1 class="hero-h1" style="font-size:52px; font-weight:900; color:white; line-height:1.05; letter-spacing:-0.03em; margin-bottom:20px;" id="hero-heading">Roofing Services in Your City, TX</h1>
+    <p style="color:#8AAABB; font-size:16px; line-height:1.75; max-width:520px; margin-bottom:40px;" id="hero-desc">Expert roofing services trusted by homeowners across the greater Houston area. GAF certified, fully licensed &amp; insured.</p>
+    <div style="display:flex; gap:16px; flex-wrap:wrap;">
+      <a href="estimate.html" class="btn-blue" style="font-size:14px; padding:14px 28px;">Get a Free Inspection</a>
+      <a href="tel:8322953277" style="display:inline-flex; align-items:center; gap:8px; color:white; font-weight:700; font-size:14px; padding:14px 28px; border:1.5px solid rgba(255,255,255,0.2); border-radius:3px; transition:border-color 0.2s;" onmouseover="this.style.borderColor='#3B9EF0'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)'">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.95 11 19.79 19.79 0 01.88 2.38 2 2 0 012.86.4h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L7.09 8.11a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+        832-295-3277
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TRUST BAR ====== -->
+<section style="background:#0F1F35; padding:20px 28px; border-top:1px solid rgba(59,158,240,0.15); border-bottom:1px solid rgba(59,158,240,0.15);">
+  <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:center; align-items:center; gap:40px; flex-wrap:wrap;">
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span style="color:white; font-size:12px; font-weight:700;">GAF Certified Contractor</span>
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <span style="color:white; font-size:12px; font-weight:700;">Licensed &amp; Insured</span>
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span style="color:white; font-size:12px; font-weight:700;">24/7 Emergency Service</span>
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+      <span style="color:white; font-size:12px; font-weight:700;">Free Inspections</span>
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <span style="color:white; font-size:12px; font-weight:700;">5-Star Rated</span>
+    </div>
+  </div>
+</section>
+
+<!-- ====== LOCAL INTRO ====== -->
+<section style="background:white; padding:80px 28px;">
+  <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;" class="m-1col">
+    <div>
+      <span class="section-label" style="margin-bottom:12px;">Local Experts</span>
+      <h2 style="font-size:40px; font-weight:900; color:#071118; letter-spacing:-0.03em; line-height:1.1; margin-bottom:20px;" id="intro-heading">Your Trusted Roofer in Your City</h2>
+      <p style="color:#666; font-size:14px; line-height:1.85; margin-bottom:16px;" id="intro-p1">When storms roll through the Houston area, your roof is your home's first line of defense. JD Roofing Solutions has been serving local homeowners with expert craftsmanship, transparent pricing, and the kind of personal service that big national companies can't offer.</p>
+      <p style="color:#666; font-size:14px; line-height:1.85; margin-bottom:32px;" id="intro-p2">We handle everything from free insurance claim inspections to full roof replacements — always on time, always on budget, and always backed by a warranty you can trust.</p>
+      <div style="display:flex; gap:32px; flex-wrap:wrap;">
+        <div>
+          <div style="font-size:32px; font-weight:900; color:#3B9EF0; letter-spacing:-0.02em;">500+</div>
+          <div style="font-size:12px; color:#888; font-weight:600; text-transform:uppercase; letter-spacing:0.08em;">Roofs Completed</div>
+        </div>
+        <div>
+          <div style="font-size:32px; font-weight:900; color:#3B9EF0; letter-spacing:-0.02em;">5★</div>
+          <div style="font-size:12px; color:#888; font-weight:600; text-transform:uppercase; letter-spacing:0.08em;">Google Rating</div>
+        </div>
+        <div>
+          <div style="font-size:32px; font-weight:900; color:#3B9EF0; letter-spacing:-0.02em;">10+</div>
+          <div style="font-size:12px; color:#888; font-weight:600; text-transform:uppercase; letter-spacing:0.08em;">Years Experience</div>
+        </div>
+      </div>
+    </div>
+    <div style="background:#F8FAFC; border-radius:20px; padding:36px; border:1px solid #EDF2F7;">
+      <h3 style="font-size:18px; font-weight:800; color:#071118; margin-bottom:20px;" id="why-heading">Why Homeowners in Your City Choose JD Roofing</h3>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:14px;">
+        <li style="display:flex; align-items:flex-start; gap:12px;">
+          <div style="width:22px; height:22px; background:#3B9EF0; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">
+            <svg width="11" height="11" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span style="color:#555; font-size:13px; line-height:1.65;"><strong style="color:#071118;">Free storm damage inspections</strong> — we document everything for your insurance claim at no cost to you.</span>
+        </li>
+        <li style="display:flex; align-items:flex-start; gap:12px;">
+          <div style="width:22px; height:22px; background:#3B9EF0; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">
+            <svg width="11" height="11" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span style="color:#555; font-size:13px; line-height:1.65;"><strong style="color:#071118;">GAF-certified installation</strong> — premium materials backed by manufacturer warranties up to 50 years.</span>
+        </li>
+        <li style="display:flex; align-items:flex-start; gap:12px;">
+          <div style="width:22px; height:22px; background:#3B9EF0; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">
+            <svg width="11" height="11" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span style="color:#555; font-size:13px; line-height:1.65;"><strong style="color:#071118;">Transparent pricing</strong> — detailed written estimates with no hidden fees or surprise charges.</span>
+        </li>
+        <li style="display:flex; align-items:flex-start; gap:12px;">
+          <div style="width:22px; height:22px; background:#3B9EF0; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">
+            <svg width="11" height="11" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span style="color:#555; font-size:13px; line-height:1.65;"><strong style="color:#071118;">Local crew, local pride</strong> — we live and work in this community and stand behind every job we do.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SERVICES ====== -->
+<section id="services" style="background:#F8FAFC; padding:80px 28px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:52px;">
+      <span class="section-label" style="margin-bottom:10px;">What We Offer</span>
+      <h2 style="font-size:40px; font-weight:900; color:#071118; letter-spacing:-0.03em;" id="services-heading">Roofing Services in Your City</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;" class="m-1col">
+
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 style="font-size:16px; font-weight:800; color:#071118; margin-bottom:8px;">Roof Replacement</h3>
+        <p style="color:#666; font-size:13px; line-height:1.75; margin-bottom:16px;">Full tear-off and replacement using GAF premium shingles. Proper ventilation, flashing, and underlayment — done right the first time.</p>
+        <a href="roof-replacement.html" style="color:#3B9EF0; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; display:inline-flex; align-items:center; gap:6px;">Learn More <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3 style="font-size:16px; font-weight:800; color:#071118; margin-bottom:8px;">Roof Repair</h3>
+        <p style="color:#666; font-size:13px; line-height:1.75; margin-bottom:16px;">Leaks, missing shingles, damaged flashing — we diagnose the real problem and fix it fast to protect your home from further damage.</p>
+        <a href="roof-repair.html" style="color:#3B9EF0; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; display:inline-flex; align-items:center; gap:6px;">Learn More <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 style="font-size:16px; font-weight:800; color:#071118; margin-bottom:8px;">Storm &amp; Hail Damage</h3>
+        <p style="color:#666; font-size:13px; line-height:1.75; margin-bottom:16px;">Free inspection and full insurance claim support. We work directly with your adjuster to make sure you get the settlement you deserve.</p>
+        <a href="storm-damage.html" style="color:#3B9EF0; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; display:inline-flex; align-items:center; gap:6px;">Learn More <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        </div>
+        <h3 style="font-size:16px; font-weight:800; color:#071118; margin-bottom:8px;">Commercial Roofing</h3>
+        <p style="color:#666; font-size:13px; line-height:1.75; margin-bottom:16px;">Flat roofs, TPO, modified bitumen — we handle commercial properties of all sizes with minimal business disruption.</p>
+        <a href="commercial-roofing.html" style="color:#3B9EF0; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; display:inline-flex; align-items:center; gap:6px;">Learn More <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3 style="font-size:16px; font-weight:800; color:#071118; margin-bottom:8px;">Insurance Claims</h3>
+        <p style="color:#666; font-size:13px; line-height:1.75; margin-bottom:16px;">We guide you through the entire claims process — from inspection to payout — so you never have to deal with your insurance company alone.</p>
+        <a href="insurance-claims.html" style="color:#3B9EF0; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; display:inline-flex; align-items:center; gap:6px;">Learn More <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg width="22" height="22" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3 style="font-size:16px; font-weight:800; color:#071118; margin-bottom:8px;">Free Roof Inspection</h3>
+        <p style="color:#666; font-size:13px; line-height:1.75; margin-bottom:16px;">Thorough inspections with a detailed written report — at no charge. Know exactly what condition your roof is in before problems get worse.</p>
+        <a href="roof-inspection.html" style="color:#3B9EF0; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; display:inline-flex; align-items:center; gap:6px;">Learn More <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA BANNER ====== -->
+<section style="background:#071118; padding:72px 28px; position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 20% 50%, rgba(59,158,240,0.12) 0%, transparent 55%);"></div>
+  <div style="max-width:900px; margin:0 auto; text-align:center; position:relative; z-index:1;">
+    <span class="section-label" style="margin-bottom:12px;">Ready to Get Started?</span>
+    <h2 style="font-size:40px; font-weight:900; color:white; letter-spacing:-0.03em; line-height:1.1; margin-bottom:16px;" id="cta-heading">Get Your Free Inspection in Your City Today</h2>
+    <p style="color:#8AAABB; font-size:15px; line-height:1.75; max-width:520px; margin:0 auto 36px;">No pressure, no obligation — just an honest assessment of your roof's condition from a certified professional.</p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="estimate.html" class="btn-blue" style="font-size:14px; padding:15px 32px;">Schedule Free Inspection</a>
+      <a href="tel:8322953277" style="display:inline-flex; align-items:center; gap:8px; color:white; font-weight:700; font-size:14px; padding:15px 32px; border:1.5px solid rgba(255,255,255,0.25); border-radius:3px; transition:border-color 0.2s;" onmouseover="this.style.borderColor='#3B9EF0'" onmouseout="this.style.borderColor='rgba(255,255,255,0.25)'">
+        Call 832-295-3277
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CONTACT FORM ====== -->
+<section id="contact" style="background:white; padding:80px 28px;">
+  <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;" class="m-1col">
+    <div>
+      <span class="section-label" style="margin-bottom:12px;">Get In Touch</span>
+      <h2 style="font-size:38px; font-weight:900; color:#071118; letter-spacing:-0.03em; line-height:1.1; margin-bottom:16px;" id="form-heading">Request a Free Estimate in Your City</h2>
+      <p style="color:#666; font-size:14px; line-height:1.85; margin-bottom:32px;">Fill out the form and we'll get back to you within 24 hours to schedule your free inspection at a time that works for you.</p>
+      <div style="display:flex; flex-direction:column; gap:18px;">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div style="width:44px; height:44px; background:#EBF5FE; border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <svg width="18" height="18" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.95 11 19.79 19.79 0 01.88 2.38 2 2 0 012.86.4h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L7.09 8.11a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:12px; font-weight:700; color:#888; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:2px;">Call Us</div>
+            <a href="tel:8322953277" style="font-size:16px; font-weight:800; color:#071118;">832-295-3277</a>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div style="width:44px; height:44px; background:#EBF5FE; border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <svg width="18" height="18" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div style="font-size:12px; font-weight:700; color:#888; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:2px;">Email Us</div>
+            <a href="mailto:jdroofingsolutions06@gmail.com" style="font-size:14px; font-weight:700; color:#071118;">jdroofingsolutions06@gmail.com</a>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div style="width:44px; height:44px; background:#EBF5FE; border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <svg width="18" height="18" fill="none" stroke="#3B9EF0" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div style="font-size:12px; font-weight:700; color:#888; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:2px;">Hours</div>
+            <div style="font-size:14px; font-weight:700; color:#071118;">Mon–Fri 9am–5pm &nbsp;·&nbsp; 24/7 Emergency</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background:#F8FAFC; border-radius:20px; padding:36px; border:1px solid #EDF2F7;">
+      <form onsubmit="handleSubmit(event)">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+          <div>
+            <label style="display:block; font-size:11px; font-weight:700; color:#555; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">First Name</label>
+            <input type="text" name="first_name" required placeholder="John" style="width:100%; padding:12px 14px; border:1.5px solid #E2E8F0; border-radius:8px; font-size:13px; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#E2E8F0'">
+          </div>
+          <div>
+            <label style="display:block; font-size:11px; font-weight:700; color:#555; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">Last Name</label>
+            <input type="text" name="last_name" required placeholder="Smith" style="width:100%; padding:12px 14px; border:1.5px solid #E2E8F0; border-radius:8px; font-size:13px; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#E2E8F0'">
+          </div>
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-size:11px; font-weight:700; color:#555; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">Phone Number</label>
+          <input type="tel" name="phone" required placeholder="(832) 000-0000" style="width:100%; padding:12px 14px; border:1.5px solid #E2E8F0; border-radius:8px; font-size:13px; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#E2E8F0'">
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-size:11px; font-weight:700; color:#555; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">Email Address</label>
+          <input type="email" name="email" required placeholder="john@example.com" style="width:100%; padding:12px 14px; border:1.5px solid #E2E8F0; border-radius:8px; font-size:13px; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#E2E8F0'">
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-size:11px; font-weight:700; color:#555; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">Service Needed</label>
+          <select name="service" style="width:100%; padding:12px 14px; border:1.5px solid #E2E8F0; border-radius:8px; font-size:13px; outline:none; transition:border-color 0.2s; background:white;" onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#E2E8F0'">
+            <option value="">Select a service...</option>
+            <option>Free Roof Inspection</option>
+            <option>Roof Replacement</option>
+            <option>Roof Repair</option>
+            <option>Storm / Hail Damage</option>
+            <option>Insurance Claim Help</option>
+            <option>Commercial Roofing</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div style="margin-bottom:20px;">
+          <label style="display:block; font-size:11px; font-weight:700; color:#555; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">Message (Optional)</label>
+          <textarea name="message" rows="3" placeholder="Tell us about your roofing needs..." style="width:100%; padding:12px 14px; border:1.5px solid #E2E8F0; border-radius:8px; font-size:13px; outline:none; transition:border-color 0.2s; resize:vertical;" onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#E2E8F0'"></textarea>
+        </div>
+        <button type="submit" class="btn-blue" style="width:100%; padding:14px; font-size:14px;" id="submit-btn">Request Free Inspection</button>
+        <p style="text-align:center; color:#bbb; font-size:11px; margin-top:12px; line-height:1.6;">By submitting you agree to be contacted about your roofing project.<br>Licensed &amp; Insured &middot; Houston, TX</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer style="background:#071118; border-top:1px solid #0F1F35; padding:60px 28px 28px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div class="m-footer" style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; margin-bottom:48px;">
+      <div>
+        <div style="margin-bottom:18px;">
+          <img src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" style="height:80px; width:auto;">
+        </div>
+        <p style="color:#607080; font-size:13px; line-height:1.75; max-width:260px; margin-bottom:22px;">Houston's trusted roofing experts — delivering quality craftsmanship and unparalleled service across the greater Houston metro area.</p>
+        <div style="display:flex; gap:12px;">
+          <a href="https://www.facebook.com/JDRoofingSolutions/" target="_blank" rel="noopener" aria-label="Facebook" style="width:34px; height:34px; background:#0F1F35; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background 0.2s;" onmouseover="this.style.background='#1877F2'" onmouseout="this.style.background='#0F1F35'">
+            <svg width="14" height="14" fill="#93AABF" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/jdroofingsolutions/" target="_blank" rel="noopener" aria-label="Instagram" style="width:34px; height:34px; background:#0F1F35; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background 0.2s;" onmouseover="this.style.background='#E1306C'" onmouseout="this.style.background='#0F1F35'">
+            <svg width="14" height="14" fill="none" stroke="#93AABF" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://share.google/oai32PGM5oZx6rDlt" target="_blank" rel="noopener" aria-label="Google Business" style="width:34px; height:34px; background:#0F1F35; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background 0.2s;" onmouseover="this.style.background='#4285F4'" onmouseout="this.style.background='#0F1F35'">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#93AABF"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@jdroofingsolutions" target="_blank" rel="noopener" aria-label="TikTok" style="width:34px; height:34px; background:#0F1F35; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background 0.2s;" onmouseover="this.style.background='#010101'" onmouseout="this.style.background='#0F1F35'">
+            <svg width="14" height="14" fill="#93AABF" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:white; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:18px;">Services</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li><a href="roof-replacement.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Replacement</a></li>
+          <li><a href="roof-repair.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Repair</a></li>
+          <li><a href="storm-damage.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Storm &amp; Hail Damage</a></li>
+          <li><a href="commercial-roofing.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Commercial Roofing</a></li>
+          <li><a href="insurance-claims.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Insurance Claims</a></li>
+          <li><a href="roof-inspection.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Inspection</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:white; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:18px;">Service Areas</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li><a href="city.html?city=houston" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Houston</a></li>
+          <li><a href="city.html?city=katy" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Katy</a></li>
+          <li><a href="city.html?city=sugar-land" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Sugar Land</a></li>
+          <li><a href="city.html?city=the-woodlands" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">The Woodlands</a></li>
+          <li><a href="city.html?city=pearland" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Pearland</a></li>
+          <li><a href="city.html?city=cypress" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Cypress</a></li>
+          <li><a href="city.html?city=humble" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Humble</a></li>
+          <li><a href="city.html?city=baytown" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Baytown</a></li>
+          <li><a href="city.html?city=league-city" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">League City</a></li>
+          <li><a href="city.html?city=pasadena" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Pasadena</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:white; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:18px;">Contact</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li><a href="tel:8322953277" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">832-295-3277</a></li>
+          <li><a href="mailto:jdroofingsolutions06@gmail.com" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">jdroofingsolutions06@gmail.com</a></li>
+          <li style="color:#607080; font-size:13px;">10108 Veterans Memorial Dr</li>
+          <li style="color:#607080; font-size:13px;">Houston, TX 77014</li>
+          <li style="color:#607080; font-size:13px;">Mon–Fri: 9am–5pm</li>
+          <li style="color:#607080; font-size:13px;">24/7 Emergency Line</li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid #0F1F35; padding-top:22px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;">
+      <p style="color:#3A4A5A; font-size:11px;">&copy; 2025 JD Roofing Solutions. All rights reserved. &nbsp;|&nbsp; Licensed &amp; Insured</p>
+      <div style="display:flex; gap:20px;">
+        <a href="#" style="color:#3A4A5A; font-size:11px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#3A4A5A'">Privacy Policy</a>
+        <a href="#" style="color:#3A4A5A; font-size:11px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#3A4A5A'">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // City data — one object per city key
+  var cities = {
+    'houston': {
+      name: 'Houston',
+      heroBadge: 'Serving Houston, TX',
+      heroHeading: 'Houston\'s #1 Trusted Roofing Contractor',
+      heroDesc: 'GAF-certified roofing experts serving the greater Houston area. From storm damage repairs to full replacements — done right, backed by warranty.',
+      introHeading: 'Your Trusted Roofer in Houston',
+      introP1: 'Houston weather is no joke — high humidity, severe storms, and brutal summers take a heavy toll on your roof year after year. JD Roofing Solutions has been protecting Houston homes with expert craftsmanship and honest, transparent service since day one.',
+      introP2: 'From Memorial to Friendswood, we\'ve replaced and repaired thousands of roofs across Houston. We know local building codes, common problem areas, and the insurance process inside and out.',
+      whyHeading: 'Why Houston Homeowners Choose JD Roofing',
+      servicesHeading: 'Roofing Services in Houston, TX',
+      ctaHeading: 'Get Your Free Roof Inspection in Houston Today',
+      formHeading: 'Request a Free Estimate in Houston',
+      title: 'Houston Roofing Contractor | JD Roofing Solutions',
+      desc: 'JD Roofing Solutions — Houston\'s trusted GAF-certified roofing contractor. Free inspections, roof replacement, storm damage repair.'
+    },
+    'katy': {
+      name: 'Katy',
+      heroBadge: 'Serving Katy, TX',
+      heroHeading: 'Katy\'s Expert Roofing Contractor',
+      heroDesc: 'Trusted by Katy homeowners for storm damage repairs, full roof replacements, and free insurance claim inspections.',
+      introHeading: 'Katy\'s Go-To Roofing Experts',
+      introP1: 'Katy\'s rapid growth means thousands of homes built in the same era — and many of those roofs are now reaching the end of their lifespan. JD Roofing Solutions has helped countless Katy families navigate storm damage, worn-out shingles, and insurance claims.',
+      introP2: 'We respond fast, work clean, and back every job with a warranty you can actually use. That\'s why Katy homeowners keep calling us back — and referring their neighbors.',
+      whyHeading: 'Why Katy Homeowners Choose JD Roofing',
+      servicesHeading: 'Roofing Services in Katy, TX',
+      ctaHeading: 'Get Your Free Roof Inspection in Katy Today',
+      formHeading: 'Request a Free Estimate in Katy',
+      title: 'Katy TX Roofing Contractor | JD Roofing Solutions',
+      desc: 'JD Roofing Solutions — trusted roofing contractor in Katy, TX. Free inspections, GAF-certified installation, storm damage repair.'
+    },
+    'sugar-land': {
+      name: 'Sugar Land',
+      heroBadge: 'Serving Sugar Land, TX',
+      heroHeading: 'Sugar Land\'s Premier Roofing Company',
+      heroDesc: 'Professional roofing services for Sugar Land homeowners — from free storm inspections to complete roof replacements with lifetime warranties.',
+      introHeading: 'Roofing Experts Serving Sugar Land',
+      introP1: 'Sugar Land\'s established neighborhoods deserve quality work that holds up. JD Roofing Solutions brings GAF-certified expertise and a commitment to craftsmanship that Sugar Land homeowners trust.',
+      introP2: 'We handle everything from minor repairs to full replacements, and we make the insurance claims process completely stress-free. Your roof is in good hands.',
+      whyHeading: 'Why Sugar Land Homeowners Choose JD Roofing',
+      servicesHeading: 'Roofing Services in Sugar Land, TX',
+      ctaHeading: 'Get Your Free Roof Inspection in Sugar Land Today',
+      formHeading: 'Request a Free Estimate in Sugar Land',
+      title: 'Sugar Land Roofing Contractor | JD Roofing Solutions',
+      desc: 'JD Roofing Solutions — roofing contractor in Sugar Land, TX. Free inspections, full replacements, storm damage specialists.'
+    },
+    'the-woodlands': {
+      name: 'The Woodlands',
+      heroBadge: 'Serving The Woodlands, TX',
+      heroHeading: 'The Woodlands\' Top Roofing Contractor',
+      heroDesc: 'Serving The Woodlands with premium GAF-certified roofing installation, storm damage repair, and free insurance inspections.',
+      introHeading: 'Trusted Roofing in The Woodlands',
+      introP1: 'The Woodlands\' beautiful homes deserve nothing less than premium roofing done by certified professionals. JD Roofing Solutions delivers exactly that — with attention to detail, high-quality materials, and a crew that respects your property.',
+      introP2: 'From Village of Cochran\'s Crossing to Sterling Ridge, we\'ve built a reputation across The Woodlands for doing exceptional work the first time — no callbacks, no excuses.',
+      whyHeading: 'Why The Woodlands Homeowners Choose JD Roofing',
+      servicesHeading: 'Roofing Services in The Woodlands, TX',
+      ctaHeading: 'Get Your Free Roof Inspection in The Woodlands Today',
+      formHeading: 'Request a Free Estimate in The Woodlands',
+      title: 'The Woodlands Roofing Contractor | JD Roofing Solutions',
+      desc: 'JD Roofing Solutions — roofing contractor in The Woodlands, TX. Premium installation, storm damage, free inspections.'
+    },
+    'pearland': {
+      name: 'Pearland',
+      heroBadge: 'Serving Pearland, TX',
+      heroHeading: 'Pearland\'s Trusted Roofing Experts',
+      heroDesc: 'Expert roofing services for Pearland homeowners — free storm damage inspections, full replacements, and insurance claim support.',
+      introHeading: 'Roofing Done Right in Pearland',
+      introP1: 'Pearland\'s booming neighborhoods bring new and growing families who need a roofing contractor they can truly trust. JD Roofing Solutions delivers that trust through quality work, honest pricing, and standing behind every single job.',
+      introP2: 'Whether you\'re dealing with hail damage from a recent storm or just need your aging roof replaced before it causes bigger problems, we\'re ready to help.',
+      whyHeading: 'Why Pearland Homeowners Choose JD Roofing',
+      servicesHeading: 'Roofing Services in Pearland, TX',
+      ctaHeading: 'Get Your Free Roof Inspection in Pearland Today',
+      formHeading: 'Request a Free Estimate in Pearland',
+      title: 'Pearland Roofing Contractor | JD Roofing Solutions',
+      desc: 'JD Roofing Solutions — roofing contractor in Pearland, TX. Free inspections, storm damage, insurance claims.'
+    },
+    'cypress': {
+      name: 'Cypress',
+      heroBadge: 'Serving Cypress, TX',
+      heroHeading: 'Cypress\'s Expert Roofing Contractor',
+      heroDesc: 'Dependable roofing services for Cypress homeowners — storm repairs, full replacements, and hassle-free insurance claims.',
+      introHeading: 'Roofing Experts in Cypress, TX',
+      introP1: 'Cypress homeowners know that storm season waits for no one. JD Roofing Solutions is ready year-round to inspect, repair, and replace roofs across Cypress with the speed and quality your home deserves.',
+      introP2: 'We\'re local, we\'re licensed, and we know exactly what it takes to protect homes in the Houston metro. Reach out today for your free inspection.',
+      whyHeading: 'Why Cypress Homeowners Choose JD Roofing',
+      servicesHeading: 'Roofing Services in Cypress, TX',
+      ctaHeading: 'Get Your Free Roof Inspection in Cypress Today',
+      formHeading: 'Request a Free Estimate in Cypress',
+      title: 'Cypress TX Roofing Contractor | JD Roofing Solutions',
+      desc: 'JD Roofing Solutions — roofing contractor in Cypress, TX. Storm damage, free inspections, GAF-certified installation.'
+    },
+    'humble': {
+      name: 'Humble',
+      heroBadge: 'Serving Humble, TX',
+      heroHeading: 'Humble\'s Trusted Roofing Company',
+      heroDesc: 'Reliable roofing services for Humble homeowners — free inspections, storm damage repairs, and full roof replacements you can count on.',
+      introHeading: 'Quality Roofing in Humble, TX',
+      introP1: 'From Atascocita to Fall Creek, JD Roofing Solutions proudly serves the Humble area with top-quality roofing that protects your home and your investment.',
+      introP2: 'We\'re fast, thorough, and completely transparent about pricing. No surprise charges — just excellent work and a roof that lasts.',
+      whyHeading: 'Why Humble Homeowners Choose JD Roofing',
+      servicesHeading: 'Roofing Services in Humble, TX',
+      ctaHeading: 'Get Your Free Roof Inspection in Humble Today',
+      formHeading: 'Request a Free Estimate in Humble',
+      title: 'Humble TX Roofing Contractor | JD Roofing Solutions',
+      desc: 'JD Roofing Solutions — roofing contractor in Humble, TX. Free inspections, storm damage, full replacements.'
+    },
+    'baytown': {
+      name: 'Baytown',
+      heroBadge: 'Serving Baytown, TX',
+      heroHeading: 'Baytown\'s Expert Roofing Contractor',
+      heroDesc: 'Serving Baytown with trusted roofing repairs, replacements, and storm damage insurance claim support at no up-front cost.',
+      introHeading: 'Dependable Roofing in Baytown, TX',
+      introP1: 'Baytown\'s coastal proximity means roofs take a beating from humidity, salt air, and Gulf storms. JD Roofing Solutions understands these unique challenges and installs roofing systems built to withstand them.',
+      introP2: 'We\'ve helped dozens of Baytown families get full insurance payouts after storm damage — and we\'ll do the same for you.',
+      whyHeading: 'Why Baytown Homeowners Choose JD Roofing',
+      servicesHeading: 'Roofing Services in Baytown, TX',
+      ctaHeading: 'Get Your Free Roof Inspection in Baytown Today',
+      formHeading: 'Request a Free Estimate in Baytown',
+      title: 'Baytown TX Roofing Contractor | JD Roofing Solutions',
+      desc: 'JD Roofing Solutions — roofing contractor in Baytown, TX. Storm damage, insurance claims, free inspections.'
+    },
+    'league-city': {
+      name: 'League City',
+      heroBadge: 'Serving League City, TX',
+      heroHeading: 'League City\'s Trusted Roofer',
+      heroDesc: 'Expert roofing services for League City homeowners — from free storm damage inspections to complete GAF-certified roof replacements.',
+      introHeading: 'Roofing You Can Trust in League City',
+      introP1: 'League City\'s growing communities deserve a roofing contractor they can actually trust. JD Roofing Solutions has built a strong reputation in the area for honest work, fair pricing, and roofs that hold up to Texas weather.',
+      introP2: 'Call us today for a free inspection and find out exactly what your roof needs — no pressure, no sales games.',
+      whyHeading: 'Why League City Homeowners Choose JD Roofing',
+      servicesHeading: 'Roofing Services in League City, TX',
+      ctaHeading: 'Get Your Free Roof Inspection in League City Today',
+      formHeading: 'Request a Free Estimate in League City',
+      title: 'League City Roofing Contractor | JD Roofing Solutions',
+      desc: 'JD Roofing Solutions — roofing contractor in League City, TX. Free inspections, storm damage, GAF-certified installation.'
+    },
+    'pasadena': {
+      name: 'Pasadena',
+      heroBadge: 'Serving Pasadena, TX',
+      heroHeading: 'Pasadena\'s Expert Roofing Contractor',
+      heroDesc: 'Trusted roofing services for Pasadena homeowners — free inspections, storm damage repairs, and full replacements backed by warranty.',
+      introHeading: 'Quality Roofing in Pasadena, TX',
+      introP1: 'JD Roofing Solutions is proud to serve the Pasadena community with the same quality and integrity we bring to every job across the Houston metro. Your roof protects everything that matters — we take that seriously.',
+      introP2: 'Whether you need a quick repair or a complete replacement, our certified team is ready to get it done right and fast.',
+      whyHeading: 'Why Pasadena Homeowners Choose JD Roofing',
+      servicesHeading: 'Roofing Services in Pasadena, TX',
+      ctaHeading: 'Get Your Free Roof Inspection in Pasadena Today',
+      formHeading: 'Request a Free Estimate in Pasadena',
+      title: 'Pasadena TX Roofing Contractor | JD Roofing Solutions',
+      desc: 'JD Roofing Solutions — roofing contractor in Pasadena, TX. Free inspections, storm damage, full replacements.'
+    }
+  };
+
+  // Determine city from query string
+  var params = new URLSearchParams(window.location.search);
+  var key = params.get('city') || 'houston';
+  var city = cities[key] || cities['houston'];
+
+  // Populate page
+  document.getElementById('page-title').textContent = city.title;
+  document.getElementById('page-desc').setAttribute('content', city.desc);
+  document.getElementById('hero-badge').textContent = city.heroBadge;
+  document.getElementById('hero-heading').textContent = city.heroHeading;
+  document.getElementById('hero-desc').textContent = city.heroDesc;
+  document.getElementById('intro-heading').textContent = city.introHeading;
+  document.getElementById('intro-p1').textContent = city.introP1;
+  document.getElementById('intro-p2').textContent = city.introP2;
+  document.getElementById('why-heading').textContent = city.whyHeading;
+  document.getElementById('services-heading').textContent = city.servicesHeading;
+  document.getElementById('cta-heading').textContent = city.ctaHeading;
+  document.getElementById('form-heading').textContent = city.formHeading;
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    var btn = document.getElementById('submit-btn');
+    var form = e.target;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    var data = {
+      _subject: 'New Inspection Request — JD Roofing Solutions',
+      'First Name': form.first_name ? form.first_name.value : '',
+      'Last Name':  form.last_name  ? form.last_name.value  : '',
+      Phone:        form.phone      ? form.phone.value      : '',
+      Email:        form.email      ? form.email.value      : '',
+      Service:      form.service    ? form.service.value    : '',
+      Message:      form.message    ? form.message.value    : ''
+    };
+
+    fetch('https://formsubmit.co/ajax/jdroofingsolutions06@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(){
+      btn.textContent = "Request Sent! We'll Call You Soon.";
+      btn.style.background = '#16a34a';
+      form.reset();
+    })
+    .catch(function(){
+      btn.textContent = 'Request Free Inspection';
+      btn.disabled = false;
+      alert('Something went wrong. Please call us at 832-295-3277.');
+    });
+  }
+</script>
+<script>
+  (function(){
+    var nav = document.getElementById('main-nav');
+    function updateNav(){
+      if(window.scrollY > 60){
+        nav.classList.add('scrolled');
+        nav.style.background = 'white';
+        nav.style.boxShadow = '0 2px 16px rgba(7,17,24,0.1)';
+      } else {
+        nav.classList.remove('scrolled');
+        nav.style.background = 'transparent';
+        nav.style.boxShadow = 'none';
+      }
+    }
+    window.addEventListener('scroll', updateNav, {passive:true});
+    updateNav();
+  })();
+</script>
+</body>
+</html>
