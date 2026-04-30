@@ -540,10 +540,7 @@
 <!-- ====== HOW IT WORKS ====== -->
 <style>
   .hiw-section { background: white; padding: 88px 0; overflow: hidden; }
-  .hiw-inner { max-width: 1260px; margin: 0 auto; padding: 0 60px; display: grid; grid-template-columns: 1fr 380px; grid-template-rows: auto 1fr; gap: 0 40px; }
-  .hiw-header { grid-column: 1; grid-row: 1; }
-  .hiw-steps-wrap { grid-column: 1; grid-row: 2; align-self: end; }
-  .hiw-photo { grid-column: 2; grid-row: 1 / 3; align-self: end; }
+  .hiw-inner { max-width: 1260px; margin: 0 auto; padding: 0 60px; display: grid; grid-template-columns: 1fr 380px; align-items: end; gap: 40px; }
   .hiw-heading { font-size: clamp(38px, 5vw, 58px); font-weight: 900; color: #071118; letter-spacing: -0.03em; line-height: 1.0; margin: 10px 0 8px; }
   .hiw-tagline { color: #999; font-size: 14px; font-weight: 500; margin-bottom: 52px; }
   /* steps */
@@ -595,11 +592,9 @@
     filter: drop-shadow(0 8px 32px rgba(0,0,0,0.18));
   }
   @media (max-width: 960px) {
-    .hiw-inner { grid-template-columns: 1fr; grid-template-rows: auto auto auto; padding: 0 28px; }
-    .hiw-header { order: 1; }
-    .hiw-photo { order: 2; margin: 28px 0; justify-content: center; }
-    .hiw-photo img { height: auto; width: 75%; max-width: 320px; }
-    .hiw-steps-wrap { order: 3; }
+    .hiw-inner { grid-template-columns: 1fr; padding: 0 28px; }
+    .hiw-photo { margin-right: -28px; justify-content: center; }
+    .hiw-photo img { height: 320px; }
     .hiw-steps::before { display: none; }
     .hiw-steps { flex-wrap: wrap; gap: 28px; }
     .hiw-step { flex: 0 0 calc(50% - 14px); }
@@ -607,12 +602,11 @@
 </style>
 <section class="hiw-section">
   <div class="hiw-inner">
-    <div class="hiw-header">
+    <div>
       <span class="section-label">Simple Process</span>
       <h2 class="hiw-heading">How It Works.</h2>
       <p class="hiw-tagline">Simple. Smooth. Stress-free from start to finish.</p>
-    </div>
-    <div class="hiw-steps-wrap">
+
       <div class="hiw-steps">
 
         <div class="hiw-step">
@@ -664,6 +658,7 @@
     </div>
 
     <div class="hiw-photo">
+
       <img src="Brand_assets/drop shadow_.png" alt="JD Roofing Solutions salesman">
     </div>
   </div>
