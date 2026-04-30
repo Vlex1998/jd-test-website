@@ -594,9 +594,19 @@
     filter: drop-shadow(0 8px 32px rgba(0,0,0,0.18));
   }
   @media (max-width: 960px) {
+    .hiw-section { padding: 0 0 72px; }
     .hiw-inner { grid-template-columns: 1fr; padding: 0 28px; }
-    .hiw-photo { margin-right: 0; justify-content: center; }
-    .hiw-photo img { height: auto; width: 100%; max-width: 480px; }
+    .hiw-photo {
+      order: -1;
+      margin: 0 0 40px;
+      background: linear-gradient(160deg, #0C1A2E 0%, #1B3A5C 100%);
+      border-radius: 0;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 40px 28px 0;
+      min-height: 360px;
+    }
+    .hiw-photo img { height: auto; width: 85%; max-width: 360px; }
     .hiw-steps::before { display: none; }
     .hiw-steps { flex-wrap: wrap; gap: 28px; }
     .hiw-step { flex: 0 0 calc(50% - 14px); }
