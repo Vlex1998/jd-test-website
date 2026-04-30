@@ -580,12 +580,13 @@
   /* photo */
   .hiw-photo {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: flex-end;
     margin-right: -40px;
+    align-self: start;
   }
   .hiw-photo img {
-    height: 520px;
+    height: 640px;
     width: auto;
     object-fit: contain;
     display: block;
@@ -594,7 +595,7 @@
   @media (max-width: 960px) {
     .hiw-inner { grid-template-columns: 1fr; padding: 0 28px; }
     .hiw-photo { margin-right: -28px; justify-content: center; }
-    .hiw-photo img { height: 320px; }
+    .hiw-photo img { height: 460px; }
     .hiw-steps::before { display: none; }
     .hiw-steps { flex-wrap: wrap; gap: 28px; }
     .hiw-step { flex: 0 0 calc(50% - 14px); }
