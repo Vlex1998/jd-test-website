@@ -421,17 +421,27 @@
 </section>
 
 <!-- ====== WHY CHOOSE US ====== -->
+<style>
+  .wcu-grid { max-width:1340px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; min-height:640px; }
+  .wcu-image { position:relative; overflow:hidden; min-height:560px; }
+  .wcu-content { padding:72px 56px 72px 52px; display:flex; flex-direction:column; justify-content:center; }
+  @media (max-width:768px) {
+    .wcu-grid { grid-template-columns:1fr; min-height:unset; }
+    .wcu-image { min-height:340px; order:1; }
+    .wcu-content { padding:48px 28px; order:2; }
+  }
+</style>
 <section style="background:#F8FAFF; padding:0 0;">
-  <div style="max-width:1340px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; min-height:640px;">
+  <div class="wcu-grid">
 
     <!-- LEFT: image -->
-    <div style="position:relative; overflow:hidden; min-height:560px;">
+    <div class="wcu-image">
       <img src="Brand_assets/worker v9.webp" alt="JD Roofing worker on job" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
       <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(7,17,24,0.08) 0%,rgba(7,17,24,0.0) 100%);"></div>
     </div>
 
     <!-- RIGHT: content -->
-    <div style="padding:72px 56px 72px 52px; display:flex; flex-direction:column; justify-content:center;">
+    <div class="wcu-content">
       <span class="section-label" style="display:block; margin-bottom:12px;">Our Advantage</span>
       <h2 class="section-heading" style="margin-bottom:14px;">Why Choose Us?</h2>
       <p style="color:#666; font-size:14px; max-width:460px; line-height:1.8; margin-bottom:44px;">JD Roofing Solutions combines expert craftsmanship, transparent pricing, and unmatched customer service across the Houston area.</p>
