@@ -16,6 +16,8 @@
     #main-nav.scrolled .nav-link { color: #071118; }
     #main-nav.scrolled .nav-link:hover { color: #3B9EF0; }
     #main-nav.scrolled .nav-hamburger span { background: #071118; }
+    #nav-logo { filter: brightness(0) invert(1); transition: filter 0.35s; }
+    #main-nav.scrolled #nav-logo { filter: none; }
     .btn-blue { background: #3B9EF0; color: white; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; padding: 11px 22px; border-radius: 3px; border: none; cursor: pointer; display: inline-block; transition: background 0.2s, transform 0.1s; }
     .btn-blue:hover { background: #2589D8; }
     .section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #3B9EF0; display: block; }
@@ -64,7 +66,7 @@
 <!-- NAVBAR -->
 <nav id="main-nav" style="background:transparent;position:fixed;top:0;left:0;right:0;z-index:50;transition:background 0.35s,box-shadow 0.35s;">
   <div style="max-width:1200px; margin:0 auto; padding:0 28px; height:70px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
-    <a href="index.html"><img src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" style="height:80px; width:auto;"></a>
+    <a href="index.html"><img id="nav-logo" src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" style="height:80px; width:auto;"></a>
     <div class="nav-links-desktop" style="display:flex; align-items:center; gap:28px;">
       <a href="index.html" class="nav-link">Home</a>
       <div class="nav-dropdown-wrap">
