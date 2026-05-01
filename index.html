@@ -360,10 +360,12 @@
   @media (max-width:768px) {
     #services { padding:52px 18px; }
     #services .m-2col { grid-template-columns:1fr !important; gap:20px !important; }
-    .svc-img { display:block; width:calc(100% + 40px); margin:-26px -20px 20px; height:210px; object-fit:cover; border-radius:14px 14px 0 0; }
+    .svc-img { display:block; width:100%; margin:0 0 20px; height:210px; object-fit:cover; border-radius:0; }
+    #services .card-hover .svc-img ~ * { padding-left:0; }
+    #services .card-hover > div:first-of-type { margin-top:20px; }
     .svc-learn { display:block; color:#1B6FE8; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; margin-top:16px; }
     .svc-learn::after { content:' →'; }
-    #services .card-hover { border-radius:14px; overflow:hidden; padding:26px 20px 22px; }
+    #services .card-hover { border-radius:14px; overflow:hidden; padding:0 20px 22px; }
   }
 </style>
 <section id="services" style="background:white; padding:88px 28px;">
