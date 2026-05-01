@@ -190,17 +190,17 @@
     <!-- Stats -->
     <div class="hero-item" style="animation-delay:0.70s; display:flex; align-items:center; justify-content:center; gap:44px; flex-wrap:wrap;">
       <div style="text-align:center;">
-        <div style="font-size:28px; font-weight:800; color:white; line-height:1; letter-spacing:-0.02em;">2,500+</div>
+        <div id="stat-roofs" style="font-size:28px; font-weight:800; color:white; line-height:1; letter-spacing:-0.02em;">0</div>
         <div style="font-size:12px; color:rgba(255,255,255,0.45); margin-top:5px; letter-spacing:0.04em;">Roofs Completed</div>
       </div>
       <div class="m-hide" style="width:1px; height:38px; background:rgba(255,255,255,0.14);"></div>
       <div style="text-align:center;">
-        <div style="font-size:28px; font-weight:800; color:white; line-height:1; letter-spacing:-0.02em;">10+</div>
+        <div id="stat-years" style="font-size:28px; font-weight:800; color:white; line-height:1; letter-spacing:-0.02em;">0</div>
         <div style="font-size:12px; color:rgba(255,255,255,0.45); margin-top:5px; letter-spacing:0.04em;">Years Experience</div>
       </div>
       <div class="m-hide" style="width:1px; height:38px; background:rgba(255,255,255,0.14);"></div>
       <div style="text-align:center;">
-        <div style="font-size:28px; font-weight:800; color:white; line-height:1; letter-spacing:-0.02em;">&#9733; 5.0</div>
+        <div id="stat-stars" style="font-size:28px; font-weight:800; color:white; line-height:1; letter-spacing:-0.02em;">&#9733; 0.0</div>
         <div style="font-size:12px; color:rgba(255,255,255,0.45); margin-top:5px; letter-spacing:0.04em;">Star Rated</div>
       </div>
     </div>
@@ -1352,6 +1352,33 @@
     }
     window.addEventListener('scroll', updateNav, { passive: true });
     updateNav();
+  })();
+
+  // Hero stat counter animation
+  (function() {
+    function countUp(el, target, duration, suffix, decimals) {
+      var start = 0;
+      var startTime = null;
+      function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        var ease = 1 - Math.pow(1 - progress, 4);
+        var val = start + (target - start) * ease;
+        if (decimals) {
+          el.innerHTML = '&#9733; ' + val.toFixed(1);
+        } else {
+          el.textContent = Math.floor(val).toLocaleString() + suffix;
+        }
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    setTimeout(function() {
+      countUp(document.getElementById('stat-roofs'), 2500, 2000, '+');
+      countUp(document.getElementById('stat-years'), 10, 1600, '+');
+      countUp(document.getElementById('stat-stars'), 5.0, 1800, '', true);
+    }, 700);
   })();
 
   // Service card entrance animations
