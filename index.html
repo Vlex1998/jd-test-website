@@ -357,6 +357,32 @@
 <style>
   .svc-img { display:none; }
   .svc-learn { display:none; }
+
+  /* Card entrance animation */
+  #services .m-2col a {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.55s cubic-bezier(0.22,1,0.36,1), transform 0.55s cubic-bezier(0.22,1,0.36,1);
+  }
+  #services .m-2col a.svc-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* Hover lift */
+  #services .card-hover {
+    transition: transform 0.28s cubic-bezier(0.22,1,0.36,1), box-shadow 0.28s cubic-bezier(0.22,1,0.36,1);
+  }
+  #services .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(27,111,232,0.13);
+  }
+  /* Image zoom on card hover */
+  #services .card-hover .svc-img {
+    transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
+  }
+  #services .card-hover:hover .svc-img {
+    transform: scale(1.05);
+  }
   @media (max-width:768px) {
     #services { padding:52px 18px; }
     #services .m-2col { grid-template-columns:1fr !important; gap:20px !important; }
@@ -1326,6 +1352,25 @@
     }
     window.addEventListener('scroll', updateNav, { passive: true });
     updateNav();
+  })();
+
+  // Service card entrance animations
+  (function() {
+    var cards = document.querySelectorAll('#services .m-2col a');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry, i) {
+        if (entry.isIntersecting) {
+          setTimeout(function() {
+            entry.target.classList.add('svc-visible');
+          }, entry.target.dataset.delay || 0);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    cards.forEach(function(card, i) {
+      card.dataset.delay = i * 80;
+      observer.observe(card);
+    });
   })();
 </script>
 </body>
