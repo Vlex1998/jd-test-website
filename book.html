@@ -186,24 +186,122 @@
     /* ── SUCCESS STATE ── */
     #success-wrap { display: none; flex-direction: column; align-items: center; justify-content: center; padding: 40px 24px; text-align: center; min-height: 360px; }
 
-    /* ── MOBILE ── */
-    @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
-      .trust-icons-grid { grid-template-columns: 1fr 1fr; }
-      .services-grid { grid-template-columns: 1fr 1fr; }
-      .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
-      .gallery-grid .wide { grid-column: span 1; }
-      .why-us-grid { grid-template-columns: 1fr; gap: 16px; }
-      .reviews-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 600px) {
-      .top-bar-inner { flex-direction: column; align-items: flex-start; }
-      .top-bar-right { width: 100%; justify-content: space-between; }
-      .services-grid { grid-template-columns: 1fr; }
-      .trust-icons-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: 1fr 1fr; }
-      .hero-stats { grid-template-columns: repeat(3,1fr); }
-      .field-row { grid-template-columns: 1fr; }
+    /* ══════════════════════════════
+       MOBILE — comprehensive fix
+    ══════════════════════════════ */
+    @media (max-width: 768px) {
+
+      /* ── Nav bar ── */
+      .top-bar-main { padding: 8px 16px; flex-wrap: nowrap; }
+      .top-bar-left img { height: 40px; }
+      /* Hide cert badges on mobile — too crowded */
+      .top-bar-right > div:first-child { display: none; }
+      /* Shrink phone */
+      .btn-phone { font-size: 18px; gap: 6px; }
+      .btn-phone svg { width: 16px; height: 16px; }
+      /* Speak label */
+      #speak-label { font-size: 9px; }
+      /* Checkmark strip — wrap to 2 columns */
+      .top-bar-strip { padding: 6px 12px; }
+      .top-bar-strip-inner { gap: 8px 20px; justify-content: flex-start; }
+      .check-item { font-size: 11px; }
+
+      /* ── Hero ── */
+      .hero-inner {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        padding: 130px 16px 40px !important;
+      }
+      .hero-h1 { font-size: 34px !important; }
+      .hero-sub { font-size: 14px; }
+      .hero-trust-row { gap: 6px; }
+      .hero-pill { font-size: 11px; padding: 5px 10px; gap: 5px; }
+
+      /* ── Form card ── */
+      .form-card { border-radius: 12px; }
+      .form-card-head { padding: 14px 16px; }
+      .form-card-head h2 { font-size: 17px; }
+      .form-card-body { padding: 16px; gap: 10px; }
+      .field-row { grid-template-columns: 1fr !important; gap: 10px; }
+      .field input, .field select { padding: 11px 12px; font-size: 14px; }
+      .btn-submit { font-size: 16px; padding: 14px; }
+
+      /* ── Trust strip (Google, 7, etc.) ── */
+      section[style*="background:#f4f5f7"] > div {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px !important;
+        padding: 0 16px !important;
+      }
+
+      /* ── Trust icons (4 cards) ── */
+      .trust-icons { padding: 40px 16px; }
+      .trust-icons-grid { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+      .trust-icon-card { padding: 20px 14px; }
+
+      /* ── Reviews ── */
+      .reviews { padding: 40px 16px; }
+      .reviews-grid { grid-template-columns: 1fr !important; }
+
+      /* ── Why us ── */
+      .why-us { padding: 40px 16px; }
+      .why-us-grid { grid-template-columns: 1fr !important; gap: 14px !important; }
+
+      /* ── Gallery ── */
+      .gallery { padding: 40px 16px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr !important; grid-auto-rows: 130px !important; }
+      .gallery-grid .wide { grid-column: span 1 !important; }
+      .gallery-grid .tall { grid-row: span 1 !important; }
+
+      /* ── Call CTA bar ── */
+      div[style*="Call Us Today"] > div {
+        flex-direction: column !important;
+        gap: 12px !important;
+        text-align: center;
+      }
+
+      /* ── Residential services split ── */
+      section[style*="Residential Roofing"] > div > div[style*="grid-template-columns:1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+      }
+
+      /* ── All 2-col split sections (commercial, owner msg, map) ── */
+      div[style*="grid-template-columns:1fr 1fr"],
+      div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+      }
+
+      /* ── Service images in split sections ── */
+      div[style*="height:420px"] img { min-height: 240px !important; height: 240px !important; }
+
+      /* ── Pre-footer dark CTA ── */
+      section[style*="pex-18289258"] > div,
+      section[style*="min-height:420px"] > div { padding: 50px 16px !important; }
+
+      /* ── Service area map ── */
+      .gallery-inner, .why-us-inner, .reviews-inner { padding: 0; }
+
+      /* ── Footer 3-col → 1-col ── */
+      footer[style*="background:var(--dark)"] > div > div[style*="grid-template-columns:1.2fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+
+      /* ── CTA band buttons ── */
+      .cta-btn-row { flex-direction: column; align-items: center; }
+      .btn-white, .btn-outline-white { width: 100%; justify-content: center; font-size: 15px; }
+
+      /* ── Bottom floating call button padding ── */
+      body { padding-bottom: 80px; }
+
+      /* ── Section headings ── */
+      .section-heading { font-size: 26px !important; }
+
+      /* General section padding tightening */
+      .trust-icons, .gallery, .reviews, .why-us { padding-left: 16px !important; padding-right: 16px !important; }
+      section[style*="padding:70px 24px"] { padding: 40px 16px !important; }
+      section[style*="padding: 70px 24px"] { padding: 40px 16px !important; }
     }
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
