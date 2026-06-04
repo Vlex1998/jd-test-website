@@ -1189,17 +1189,14 @@
   #speak-label { display: none !important; }
   .btn-phone { font-size: 17px !important; gap: 6px !important; }
   .btn-phone svg { width: 15px !important; height: 15px !important; }
-  /* checkmark strip */
-  .top-bar-strip { padding: 5px 14px !important; }
-  .top-bar-strip-inner { gap: 6px 16px !important; }
-  .check-item { font-size: 10px !important; gap: 5px !important; }
-  .check-item svg { width: 12px !important; height: 12px !important; }
+  /* hide blue checkmark strip on mobile */
+  .top-bar-strip { display: none !important; }
 
-  /* ── Hero ── */
+  /* ── Hero — tighter top since strip is gone ── */
   .hero-inner {
     display: flex !important;
     flex-direction: column !important;
-    padding: 120px 16px 36px !important;
+    padding: 72px 16px 36px !important;
     gap: 24px !important;
   }
   .hero-h1 { font-size: 30px !important; margin-bottom: 10px !important; }
