@@ -1438,17 +1438,19 @@
   /* ── Reviews: stacked card design ── */
   .reviews { padding: 40px 0 48px !important; background: #071118 !important; }
   .reviews-inner { padding: 0 !important; }
-  .reviews-head { padding: 0 24px !important; margin-bottom: 36px !important; }
+  .reviews-head { padding: 0 24px !important; margin-bottom: 56px !important; }
   .reviews-head .section-label { color: var(--blue) !important; }
   .reviews-head .section-heading { color: white !important; }
   .reviews-head p { color: rgba(255,255,255,0.5) !important; }
   .reviews-grid { display: none !important; }
-  .rstack-mobile { display: block !important; padding: 0 24px !important; }
+  .rstack-mobile { display: block !important; padding: 0 24px !important; display: flex !important; flex-direction: column !important; align-items: center !important; }
 
   .rstack-wrap {
     position: relative !important;
     height: 260px !important;
-    margin-bottom: 28px !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 0 auto 28px !important;
   }
   .rstack-card {
     position: absolute !important;
