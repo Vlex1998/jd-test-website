@@ -1343,8 +1343,8 @@
    ════════════════════════════════════════ */
 @media (max-width: 768px) {
 
-  /* Prevent horizontal overflow */
-  html, body { overflow-x: hidden !important; }
+  /* Prevent horizontal overflow + kill white gap under footer */
+  html, body { overflow-x: hidden !important; margin: 0 !important; padding-bottom: 0 !important; background: var(--dark) !important; }
   * { max-width: 100%; box-sizing: border-box; }
 
   /* ── Fixed nav ── */
