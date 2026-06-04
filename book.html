@@ -591,7 +591,12 @@
       <img class="trust-hero-img" src="Brand_assets/worker v9.webp" alt="JD Roofing worker">
       <div class="trust-hero-overlay">
         <div class="trust-hero-label">
-          <span class="trust-hero-eyebrow">Why Choose JD Roofing</span>
+          <div class="trust-animated-wrap">
+            <span class="trust-hero-eyebrow">Why Choose JD Roofing</span>
+            <svg class="trust-underline-svg" width="100%" height="22" viewBox="0 0 300 22" preserveAspectRatio="none">
+              <path class="trust-underline-path" d="M 0,10 Q 75,0 150,10 Q 225,20 300,10" stroke="#3B9EF0" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -1417,6 +1422,12 @@
     padding: 0 24px 28px !important;
     width: 100% !important;
   }
+  .trust-animated-wrap {
+    display: inline-block !important;
+    position: relative !important;
+    border-left: 4px solid var(--blue) !important;
+    padding-left: 14px !important;
+  }
   .trust-hero-eyebrow {
     display: block !important;
     font-family: 'Fira Sans', sans-serif !important;
@@ -1425,8 +1436,28 @@
     color: white !important;
     line-height: 1.15 !important;
     letter-spacing: -0.01em !important;
-    border-left: 4px solid var(--blue) !important;
-    padding-left: 14px !important;
+    opacity: 0;
+    transform: translateY(-16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .trust-animated-wrap.animate-in .trust-hero-eyebrow {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  .trust-underline-svg {
+    display: block !important;
+    margin-top: 6px !important;
+    width: 100% !important;
+  }
+  .trust-underline-path {
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    opacity: 0;
+    transition: stroke-dashoffset 1.5s ease-in-out 0.4s, opacity 0.3s ease 0.4s;
+  }
+  .trust-animated-wrap.animate-in .trust-underline-path {
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
   }
 
   .trust-icons-grid { padding: 0 24px !important; }
@@ -1638,6 +1669,22 @@
   function scrollToForm() {
     document.querySelector('.form-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
     setTimeout(() => document.querySelector('.field input'), 600);
+  }
+</script>
+
+<script>
+  // Animated underline: fire when trust section scrolls into view
+  const trustWrap = document.querySelector('.trust-animated-wrap');
+  if (trustWrap) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          trustWrap.classList.add('animate-in');
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(trustWrap);
   }
 </script>
 
