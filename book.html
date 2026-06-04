@@ -1234,34 +1234,37 @@
   }
 
   /* ── Trust cards: stacked centered layout on mobile ── */
-  .trust-icons { padding: 40px 24px !important; background: #eef6ff !important; }
+  .trust-icons {
+    padding: 40px 24px !important;
+    background: radial-gradient(ellipse 100% 70% at 50% 50%, #d6ebff 0%, #ffffff 75%) !important;
+  }
   .trust-icons-grid {
     display: flex !important;
     flex-direction: column !important;
     gap: 0 !important;
-    margin-top: 32px !important;
+    margin-top: 20px !important;
   }
   .trust-icon-card {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
-    padding: 32px 16px !important;
+    padding: 22px 16px !important;
     border: none !important;
     border-radius: 0 !important;
-    border-bottom: 1px solid #e9eef3 !important;
+    border-bottom: 1px solid rgba(59,158,240,0.15) !important;
     box-shadow: none !important;
   }
   .trust-icon-card:last-child { border-bottom: none !important; }
   .trust-icon-wrap {
-    width: 72px !important;
-    height: 72px !important;
-    background: rgba(59,158,240,0.1) !important;
-    margin-bottom: 16px !important;
+    width: 64px !important;
+    height: 64px !important;
+    background: rgba(59,158,240,0.12) !important;
+    margin-bottom: 12px !important;
   }
-  .trust-icon-wrap svg { width: 36px !important; height: 36px !important; }
-  .trust-icon-card h3 { font-size: 18px !important; font-weight: 800 !important; margin-bottom: 10px !important; }
-  .trust-icon-card p { font-size: 14px !important; line-height: 1.65 !important; max-width: 300px !important; color: #6b7280 !important; }
+  .trust-icon-wrap svg { width: 32px !important; height: 32px !important; }
+  .trust-icon-card h3 { font-size: 17px !important; font-weight: 800 !important; margin-bottom: 6px !important; }
+  .trust-icon-card p { font-size: 13px !important; line-height: 1.6 !important; max-width: 300px !important; color: #6b7280 !important; }
 
   /* ── Reviews ── */
   .reviews { padding: 36px 16px !important; }
