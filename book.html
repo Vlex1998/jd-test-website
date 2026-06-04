@@ -734,7 +734,7 @@
     </div>
 
     <!-- Row 1: New Roof Installations — text left, photo right -->
-    <div class="split-section" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:72px;">
+    <div class="split-section split-img-right" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:72px;">
       <div>
         <h3 style="font-family:'Fira Sans',sans-serif;font-size:28px;font-weight:800;color:var(--dark);margin-bottom:14px;">New Roof Installations</h3>
         <p style="font-size:14px;color:#4b5563;line-height:1.75;margin-bottom:16px;">A roof replacement is one of the biggest investments you'll make as a homeowner. We start with a full inspection to assess exactly what your roof needs, then walk you through your options with no pressure and no guesswork.</p>
@@ -1336,6 +1336,14 @@
   }
   .gallery-grid .wide { grid-column: span 1 !important; }
   .gallery-grid .tall { grid-row: span 1 !important; }
+
+  /* ── Residential split row 1: image above text on mobile ── */
+  .split-img-right {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .split-img-right > div:last-child { order: -1 !important; margin-bottom: 20px; }
+  .split-img-right > div:first-child { order: 1 !important; }
 
   /* ── ALL inline-styled 2-col grids → stack ── */
   .split-section {
