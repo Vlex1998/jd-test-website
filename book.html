@@ -587,8 +587,15 @@
 ══════════════════════════════════ -->
 <section class="trust-icons">
   <div class="trust-icons-inner">
-    <img class="trust-hero-img" src="Brand_assets/worker v9.webp" alt="JD Roofing worker" style="display:none;">
-    <div style="text-align:center;">
+    <div class="trust-hero-wrap" style="display:none;">
+      <img class="trust-hero-img" src="Brand_assets/worker v9.webp" alt="JD Roofing worker">
+      <div class="trust-hero-overlay">
+        <div class="trust-hero-label">
+          <span class="trust-hero-eyebrow">Why Choose JD Roofing</span>
+        </div>
+      </div>
+    </div>
+    <div class="trust-section-head" style="text-align:center;">
       <span class="section-label">Why Choose JD Roofing</span>
       <h2 class="section-heading">We Provide Complete<br>Roofing Services</h2>
     </div>
@@ -1378,10 +1385,51 @@
   .why-us { padding: 36px 16px !important; }
   .why-us-grid { grid-template-columns: 1fr !important; gap: 14px !important; }
 
-  /* ── Trust icons: worker image at top ── */
+  /* ── Trust icons: hero image with overlay ── */
   .trust-icons { padding: 0 0 40px !important; background: radial-gradient(ellipse 100% 70% at 50% 60%, #d6ebff 0%, #ffffff 75%) !important; }
-  .trust-hero-img { display: block !important; width: 100% !important; height: 360px !important; object-fit: cover !important; object-position: center center !important; margin-bottom: 28px !important; }
-  .trust-icons-inner { padding: 0 24px !important; }
+  .trust-icons-inner { padding: 0 !important; }
+  .trust-section-head { display: none !important; }
+
+  .trust-hero-wrap {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    margin-bottom: 32px !important;
+    border-radius: 0 0 24px 24px !important;
+    box-shadow: 0 12px 40px rgba(59,158,240,0.25) !important;
+  }
+  .trust-hero-img {
+    display: block !important;
+    width: 100% !important;
+    height: 380px !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+  .trust-hero-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(to bottom, transparent 35%, rgba(7,17,24,0.92) 100%) !important;
+    display: flex !important;
+    align-items: flex-end !important;
+  }
+  .trust-hero-label {
+    padding: 0 24px 28px !important;
+    width: 100% !important;
+  }
+  .trust-hero-eyebrow {
+    display: block !important;
+    font-family: 'Fira Sans', sans-serif !important;
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    color: white !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.01em !important;
+    border-left: 4px solid var(--blue) !important;
+    padding-left: 14px !important;
+  }
+
+  .trust-icons-grid { padding: 0 24px !important; }
 
   /* ── Gallery ── */
   .gallery { padding: 36px 16px !important; }
