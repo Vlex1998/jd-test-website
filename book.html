@@ -992,17 +992,16 @@
     <h2 class="section-heading" style="margin-bottom:40px;">Recent Projects.</h2>
     <div
       data-showcase-id="01eff276-38c1-4675-8441-0a318df5ccde"
-      id="companycam-showcase-root-book"
+      id="companycam-showcase-root"
     ></div>
     <script>
       (function () {
-        var ccShowcaseRoot = document.getElementById("companycam-showcase-root-book");
-        if (!ccShowcaseRoot.attachShadow || !window.fetch) { return; }
-        var ccShowcaseRootParent = document.getElementsByTagName("body")[0];
+        var ccShowcaseRoot = document.getElementById("companycam-showcase-root");
+        if (!ccShowcaseRoot) { return; }
         var ccShowcaseScript = document.createElement("script");
         ccShowcaseScript.src = 'https://showcase.companycam.com/bundle.js';
         ccShowcaseScript.type = "text/javascript";
-        ccShowcaseRootParent.appendChild(ccShowcaseScript);
+        document.body.appendChild(ccShowcaseScript);
       })();
     </script>
   </div>
