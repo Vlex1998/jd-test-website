@@ -1233,16 +1233,35 @@
     padding: 0 !important;
   }
 
-  /* ── 4-icon trust cards ── */
-  .trust-icons { padding: 36px 16px !important; }
+  /* ── Trust cards: stacked centered layout on mobile ── */
+  .trust-icons { padding: 40px 24px !important; }
   .trust-icons-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 14px !important;
-    margin-top: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    margin-top: 32px !important;
   }
-  .trust-icon-card { padding: 18px 12px !important; }
-  .trust-icon-card h3 { font-size: 14px !important; }
-  .trust-icon-card p { font-size: 12px !important; }
+  .trust-icon-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 32px 16px !important;
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #e9eef3 !important;
+    box-shadow: none !important;
+  }
+  .trust-icon-card:last-child { border-bottom: none !important; }
+  .trust-icon-wrap {
+    width: 72px !important;
+    height: 72px !important;
+    background: rgba(59,158,240,0.1) !important;
+    margin-bottom: 16px !important;
+  }
+  .trust-icon-wrap svg { width: 36px !important; height: 36px !important; }
+  .trust-icon-card h3 { font-size: 18px !important; font-weight: 800 !important; margin-bottom: 10px !important; }
+  .trust-icon-card p { font-size: 14px !important; line-height: 1.65 !important; max-width: 300px !important; color: #6b7280 !important; }
 
   /* ── Reviews ── */
   .reviews { padding: 36px 16px !important; }
