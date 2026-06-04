@@ -983,29 +983,28 @@
 <!-- ══════════════════════════════════
      PHOTO GALLERY
 ══════════════════════════════════ -->
-<section class="gallery">
-  <div class="gallery-inner">
-    <div class="gallery-head">
-      <span class="section-label">Our Work</span>
-      <h2 class="section-heading">Recent Projects in Houston</h2>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item wide tall">
-        <img src="Brand_assets/roof 18.webp" alt="Roofing project">
-      </div>
-      <div class="gallery-item">
-        <img src="Brand_assets/roof 21.webp" alt="Roofing project">
-      </div>
-      <div class="gallery-item">
-        <img src="Brand_assets/roof 23.webp" alt="Roofing project">
-      </div>
-      <div class="gallery-item">
-        <img src="Brand_assets/roof 24 .webp" alt="Roofing project">
-      </div>
-      <div class="gallery-item">
-        <img src="Brand_assets/roof 17 .webp" alt="Roofing project">
-      </div>
-    </div>
+<!-- ══════════════════════════════════
+     RECENT PROJECTS (CompanyCam)
+══════════════════════════════════ -->
+<section style="background:white; padding:70px 24px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <span class="section-label" style="margin-bottom:12px; display:block;">Our Work</span>
+    <h2 class="section-heading" style="margin-bottom:40px;">Recent Projects.</h2>
+    <div
+      data-showcase-id="01eff276-38c1-4675-8441-0a318df5ccde"
+      id="companycam-showcase-root-book"
+    ></div>
+    <script>
+      (function () {
+        var ccShowcaseRoot = document.getElementById("companycam-showcase-root-book");
+        if (!ccShowcaseRoot.attachShadow || !window.fetch) { return; }
+        var ccShowcaseRootParent = document.getElementsByTagName("body")[0];
+        var ccShowcaseScript = document.createElement("script");
+        ccShowcaseScript.src = 'https://showcase.companycam.com/bundle.js';
+        ccShowcaseScript.type = "text/javascript";
+        ccShowcaseRootParent.appendChild(ccShowcaseScript);
+      })();
+    </script>
   </div>
 </section>
 
