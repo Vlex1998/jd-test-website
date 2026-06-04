@@ -1192,20 +1192,19 @@
   /* hide blue checkmark strip on mobile */
   .top-bar-strip { display: none !important; }
 
-  /* ── Hero — form first on mobile ── */
+  /* ── Hero ── */
   .hero-inner {
     display: flex !important;
     flex-direction: column !important;
-    padding: 58px 16px 36px !important;
-    gap: 20px !important;
+    padding: 62px 16px 30px !important;
+    gap: 16px !important;
   }
-  /* Form card shows first, copy below */
-  .hero-inner .form-card { order: -1 !important; }
-  .hero-inner .hero-left { order: 1 !important; }
-  /* Shrink headline on mobile so copy doesn't take too much space */
-  .hero-h1 { font-size: 26px !important; margin-bottom: 8px !important; }
-  .hero-sub { font-size: 13px !important; margin-bottom: 12px !important; }
-  .hero-trust-row { margin-bottom: 12px !important; }
+  /* Compact hero copy so form shows sooner */
+  .hero-h1 { font-size: 28px !important; margin-bottom: 6px !important; line-height: 1.1 !important; }
+  .hero-sub { font-size: 13px !important; margin-bottom: 10px !important; line-height: 1.5 !important; }
+  .hero-trust-row { margin-bottom: 10px !important; gap: 6px !important; }
+  /* Hide review card on mobile to save space */
+  .hero-inner > div:first-child > div:last-child { display: none !important; }
   .hero-h1 { font-size: 30px !important; margin-bottom: 10px !important; }
   .hero-sub { font-size: 14px !important; margin-bottom: 16px !important; }
   .hero-trust-row { gap: 6px !important; margin-bottom: 16px !important; }
