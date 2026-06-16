@@ -17,7 +17,7 @@
     #main-nav.scrolled .nav-link:hover { color: #3B9EF0; }
     #nav-logo { filter: brightness(0) invert(1); transition: filter 0.35s; }
     #main-nav.scrolled #nav-logo { filter: none; }
-    .btn-blue { background: #3B9EF0; color: white; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; padding: 11px 22px; border-radius: 3px; border: none; cursor: pointer; display: inline-block; transition: background 0.2s, transform 0.1s; }
+    .btn-blue { background: #3B9EF0; color: white; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; padding: 11px 22px; border-radius:100px; border: none; cursor: pointer; display: inline-block; transition: background 0.2s, transform 0.1s; }
     .btn-blue:hover { background: #2589D8; }
     .btn-blue:active { transform: scale(0.98); }
     .section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #3B9EF0; display: block; }
@@ -250,7 +250,7 @@
       <label style="font-size:11px; font-weight:700; color:#555; letter-spacing:0.07em; text-transform:uppercase; display:block; margin-bottom:6px;">Street Address</label>
       <input type="text" name="address" placeholder="123 Main St, Houston TX" style="width:100%; padding:14px 16px; border:1.5px solid #e2e8f0; border-radius:8px; font-size:15px; font-family:inherit; outline:none; box-sizing:border-box; transition:border-color 0.2s;" onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#e2e8f0'">
     </div>
-    <button type="submit" id="mobile-est-btn" style="width:100%; padding:16px; background:#3B9EF0; color:#fff; font-size:14px; font-weight:700; letter-spacing:0.07em; border:none; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; font-family:inherit;">
+    <button type="submit" id="mobile-est-btn" style="width:100%; padding:16px; background:#3B9EF0; color:#fff; font-size:14px; font-weight:700; letter-spacing:0.07em; border:none; border-radius:100px; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; font-family:inherit;">
       GET FREE ESTIMATE &nbsp;→
     </button>
   </form>
@@ -351,7 +351,7 @@
           </div>
           <!-- Address full width -->
           <input type="text" name="address" placeholder="Street Address *" style="width:100%; padding:11px 13px; border:1.5px solid #e2e8f0; border-radius:5px; font-size:13px; font-family:inherit; outline:none; margin-bottom:16px; display:block; transition:border-color 0.2s;" onfocus="this.style.borderColor='#3B9EF0'" onblur="this.style.borderColor='#e2e8f0'" />
-          <button type="submit" id="hero-submit-btn" class="btn-blue" style="width:100%; padding:14px; font-size:13px; border-radius:5px; display:flex; align-items:center; justify-content:center; gap:8px;">
+          <button type="submit" id="hero-submit-btn" class="btn-blue" style="width:100%; padding:14px; font-size:13px; border-radius:100px; display:flex; align-items:center; justify-content:center; gap:8px;">
             GET FREE ESTIMATE
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
@@ -982,7 +982,7 @@
         oninput="this.value=this.value.replace(/[^0-9]/g,''); document.getElementById('zipResult').style.display='none';"
         onkeydown="if(event.key==='Enter')checkZip()" />
 
-      <button onclick="checkZip()" class="btn-blue" style="width:100%; padding:14px; border-radius:8px; font-size:13px; letter-spacing:0.08em;">CHECK</button>
+      <button onclick="checkZip()" class="btn-blue" style="width:100%; padding:14px; border-radius:100px; font-size:13px; letter-spacing:0.08em;">CHECK</button>
 
       <div id="zipResult" style="margin-top:14px; font-size:12px; font-weight:700; display:none; padding:11px 14px; border-radius:8px; line-height:1.5;"></div>
 
