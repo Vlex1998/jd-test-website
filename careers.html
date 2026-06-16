@@ -545,6 +545,39 @@
       box-shadow: 0 0 0 3px rgba(59,158,240,0.12);
     }
     .form-group textarea { resize: vertical; min-height: 100px; }
+    .checkbox-group { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 6px; }
+    .checkbox-label {
+      display: flex; align-items: center; gap: 10px;
+      cursor: pointer; font-size: 15px; font-weight: 600; color: var(--text);
+      padding: 12px 20px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      background: #fff;
+      transition: border-color 0.18s, background 0.18s;
+      user-select: none;
+    }
+    .checkbox-label:hover { border-color: var(--blue); background: rgba(59,158,240,0.04); }
+    .checkbox-label input[type="checkbox"] { display: none; }
+    .checkbox-box {
+      width: 20px; height: 20px;
+      border: 2px solid #d0d8e4;
+      border-radius: 5px;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 0.18s, background 0.18s;
+    }
+    .checkbox-label input[type="checkbox"]:checked ~ .checkbox-box {
+      background: var(--blue); border-color: var(--blue);
+    }
+    .checkbox-label input[type="checkbox"]:checked ~ .checkbox-box::after {
+      content: '';
+      display: block;
+      width: 5px; height: 9px;
+      border: 2px solid #fff;
+      border-top: none; border-left: none;
+      transform: rotate(45deg) translateY(-1px);
+    }
+    .checkbox-label:has(input:checked) { border-color: var(--blue); background: rgba(59,158,240,0.06); }
     .btn-submit {
       width: 100%;
       background: var(--blue);
@@ -934,7 +967,21 @@
         <input type="hidden" name="_subject" value="New Career Application — Roofing Sales Specialist">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="Position" value="Roofing Sales Specialist">
+        <div class="form-group full" style="margin-bottom:4px;">
+          <label>Position Interested In *</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="Position" value="Canvassing">
+              <span class="checkbox-box"></span>
+              Canvassing
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="Position" value="Salesperson">
+              <span class="checkbox-box"></span>
+              Salesperson
+            </label>
+          </div>
+        </div>
         <div class="form-grid">
           <div class="form-group">
             <label for="cf-first">First Name *</label>
@@ -1078,7 +1125,9 @@
     btn.textContent = 'Submitting…';
     btn.disabled = true;
 
+    const checked = [...form.querySelectorAll('input[name="Position"]:checked')].map(c => c.value);
     const data = Object.fromEntries(new FormData(form));
+    data['Position'] = checked.length ? checked.join(', ') : 'Not specified';
     try {
       const res = await fetch('https://formsubmit.co/ajax/jdroofingsolutions06@gmail.com', {
         method: 'POST',
