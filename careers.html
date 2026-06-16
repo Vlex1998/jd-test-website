@@ -273,6 +273,17 @@
       inset: 0;
       background: linear-gradient(135deg, rgba(7,17,24,0.28) 0%, transparent 60%);
     }
+    .hero-cutout {
+      position: absolute;
+      bottom: 0;
+      right: 8%;
+      height: 92%;
+      width: auto;
+      object-fit: contain;
+      object-position: bottom;
+      z-index: 2;
+      filter: drop-shadow(-8px 0 32px rgba(7,17,24,0.55));
+    }
 
     /* ── STATS BAR ── */
     .stats-bar {
@@ -783,6 +794,7 @@
         padding-top: 92px;
       }
       .hero-image-wrap { min-height: 260px; order: -1; }
+      .hero-cutout { display: none; }
       .hero-text { padding: 36px 24px 40px; }
       .hero-actions { flex-direction: column; }
       .btn-primary, .btn-outline { text-align: center; justify-content: center; }
@@ -887,6 +899,7 @@
   </div>
   <div class="hero-image-wrap">
     <img src="Brand_assets/DSC09106.JPG" alt="JD Roofing Solutions crew on the job" width="720" height="520" fetchpriority="high">
+    <img src="Brand_assets/background erased_.png" alt="JD Roofing Solutions salesperson" class="hero-cutout" width="380" height="520" fetchpriority="high">
   </div>
 </section>
 
