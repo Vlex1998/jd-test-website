@@ -81,6 +81,8 @@
     .m-h2-lg{font-size:30px!important;}
     .m-pad{padding-left:18px!important;padding-right:18px!important;}
     .m-pad-v{padding-top:52px!important;padding-bottom:52px!important;}
+    .m-hero-section{min-height:72vh!important;}
+    .m-hero-inner{padding-top:72px!important;padding-bottom:48px!important;}
   }
   </style>
 </head>
@@ -138,7 +140,7 @@
 </div>
 
 <!-- ====== HERO ====== -->
-<section style="position:relative; min-height:100vh; background:#071118; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+<section class="m-hero-section" style="position:relative; min-height:100vh; background:#071118; display:flex; align-items:center; justify-content:center; overflow:hidden;">
 
   <!-- Background video -->
   <video id="hero-video" autoplay muted loop playsinline preload="auto"
@@ -153,15 +155,7 @@
   <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 50% 40%, rgba(59,158,240,0.1) 0%, transparent 62%);"></div>
 
   <!-- Animated content -->
-  <div style="position:relative; z-index:1; text-align:center; padding:100px 28px 80px; max-width:860px; margin:0 auto; width:100%;">
-
-    <!-- Badge pill -->
-    <div class="hero-item" style="animation-delay:0.10s; margin-bottom:22px;">
-      <span style="display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.07); padding:7px 18px; border-radius:100px; font-size:12px; font-weight:700; color:#93C5FD; letter-spacing:0.06em; text-transform:uppercase;">
-        <svg width="13" height="13" fill="#3B9EF0" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        GAF Certified &nbsp;&middot;&nbsp; Houston, TX
-      </span>
-    </div>
+  <div class="m-hero-inner" style="position:relative; z-index:1; text-align:center; padding:100px 28px 80px; max-width:860px; margin:0 auto; width:100%;">
 
     <!-- Heading -->
     <div class="hero-item" style="animation-delay:0.25s; margin-bottom:22px;">
