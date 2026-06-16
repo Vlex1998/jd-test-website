@@ -571,11 +571,13 @@
   .wcu-grid { max-width:1340px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; min-height:640px; }
   .wcu-image { position:relative; overflow:hidden; min-height:560px; }
   .wcu-content { padding:72px 56px 72px 52px; display:flex; flex-direction:column; justify-content:center; }
+  .wcu-img-title { display:none; }
   @media (max-width:768px) {
     .wcu-grid { grid-template-columns:1fr; min-height:unset; }
     .wcu-image { min-height:420px; order:1; }
     .wcu-image img { object-position:center 30% !important; }
     .wcu-content { padding:48px 28px; order:2; }
+    .wcu-img-title { display:block; position:absolute; top:24px; left:24px; z-index:2; font-size:32px; font-weight:800; color:#fff; line-height:1.1; letter-spacing:-0.02em; text-shadow:0 2px 12px rgba(0,0,0,0.35); }
   }
 </style>
 <section style="background:#F8FAFF; padding:0 0;">
@@ -584,7 +586,8 @@
     <!-- LEFT: image -->
     <div class="wcu-image">
       <img src="Brand_assets/DSC00001-4.jpg" alt="JD Roofing Solutions team" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;">
-      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(7,17,24,0.08) 0%,rgba(7,17,24,0.0) 100%);"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(7,17,24,0.45) 0%,transparent 45%);"></div>
+      <span class="wcu-img-title">Why Choose Us?</span>
     </div>
 
     <!-- RIGHT: content -->
