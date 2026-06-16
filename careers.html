@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers — JD Roofing Solutions | Houston, TX</title>
+  <meta name="description" content="Join the JD Roofing Solutions team. We're hiring motivated Roofing Sales Specialists in Houston, TX. Uncapped commissions, paid training, flexible schedule.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --blue: #3B9EF0;
+      --blue-dark: #2589D8;
+      --dark: #071118;
+      --dark2: #0c1a27;
+      --gray-bg: #f4f6f8;
+      --text: #1a2533;
+      --text-muted: #5a6a7a;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Fira Sans', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    /* ── NAV ── */
+    .site-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: 72px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.35);
+    }
+    .nav-logo { height: 54px; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a {
+      color: rgba(255,255,255,0.80);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: color 0.18s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a.active { color: var(--blue); }
+    .nav-right { display: flex; align-items: center; gap: 14px; }
+    .nav-phone {
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      transition: color 0.18s;
+    }
+    .nav-phone:hover { color: var(--blue); }
+    .nav-cta {
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 9px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.18s, transform 0.15s;
+    }
+    .nav-cta:hover { background: var(--blue-dark); transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: all 0.2s; }
+
+    /* ── HERO ── */
+    .hero {
+      padding-top: 72px;
+      background: #fff;
+      min-height: 520px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-text {
+      padding: 72px 56px 72px 72px;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59,158,240,0.10);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 6px; height: 6px;
+      background: var(--blue);
+      border-radius: 50%;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      color: var(--dark);
+      margin: 0 0 20px;
+    }
+    .hero h1 span { color: var(--blue); }
+    .hero-desc {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+      box-shadow: 0 4px 18px rgba(59,158,240,0.30);
+    }
+    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(59,158,240,0.38); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-outline {
+      background: transparent;
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 13px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 2px solid #d0d8e4;
+      transition: border-color 0.18s, color 0.18s, transform 0.15s;
+    }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-1px); }
+    .btn-outline:active { transform: translateY(0); }
+    .hero-image-wrap {
+      position: relative;
+      height: 100%;
+      min-height: 520px;
+      overflow: hidden;
+    }
+    .hero-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+    .hero-image-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(7,17,24,0.28) 0%, transparent 60%);
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--blue);
+      padding: 24px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+    .stat-item {
+      flex: 1;
+      text-align: center;
+      padding: 0 24px;
+      position: relative;
+    }
+    .stat-item + .stat-item::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%;
+      transform: translateY(-50%);
+      height: 32px; width: 1px;
+      background: rgba(255,255,255,0.28);
+    }
+    .stat-num {
+      display: block;
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .stat-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.80);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* ── JOBS SECTION ── */
+    .jobs-section {
+      background: var(--gray-bg);
+      padding: 80px 0 96px;
+    }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 32px; }
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: clamp(26px, 3vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--dark);
+      margin: 0 0 8px;
+      line-height: 1.15;
+    }
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin: 0 0 40px;
+      max-width: 560px;
+    }
+
+    /* filter tabs */
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .filter-tab {
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid #d0d8e4;
+      background: #fff;
+      color: var(--text-muted);
+      transition: all 0.18s;
+    }
+    .filter-tab.active, .filter-tab:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    /* job card */
+    .job-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(7,17,24,0.08), 0 1px 4px rgba(7,17,24,0.05);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: stretch;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .job-card:hover { box-shadow: 0 12px 48px rgba(7,17,24,0.14); transform: translateY(-2px); }
+    .job-card-body { padding: 36px 40px; }
+    .job-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(59,158,240,0.10);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+    .job-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+    }
+    .job-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .job-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .job-meta-item svg { flex-shrink: 0; }
+    .job-earnings {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #e8f7ee;
+      color: #158a4a;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .job-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin: 0 0 24px;
+      max-width: 600px;
+    }
+    .job-perks {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .job-perk {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      background: var(--gray-bg);
+      padding: 5px 12px;
+      border-radius: 6px;
+    }
+    .job-perk svg { color: var(--blue); }
+    .job-card-cta {
+      background: var(--dark);
+      padding: 40px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      min-width: 200px;
+    }
+    .btn-apply {
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      white-space: nowrap;
+      transition: background 0.18s, transform 0.15s;
+      box-shadow: 0 4px 18px rgba(59,158,240,0.35);
+    }
+    .btn-apply:hover { background: var(--blue-dark); transform: translateY(-2px); }
+    .btn-apply:active { transform: translateY(0); }
+    .job-card-cta-note {
+      font-size: 12px;
+      color: rgba(255,255,255,0.50);
+      text-align: center;
+    }
+
+    /* ── BUILD SECTION ── */
+    .build-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 520px;
+    }
+    .build-text {
+      background: var(--dark);
+      padding: 80px 64px 80px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .build-text .section-label { color: rgba(59,158,240,0.90); }
+    .build-text .section-title { color: #fff; }
+    .build-text p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.70);
+      margin: 0 0 32px;
+      max-width: 440px;
+    }
+    .build-image {
+      position: relative;
+      overflow: hidden;
+    }
+    .build-image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    .build-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(7,17,24,0.35), transparent 60%);
+    }
+
+    /* ── MEANINGFUL WORK SECTION ── */
+    .meaningful-section {
+      position: relative;
+      padding: 96px 0;
+      overflow: hidden;
+      background: var(--dark2);
+    }
+    .meaningful-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('Brand_assets/worker v9.webp');
+      background-size: cover;
+      background-position: center 30%;
+      opacity: 0.22;
+    }
+    .meaningful-section .container {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .meaningful-text .section-label { color: rgba(59,158,240,0.90); }
+    .meaningful-text .section-title { color: #fff; margin-bottom: 16px; }
+    .meaningful-text p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.65);
+      margin: 0 0 36px;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 16px;
+      transition: background 0.18s, border-color 0.18s;
+    }
+    .benefit-item:hover { background: rgba(59,158,240,0.10); border-color: rgba(59,158,240,0.25); }
+    .benefit-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: rgba(59,158,240,0.15);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      color: var(--blue);
+    }
+    .benefit-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+    .benefit-desc { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+
+    /* ── APPLY SECTION (CTA) ── */
+    .apply-section {
+      background: var(--dark);
+      padding: 80px 0;
+    }
+    .apply-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 32px;
+      text-align: center;
+    }
+    .apply-inner .section-title { color: #fff; margin-bottom: 12px; }
+    .apply-inner p { font-size: 17px; color: rgba(255,255,255,0.65); margin-bottom: 40px; }
+
+    /* ── APPLICATION FORM ── */
+    .form-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px 40px;
+      text-align: left;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.22);
+    }
+    .form-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--dark);
+      margin: 0 0 24px;
+    }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 11px 14px;
+      font-size: 15px;
+      font-family: inherit;
+      color: var(--text);
+      background: #fff;
+      transition: border-color 0.18s, box-shadow 0.18s;
+      outline: none;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(59,158,240,0.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .btn-submit {
+      width: 100%;
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+      box-shadow: 0 4px 18px rgba(59,158,240,0.30);
+    }
+    .btn-submit:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 8px 28px rgba(59,158,240,0.38); }
+    .btn-submit:active { transform: translateY(0); }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px;
+    }
+    .form-success svg { color: #22c55e; margin-bottom: 16px; }
+    .form-success h4 { font-size: 20px; font-weight: 800; color: var(--dark); margin: 0 0 8px; }
+    .form-success p { font-size: 15px; color: var(--text-muted); margin: 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 56px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand img { height: 52px; margin-bottom: 16px; }
+    .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.50); line-height: 1.7; margin: 0 0 20px; max-width: 260px; }
+    .footer-social { display: flex; gap: 10px; }
+    .footer-social a {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.07);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.60);
+      text-decoration: none;
+      font-size: 15px;
+      transition: background 0.18s, color 0.18s;
+    }
+    .footer-social a:hover { background: var(--blue); color: #fff; }
+    .footer-col h4 { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.40); margin: 0 0 16px; }
+    .footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a { font-size: 14px; color: rgba(255,255,255,0.60); text-decoration: none; transition: color 0.18s; }
+    .footer-col ul a:hover { color: var(--blue); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.35); margin: 0; }
+    .footer-bottom a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.18s; }
+    .footer-bottom a:hover { color: var(--blue); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .site-nav { padding: 0 20px; height: 64px; }
+      .nav-logo { height: 44px; }
+      .nav-links, .nav-right { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 64px; left: 0; right: 0;
+        background: var(--dark);
+        padding: 20px 24px 32px;
+        z-index: 99;
+        border-top: 1px solid rgba(255,255,255,0.08);
+      }
+      .mobile-menu.open { display: block; }
+      .mobile-menu ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
+      .mobile-menu ul a {
+        display: block;
+        padding: 14px 0;
+        color: rgba(255,255,255,0.80);
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+      }
+      .mobile-menu ul a:last-child { border-bottom: none; }
+      .mobile-menu-phone {
+        display: flex; align-items: center; gap: 8px;
+        color: var(--blue); font-weight: 700; font-size: 18px;
+        text-decoration: none; margin-top: 20px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 64px;
+      }
+      .hero-image-wrap { min-height: 260px; order: -1; }
+      .hero-text { padding: 36px 24px 40px; }
+      .hero-actions { flex-direction: column; }
+      .btn-primary, .btn-outline { text-align: center; justify-content: center; }
+
+      .stats-bar { padding: 20px 16px; gap: 0; flex-wrap: wrap; }
+      .stat-item { padding: 12px 10px; min-width: 50%; }
+      .stat-item + .stat-item::before { display: none; }
+      .stat-num { font-size: 22px; }
+
+      .jobs-section { padding: 56px 0 64px; }
+      .job-card { grid-template-columns: 1fr; }
+      .job-card-body { padding: 28px 24px; }
+      .job-card-cta { padding: 24px; min-width: unset; }
+
+      .build-section { grid-template-columns: 1fr; }
+      .build-text { padding: 56px 24px; }
+      .build-image { min-height: 280px; }
+
+      .meaningful-section { padding: 64px 0; }
+      .meaningful-section .container { grid-template-columns: 1fr; gap: 40px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+
+      .apply-section { padding: 56px 0; }
+      .form-card { padding: 28px 20px; }
+      .form-grid { grid-template-columns: 1fr; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="site-nav">
+  <a href="index.html">
+    <img src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" class="nav-logo" width="120" height="54">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="careers.html" class="active">Careers</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:8322953277" class="nav-phone">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.45 2 2 0 0 1 3.62 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      832-295-3277
+    </a>
+    <a href="#apply" class="nav-cta">Apply Now</a>
+  </div>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+    <li><a href="index.html#services" onclick="toggleMenu()">Services</a></li>
+    <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+    <li><a href="careers.html" onclick="toggleMenu()">Careers</a></li>
+    <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+  </ul>
+  <a href="tel:8322953277" class="mobile-menu-phone">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.45 2 2 0 0 1 3.62 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    832-295-3277
+  </a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Now Hiring in Houston, TX</div>
+    <h1>Join the <span>JD Roofing Solutions</span> Team</h1>
+    <p class="hero-desc">We're looking for driven, motivated sales professionals ready to earn big and grow with Houston's most trusted roofing company. No roofing experience required — we train and equip you to succeed.</p>
+    <div class="hero-actions">
+      <a href="#jobs" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        View Open Positions
+      </a>
+      <a href="tel:8322953277" class="btn-outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.45 2 2 0 0 1 3.62 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call 832-295-3277
+      </a>
+    </div>
+  </div>
+  <div class="hero-image-wrap">
+    <img src="Brand_assets/DSC09106.JPG" alt="JD Roofing Solutions crew on the job" width="720" height="520" fetchpriority="high">
+  </div>
+</section>
+
+<!-- ── STATS BAR ── -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-num">$80K–$200K+</span>
+    <span class="stat-label">Annual Earnings Potential</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">Uncapped</span>
+    <span class="stat-label">Commission Structure</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">2,500+</span>
+    <span class="stat-label">Roofs Completed</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">4.9★</span>
+    <span class="stat-label">Google Rating</span>
+  </div>
+</div>
+
+<!-- ── JOBS SECTION ── -->
+<section class="jobs-section" id="jobs">
+  <div class="container">
+    <div class="section-label">Open Positions</div>
+    <h2 class="section-title">Current Opportunities</h2>
+    <p class="section-subtitle">We're growing fast and looking for top talent to join our team across Houston.</p>
+
+    <div class="filter-tabs">
+      <button class="filter-tab active">All Positions</button>
+      <button class="filter-tab">Roofing Sales</button>
+      <button class="filter-tab">Full-Time</button>
+    </div>
+
+    <!-- Job Card -->
+    <div class="job-card">
+      <div class="job-card-body">
+        <div class="job-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>
+          Actively Hiring
+        </div>
+        <h3 class="job-title">Roofing Sales Specialist</h3>
+        <div class="job-meta">
+          <span class="job-meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Houston, TX
+          </span>
+          <span class="job-meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Full-Time · Flexible Hours
+          </span>
+          <span class="job-meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            Commission-Based
+          </span>
+        </div>
+        <div class="job-earnings">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          $80,000 – $200,000+ per year (uncapped)
+        </div>
+        <p class="job-desc">As a Roofing Sales Specialist at JD Roofing Solutions, you'll meet with homeowners, assess their roofing needs, and guide them through our process. We provide you with leads, marketing materials, and full training — you provide the drive. No prior roofing experience required.</p>
+        <div class="job-perks">
+          <span class="job-perk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Pre-Qualified Leads Provided
+          </span>
+          <span class="job-perk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Paid Training & Onboarding
+          </span>
+          <span class="job-perk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            No Experience Required
+          </span>
+          <span class="job-perk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Flexible Schedule
+          </span>
+          <span class="job-perk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Team Support & Mentorship
+          </span>
+          <span class="job-perk">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Fast-Track Career Growth
+          </span>
+        </div>
+        <a href="#apply" class="btn-primary">
+          Apply for This Role
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="job-card-cta">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(59,158,240,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+        <a href="#apply" class="btn-apply">Apply Now</a>
+        <span class="job-card-cta-note">Takes less than 2 minutes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BUILD SOMETHING SECTION ── -->
+<section class="build-section">
+  <div class="build-text">
+    <div class="section-label">Our Culture</div>
+    <h2 class="section-title">Build Something That Lasts</h2>
+    <p>At JD Roofing Solutions, we don't just fix roofs — we build careers. Our top performers consistently earn six figures, set their own pace, and grow with a company that invests in their success. When you win, we win.</p>
+    <p>Founded on integrity and hard work, we've completed 2,500+ roofs across Houston and built a reputation homeowners trust. Join a team that takes pride in every job and every person on the crew.</p>
+    <a href="#apply" class="btn-primary" style="align-self:flex-start;">
+      Start Your Application
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+  <div class="build-image">
+    <img src="Brand_assets/DSC00001-4.webp" alt="JD Roofing Solutions team on a completed roof job" width="720" height="520" loading="lazy">
+  </div>
+</section>
+
+<!-- ── MEANINGFUL WORK SECTION ── -->
+<section class="meaningful-section">
+  <div class="meaningful-bg"></div>
+  <div class="container">
+    <div class="meaningful-text">
+      <div class="section-label">Why JD Roofing</div>
+      <h2 class="section-title">Meaningful Work<br>for Your Life</h2>
+      <p>We believe a sales career should give you freedom — the freedom to earn what you're worth, control your schedule, and build a future on your terms. That's exactly what our Roofing Sales Specialists experience every day.</p>
+      <a href="#apply" class="btn-primary" style="align-self:flex-start; display:inline-flex;">
+        Join Our Team
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <div class="benefit-title">Uncapped Commissions</div>
+          <div class="benefit-desc">Your earning potential is 100% unlimited. The more you sell, the more you make.</div>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <div class="benefit-title">Pre-Qualified Leads</div>
+          <div class="benefit-desc">We bring the customers to you. No cold calling from scratch.</div>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <div>
+          <div class="benefit-title">Full Training Provided</div>
+          <div class="benefit-desc">We invest in your success with paid onboarding and ongoing coaching.</div>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="benefit-title">Flexible Schedule</div>
+          <div class="benefit-desc">Work the hours that fit your life. You control your calendar.</div>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div>
+          <div class="benefit-title">Fast Career Growth</div>
+          <div class="benefit-desc">Top sellers move into leadership roles quickly. We promote from within.</div>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div>
+          <div class="benefit-title">Dedicated Support</div>
+          <div class="benefit-desc">Our team has your back at every step — from estimate to close.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── APPLY SECTION ── -->
+<section class="apply-section" id="apply">
+  <div class="apply-inner">
+    <div class="section-label" style="color:rgba(59,158,240,0.90);">Join the Team</div>
+    <h2 class="section-title" style="color:#fff;">Ready to Start Your<br>Roofing Sales Career?</h2>
+    <p>Fill out the form below and a member of our team will reach out within 24 hours.</p>
+    <div class="form-card">
+      <h3>Apply for Roofing Sales Specialist</h3>
+      <form id="career-form" novalidate>
+        <input type="hidden" name="_subject" value="New Career Application — Roofing Sales Specialist">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="Position" value="Roofing Sales Specialist">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="cf-first">First Name *</label>
+            <input type="text" id="cf-first" name="First Name" placeholder="John" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-last">Last Name *</label>
+            <input type="text" id="cf-last" name="Last Name" placeholder="Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-phone">Phone Number *</label>
+            <input type="tel" id="cf-phone" name="Phone" placeholder="(832) 000-0000" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email Address *</label>
+            <input type="email" id="cf-email" name="Email" placeholder="john@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-experience">Sales Experience</label>
+            <select id="cf-experience" name="Sales Experience">
+              <option value="">Select one...</option>
+              <option>No prior experience</option>
+              <option>Less than 1 year</option>
+              <option>1–3 years</option>
+              <option>3–5 years</option>
+              <option>5+ years</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-availability">Availability</label>
+            <select id="cf-availability" name="Availability">
+              <option value="">Select one...</option>
+              <option>Full-Time</option>
+              <option>Part-Time</option>
+              <option>Weekends Only</option>
+              <option>Flexible</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="cf-why">Why do you want to join JD Roofing Solutions?</label>
+            <textarea id="cf-why" name="Why Join Us" placeholder="Tell us a little about yourself and what motivates you..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit" id="career-submit">
+          Submit Application
+        </button>
+      </form>
+      <div class="form-success" id="career-success">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h4>Application Received!</h4>
+        <p>Thank you for applying. A member of our team will reach out to you within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" width="110" height="52" loading="lazy">
+        <p>Houston's trusted roofing experts. Licensed, insured, and committed to excellence on every roof we touch.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61567304826498" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/jdroofingsolutions/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@jdroofingsolutions" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.78a4.85 4.85 0 0 1-1.01-.09z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#services">Roof Installation</a></li>
+          <li><a href="index.html#services">Roof Repair</a></li>
+          <li><a href="index.html#services">Storm Damage</a></li>
+          <li><a href="index.html#services">Commercial Roofing</a></li>
+          <li><a href="index.html#services">Gutters</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:8322953277">832-295-3277</a></li>
+          <li><a href="mailto:jdroofingsolutions06@gmail.com">jdroofingsolutions06@gmail.com</a></li>
+          <li><a href="#">Houston, TX</a></li>
+          <li><a href="https://g.co/kgs/Hjr3s7w" target="_blank" rel="noopener">Google Reviews ★ 4.9</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 JD Roofing Solutions. All rights reserved.</p>
+      <p>Licensed &amp; Insured · Houston, TX · <a href="tel:8322953277">832-295-3277</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('open');
+  }
+
+  // filter tabs (visual only for now — one position)
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+
+  // Career form → FormSubmit AJAX
+  document.getElementById('career-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = this;
+    const btn = document.getElementById('career-submit');
+    const successEl = document.getElementById('career-success');
+
+    const firstName = form.querySelector('#cf-first').value.trim();
+    const phone = form.querySelector('#cf-phone').value.trim();
+    const email = form.querySelector('#cf-email').value.trim();
+    if (!firstName || !phone || !email) {
+      alert('Please fill in your name, phone, and email.');
+      return;
+    }
+
+    btn.textContent = 'Submitting…';
+    btn.disabled = true;
+
+    const data = Object.fromEntries(new FormData(form));
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/jdroofingsolutions06@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        successEl.style.display = 'block';
+      } else {
+        throw new Error('Failed');
+      }
+    } catch {
+      btn.textContent = 'Submit Application';
+      btn.disabled = false;
+      alert('Something went wrong. Please call us at 832-295-3277.');
+    }
+  });
+</script>
+</body>
+</html>
