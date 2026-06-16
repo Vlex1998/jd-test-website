@@ -597,15 +597,38 @@
     .apply-section {
       background: var(--dark);
       padding: 80px 0;
+      overflow: hidden;
     }
     .apply-inner {
-      max-width: 780px;
+      max-width: 1160px;
       margin: 0 auto;
       padding: 0 32px;
-      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: end;
     }
-    .apply-inner .section-title { color: #fff; margin-bottom: 12px; }
-    .apply-inner p { font-size: 17px; color: rgba(255,255,255,0.65); margin-bottom: 40px; }
+    .apply-text { text-align: left; }
+    .apply-text .section-title { color: #fff; margin-bottom: 12px; }
+    .apply-text p { font-size: 17px; color: rgba(255,255,255,0.65); margin-bottom: 32px; }
+    .apply-cutout-wrap {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 100%;
+      min-height: 480px;
+    }
+    .apply-cutout {
+      height: 110%;
+      max-height: 580px;
+      width: auto;
+      object-fit: contain;
+      object-position: bottom;
+      filter: drop-shadow(0 -4px 40px rgba(59,158,240,0.18));
+      position: absolute;
+      bottom: -80px;
+    }
 
     /* ── APPLICATION FORM ── */
     .form-card {
@@ -818,6 +841,9 @@
       .benefits-grid { grid-template-columns: 1fr; }
 
       .apply-section { padding: 56px 0; }
+      .apply-inner { grid-template-columns: 1fr; gap: 32px; }
+      .apply-cutout-wrap { display: none; }
+      .apply-text { text-align: center; }
       .form-card { padding: 28px 20px; }
       .form-grid { grid-template-columns: 1fr; }
 
@@ -899,7 +925,6 @@
   </div>
   <div class="hero-image-wrap">
     <img src="Brand_assets/DSC09106.JPG" alt="JD Roofing Solutions crew on the job" width="720" height="520" fetchpriority="high">
-    <img src="Brand_assets/background erased_.png" alt="JD Roofing Solutions salesperson" class="hero-cutout" width="380" height="520" fetchpriority="high">
   </div>
 </section>
 
@@ -1082,6 +1107,10 @@
 <!-- ── APPLY SECTION ── -->
 <section class="apply-section" id="apply">
   <div class="apply-inner">
+    <div class="apply-cutout-wrap">
+      <img src="Brand_assets/background erased_.png" alt="JD Roofing Solutions salesperson" class="apply-cutout" loading="lazy">
+    </div>
+    <div class="apply-text">
     <div class="section-label" style="color:rgba(59,158,240,0.90);">Join the Team</div>
     <h2 class="section-title" style="color:#fff;">Ready to Start Your<br>Roofing Sales Career?</h2>
     <p>Fill out the form below and a member of our team will reach out within 24 hours.</p>
@@ -1159,6 +1188,7 @@
         <p>Thank you for applying. A member of our team will reach out to you within 24 hours.</p>
       </div>
     </div>
+    </div><!-- /apply-text -->
   </div>
 </section>
 
