@@ -494,6 +494,17 @@
       text-align: center;
     }
 
+    /* ── PHOTO STRIP ── */
+    .photo-strip { background: var(--dark); overflow: hidden; }
+    .photo-strip-grid { display: grid; grid-template-columns: 1fr 1fr; height: 440px; }
+    .photo-strip-item { position: relative; overflow: hidden; }
+    .photo-strip-item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
+    .photo-strip-item:hover img { transform: scale(1.05); }
+    .photo-strip-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(7,17,24,0.80) 0%, rgba(7,17,24,0.15) 55%, transparent 100%); pointer-events: none; }
+    .photo-strip-overlay::after { content: ''; position: absolute; inset: 0; background: rgba(59,158,240,0.08); mix-blend-mode: screen; }
+    .photo-strip-caption { position: absolute; bottom: 22px; left: 24px; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.85; }
+    .photo-strip-divider { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: linear-gradient(to bottom, transparent, rgba(59,158,240,0.4), transparent); z-index: 2; pointer-events: none; }
+
     /* ── BUILD SECTION ── */
     .build-section {
       display: grid;
@@ -821,6 +832,10 @@
       .build-text { padding: 56px 24px; }
       .build-image { min-height: 280px; }
 
+      .photo-strip-grid { height: auto; grid-template-columns: 1fr; }
+      .photo-strip-item { height: 280px; }
+      .photo-strip-divider { display: none; }
+
       .meaningful-section { padding: 64px 0; }
       .meaningful-section .container { grid-template-columns: 1fr; gap: 40px; }
       .benefits-grid { grid-template-columns: 1fr; }
@@ -992,6 +1007,23 @@
         <span class="job-card-cta-note">Takes less than 2 minutes</span>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ── PHOTO STRIP ── -->
+<section class="photo-strip">
+  <div class="photo-strip-grid">
+    <div class="photo-strip-item">
+      <img src="Brand_assets/IMG_4159.jpg" alt="JD Roofing Solutions crew member on the job" loading="lazy" style="object-position: center 60%;">
+      <div class="photo-strip-overlay"></div>
+      <div class="photo-strip-caption">On the Roof</div>
+    </div>
+    <div class="photo-strip-item">
+      <img src="Brand_assets/IMG_5933.jpg" alt="JD Roofing Solutions in the field" loading="lazy" style="object-position: center 15%;">
+      <div class="photo-strip-overlay"></div>
+      <div class="photo-strip-caption">In the Field</div>
+    </div>
+    <div class="photo-strip-divider"></div>
   </div>
 </section>
 
