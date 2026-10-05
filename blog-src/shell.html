@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{HEAD}}
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Open Sans', Arial, sans-serif; box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    body { font-size: 15px; line-height: 1.75; font-weight: 500; color: #3D4550; background: #fff; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; }
+    .nav-link { color: white; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; transition: color 0.2s; white-space:nowrap; }
+    .nav-link:hover { color: #3B9EF0; }
+    #main-nav.scrolled .nav-link { color: #071118; }
+    #main-nav.scrolled .nav-link:hover { color: #3B9EF0; }
+    #main-nav.scrolled .nav-hamburger span { background: #071118; }
+    #nav-logo { filter: brightness(0) invert(1); transition: filter 0.35s; }
+    #main-nav.scrolled #nav-logo { filter: none; }
+    .btn-blue { background: #3B9EF0; color: white; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; padding: 11px 22px; border-radius:100px; border: none; cursor: pointer; display: inline-block; transition: background 0.2s, transform 0.1s; }
+    .btn-blue:hover { background: #2589D8; }
+    .btn-blue:active { transform: scale(0.98); }
+    .article h2 { font-size: 34px; font-weight: 800; color: #071118; line-height: 1.15; letter-spacing: -0.015em; margin-bottom: 18px; }
+    .article h3 { font-size: 22px; font-weight: 800; color: #071118; line-height: 1.2; margin-bottom: 12px; margin-top: 34px; }
+    .article h4 { font-size: 15px; font-weight: 700; color: #071118; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; margin-top: 22px; }
+    .article p { color: #556070; font-size: 15px; line-height: 1.8; margin-bottom: 14px; max-width: 760px; }
+    .article ul { list-style: none; margin: 0 0 18px 0; padding: 0; max-width: 760px; }
+    .article ul li { position: relative; padding-left: 22px; color: #556070; font-size: 15px; line-height: 1.75; margin-bottom: 11px; }
+    .article ul li::before { content: ''; position: absolute; left: 4px; top: 9px; width: 6px; height: 6px; border-radius: 50%; background: #3B9EF0; }
+    .article ul li b, .article ul li strong { color: #071118; }
+    .article a.inline-link { color: #3B9EF0; font-weight: 700; }
+    .article a.inline-link:hover { text-decoration: underline; }
+    .type-block { padding-top: 44px; padding-bottom: 44px; border-top: 1px solid #E9EEF4; }
+    .type-block:first-of-type { border-top: none; padding-top: 8px; }
+    .trust-strip-item { display:flex; align-items:center; gap:11px; }
+    .brand-plain img { height: 60px; width: auto; object-fit: contain; }
+    .nav-dropdown-wrap{position:relative;}
+  .nav-dropdown{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:rgba(7,17,24,0.98);border:1px solid rgba(59,158,240,0.22);border-radius:10px;padding:16px 0 8px;min-width:210px;box-shadow:0 12px 40px rgba(0,0,0,0.5);z-index:100;} .nav-dropdown::before{content:'';position:absolute;top:-10px;left:-20px;right:-20px;height:10px;}
+  .nav-dropdown-wrap:hover .nav-dropdown{display:block;}
+  .nav-dropdown a{display:block;padding:11px 20px;color:#9AAABB;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;border-bottom:1px solid rgba(255,255,255,0.05);transition:color 0.2s,background 0.2s;}
+  .nav-dropdown a:last-child{border-bottom:none;}
+  .nav-dropdown a:hover{color:#3B9EF0;background:rgba(59,158,240,0.07);}
+  .nav-dropdown-advice{columns:2;column-gap:0;min-width:560px;max-width:640px;max-height:72vh;overflow-y:auto;padding:8px 0;}
+  .mob-services{border-bottom:1px solid rgba(255,255,255,0.06);}
+  .mob-services-btn{display:flex;justify-content:space-between;align-items:center;width:100%;color:white;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;padding:17px 24px;background:transparent;border:none;cursor:pointer;transition:color 0.2s;}
+  .mob-services-btn:hover,.mob-services-btn.active{color:#3B9EF0;}
+  .mob-services-btn .arr{transition:transform 0.22s;}
+  .mob-services-btn.active .arr{transform:rotate(180deg);}
+  .mob-services-sub{display:none;background:rgba(0,0,0,0.18);}
+  .mob-services-sub.open{display:block;}
+  .mob-services-sub a{display:block!important;padding:13px 24px 13px 36px!important;color:#889!important;font-size:12px!important;letter-spacing:0.06em!important;border-bottom:1px solid rgba(255,255,255,0.04)!important;}
+  .mob-services-sub a:last-child{border-bottom:none!important;}
+  .mob-services-sub a:hover{color:#3B9EF0!important;}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:transparent;border:none;}
+    .nav-hamburger span{width:22px;height:2px;background:white;display:block;border-radius:1px;}
+    .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(7,17,24,0.98);z-index:49;flex-direction:column;border-top:1px solid rgba(59,158,240,0.2);box-shadow:0 12px 40px rgba(0,0,0,0.5);}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{color:white;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;padding:17px 24px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color 0.2s;}
+    .mobile-menu a:hover{color:#3B9EF0;}
+    .mobile-menu .m-tel{color:#3B9EF0;border-bottom:none;}
+    @media(max-width:768px){
+      .nav-links-desktop{display:none!important;}
+      .nav-cta-desktop{display:none!important;}
+      .nav-hamburger{display:flex!important;}
+      .m-hero-h1{font-size:32px!important;line-height:1.15!important;}
+      .article h2{font-size:26px!important;}
+      .article h3{font-size:19px!important;}
+      .m-col{flex-direction:column!important;gap:28px!important;}
+      .m-3col{grid-template-columns:1fr!important;gap:36px!important;}
+      .m-footer{grid-template-columns:1fr 1fr!important;gap:28px!important;}
+      .m-trust-strip{flex-wrap:wrap!important;gap:20px 28px!important;justify-content:center!important;}
+      section:not(:first-of-type){padding-top:44px!important;padding-bottom:44px!important;}
+      .type-block{padding-top:28px!important;padding-bottom:28px!important;}
+      .type-block:first-of-type{padding-top:4px!important;}
+      .widget-box{padding:12px!important;}
+      .cta-heading{font-size:30px!important;}
+    }
+    @media(max-width:420px){
+      .brand-plain img{height:48px!important;}
+    }
+/*{{BLOG_CSS}}*/
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="main-nav" style="background:transparent;position:fixed;top:0;left:0;right:0;z-index:50;transition:background 0.35s,box-shadow 0.35s;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 28px; height:70px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+    <a href="index.html" style="display:flex; align-items:center;">
+      <img id="nav-logo" src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" style="height:80px; width:auto;">
+    </a>
+    <div class="nav-links-desktop" style="display:flex; align-items:center; gap:20px;">
+      <a href="index.html" class="nav-link">Home</a>
+      <div class="nav-dropdown-wrap">
+        <a href="index.html#services" class="nav-link" style="display:flex;align-items:center;gap:5px;">Services<svg class="arr" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="nav-dropdown">
+          <a href="roof-replacement.html">Roof Replacement</a>
+          <a href="roof-repair.html">Roof Repair</a>
+          <a href="storm-damage.html">Storm &amp; Hail Damage</a>
+          <a href="commercial-roofing.html">Commercial Roofing</a>
+          <a href="insurance-claims.html">Insurance Claims</a>
+          <a href="roof-inspection.html">Roof Inspection</a>
+        </div>
+      </div>
+      <div class="nav-dropdown-wrap">
+        <a href="javascript:void(0)" class="nav-link" style="display:flex;align-items:center;gap:5px;">Roofing Advice<svg class="arr" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="nav-dropdown nav-dropdown-advice">
+          <a href="hiring-local-roofer-vs-storm-chaser.html">Hiring a Local Roofer vs Storm Chaser</a>
+          <a href="does-roofing-company-age-matter.html">Does Roofing Company Age Matter?</a>
+          <a href="verify-houston-roofer-credentials.html">The Easiest Way to Verify a Houston Roofer's Credentials</a>
+          <a href="how-to-choose-a-good-roofing-contractor.html">How to Choose a Good Roofing Contractor Near You</a>
+          <a href="best-roofing-companies-in-houston-ranked.html">The Best Roofing Companies in Houston Ranked</a>
+          <a href="best-roofing-contractors-in-katy.html">Who Are the Best Roofing Contractors in Katy?</a>
+          <a href="what-is-a-mansard-roof.html">What Is a Mansard Roof?</a>
+          <a href="parts-of-a-roof-diagram.html">21 Most Important Parts of a Roof Diagram</a>
+          <a href="what-is-roof-sheathing.html">What Is Roof Sheathing?</a>
+          <a href="repair-or-replace-my-roof.html">Should I Repair or Replace My Roof?</a>
+          <a href="what-do-roofers-charge-per-hour.html">What Do Roofers Charge Per Hour in Houston?</a>
+          <a href="popular-roof-shingle-colors.html">12 Most Popular Roof Shingle Colors</a>
+          <a href="how-to-tell-if-a-roofer-is-lying.html">How to Tell If a Roofer Is Lying?</a>
+          <a href="what-paint-goes-with-a-brown-roof.html">What Paint Goes With a Brown Roof?</a>
+          <a href="how-long-does-a-roof-last-in-texas.html">How Long Does a Roof Last in Texas?</a>
+          <a href="different-types-of-roofing-materials.html">Different Types of Roofing Materials</a>
+          <a href="how-much-does-a-roof-cost-in-houston.html">How Much Does a Roof Cost in Houston, Texas?</a>
+          <a href="roof-drip-edge-flashing-guide.html">Roof Drip Edge Flashing Guide</a>
+        </div>
+      </div>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="reviews.html" class="nav-link">Reviews</a>
+      <a href="financing.html" class="nav-link">Financing</a>
+      <a href="index.html#contact" class="nav-link">Contact Us</a>
+    </div>
+    <div class="nav-cta-desktop" style="display:flex; align-items:center; gap:18px;">
+      <a href="tel:8322953277" style="color:white; font-size:13px; font-weight:700; white-space:nowrap;">&#9990; 832-295-3277</a>
+      <a href="index.html#contact" class="btn-blue">Free Inspection</a>
+    </div>
+    <button class="nav-hamburger" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+<div class="mob-services">
+    <button class="mob-services-btn" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('open')">Services<svg class="arr" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="mob-services-sub">
+      <a href="roof-replacement.html">Roof Replacement</a>
+      <a href="roof-repair.html">Roof Repair</a>
+      <a href="storm-damage.html">Storm &amp; Hail Damage</a>
+      <a href="commercial-roofing.html">Commercial Roofing</a>
+      <a href="insurance-claims.html">Insurance Claims</a>
+      <a href="roof-inspection.html">Roof Inspection</a>
+    </div>
+  </div>
+  <div class="mob-services">
+    <button class="mob-services-btn" onclick="this.classList.toggle('active');this.nextElementSibling.classList.toggle('open')">Roofing Advice<svg class="arr" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="mob-services-sub">
+      <a href="hiring-local-roofer-vs-storm-chaser.html">Hiring a Local Roofer vs Storm Chaser</a>
+      <a href="does-roofing-company-age-matter.html">Does Roofing Company Age Matter?</a>
+      <a href="verify-houston-roofer-credentials.html">The Easiest Way to Verify a Houston Roofer's Credentials</a>
+      <a href="how-to-choose-a-good-roofing-contractor.html">How to Choose a Good Roofing Contractor Near You</a>
+      <a href="best-roofing-companies-in-houston-ranked.html">The Best Roofing Companies in Houston Ranked</a>
+      <a href="best-roofing-contractors-in-katy.html">Who Are the Best Roofing Contractors in Katy?</a>
+      <a href="what-is-a-mansard-roof.html">What Is a Mansard Roof?</a>
+      <a href="parts-of-a-roof-diagram.html">21 Most Important Parts of a Roof Diagram</a>
+      <a href="what-is-roof-sheathing.html">What Is Roof Sheathing?</a>
+      <a href="repair-or-replace-my-roof.html">Should I Repair or Replace My Roof?</a>
+      <a href="what-do-roofers-charge-per-hour.html">What Do Roofers Charge Per Hour in Houston?</a>
+      <a href="popular-roof-shingle-colors.html">12 Most Popular Roof Shingle Colors</a>
+      <a href="how-to-tell-if-a-roofer-is-lying.html">How to Tell If a Roofer Is Lying?</a>
+      <a href="what-paint-goes-with-a-brown-roof.html">What Paint Goes With a Brown Roof?</a>
+      <a href="how-long-does-a-roof-last-in-texas.html">How Long Does a Roof Last in Texas?</a>
+      <a href="different-types-of-roofing-materials.html">Different Types of Roofing Materials</a>
+      <a href="how-much-does-a-roof-cost-in-houston.html">How Much Does a Roof Cost in Houston, Texas?</a>
+      <a href="roof-drip-edge-flashing-guide.html">Roof Drip Edge Flashing Guide</a>
+    </div>
+  </div>
+  <a href="products.html">Products</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="financing.html">Financing</a>
+  <a href="index.html#contact">Contact Us</a>
+  <a href="tel:8322953277" class="m-tel">&#9990; 832-295-3277</a>
+</div>
+
+
+
+{{MAIN}}
+
+<!-- FOOTER -->
+<footer style="background:#071118; border-top:1px solid #0F1F35; padding:60px 28px 28px;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div class="m-footer" style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; margin-bottom:48px;">
+      <div>
+        <div style="margin-bottom:18px;"><img src="Brand_assets/jd logo transparent.png" alt="JD Roofing Solutions" style="height:80px; width:auto;"></div>
+        <p style="color:#607080; font-size:13px; line-height:1.75; max-width:260px; margin-bottom:22px;">Houston's trusted roofing experts — delivering quality craftsmanship and unparalleled service across the greater Houston metro area.</p>
+      </div>
+      <div>
+        <h4 style="color:white; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:18px;">Services</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li><a href="roof-replacement.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Replacement</a></li>
+          <li><a href="roof-repair.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Repair</a></li>
+          <li><a href="storm-damage.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Storm &amp; Hail Damage</a></li>
+          <li><a href="commercial-roofing.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Commercial Roofing</a></li>
+          <li><a href="insurance-claims.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Insurance Claims</a></li>
+          <li><a href="roof-inspection.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Roof Inspection</a></li>
+          <li><a href="products.html" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Products &amp; Brands</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:white; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:18px;">Service Areas</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li><a href="https://jdroofingsolutions.com/houston-1" target="_blank" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Houston</a></li>
+          <li><a href="https://jdroofingsolutions.com/katy" target="_blank" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Katy</a></li>
+          <li><a href="https://jdroofingsolutions.com/sugar-land" target="_blank" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Sugar Land</a></li>
+          <li><a href="https://jdroofingsolutions.com/pearland" target="_blank" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Pearland</a></li>
+          <li><a href="https://jdroofingsolutions.com/the-woodlands" target="_blank" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">The Woodlands</a></li>
+          <li><a href="https://jdroofingsolutions.com/cypress" target="_blank" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">Cypress</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:white; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:18px;">Contact</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li><a href="tel:8322953277" style="color:#607080; font-size:13px; transition:color 0.2s;" onmouseover="this.style.color='#3B9EF0'" onmouseout="this.style.color='#607080'">832-295-3277</a></li>
+          <li><a href="mailto:jdroofingsolutions06@gmail.com" style="color:#607080; font-size:13px;">jdroofingsolutions06@gmail.com</a></li>
+          <li style="color:#607080; font-size:13px;">10108 Veterans Memorial Dr</li>
+          <li style="color:#607080; font-size:13px;">Houston, TX 77014</li>
+          <li style="color:#607080; font-size:13px;">24/7 Emergency Line</li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid #0F1F35; padding-top:22px; text-align:center;">
+      <p style="color:#3A4A5A; font-size:11px;">&copy; 2025 JD Roofing Solutions. All rights reserved. &nbsp;|&nbsp; Licensed &amp; Insured</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var nav = document.getElementById('main-nav');
+    function updateNav(){
+      if(window.scrollY > 60){
+        nav.classList.add('scrolled');
+        nav.style.background = 'white';
+        nav.style.boxShadow = '0 2px 16px rgba(7,17,24,0.1)';
+      } else {
+        nav.classList.remove('scrolled');
+        nav.style.background = 'transparent';
+        nav.style.boxShadow = 'none';
+      }
+    }
+    window.addEventListener('scroll', updateNav, {passive:true});
+    updateNav();
+  })();
+</script>
+</body>
+</html>
